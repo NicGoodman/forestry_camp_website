@@ -1,12 +1,12 @@
 {% extends "_layouts/baseLayout" %}
 {% block body %}
 <header id="header">
-  {% include "_components/blocks/header" %}
+  {% include "_components/header" %}
   {% block header %}{% endblock %}
 </header>
 
 <nav id="navigation">
-  {% include "_components/blocks/navigation" %}
+  {% include "_components/navigation" %}
   {% block navigation %}{% endblock %}
 </nav>
 
@@ -38,7 +38,7 @@
 </main>
 
 <footer id="footer">
-  {% include "_components/blocks/footer" %}
+  {% include "_components/footer" %}
   {% block footer %}{% endblock %}
 </footer>
 {% endblock %}
