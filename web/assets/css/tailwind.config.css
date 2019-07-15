@@ -1,5 +1,7 @@
 @tailwind base;
 
+@import url("https://use.typekit.net/uhy5uqy.css");
+
 @font-face {
     font-family: 'Fox Cat';
     src: url('../fonts/fox_cat-webfont.woff2') format('woff2'),

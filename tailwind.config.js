@@ -5,6 +5,7 @@ module.exports = {
       fontFamily: {
         FoxCat: ['Fox Cat', 'sans-serif'],
         GuestCheck: ['Guest Check', 'sans-serif'],
+        Pacifico: ['pacifico', 'sans-serif'],
       },
       colors: {
         fc: {

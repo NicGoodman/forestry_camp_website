@@ -593,6 +593,8 @@ video {
   height: auto;
 }
 
+@import url("https://use.typekit.net/uhy5uqy.css");
+
 @font-face {
   font-family: 'Fox Cat';
 
@@ -3733,6 +3735,10 @@ video {
 
 .font-GuestCheck {
   font-family: Guest Check, sans-serif;
+}
+
+.font-Pacifico {
+  font-family: pacifico, sans-serif;
 }
 
 .font-hairline {
@@ -10882,6 +10888,10 @@ video {
 
   .sm\:font-GuestCheck {
     font-family: Guest Check, sans-serif;
+  }
+
+  .sm\:font-Pacifico {
+    font-family: pacifico, sans-serif;
   }
 
   .sm\:font-hairline {
@@ -18034,6 +18044,10 @@ video {
     font-family: Guest Check, sans-serif;
   }
 
+  .md\:font-Pacifico {
+    font-family: pacifico, sans-serif;
+  }
+
   .md\:font-hairline {
     font-weight: 100;
   }
@@ -25184,6 +25198,10 @@ video {
     font-family: Guest Check, sans-serif;
   }
 
+  .lg\:font-Pacifico {
+    font-family: pacifico, sans-serif;
+  }
+
   .lg\:font-hairline {
     font-weight: 100;
   }
@@ -32332,6 +32350,10 @@ video {
 
   .xl\:font-GuestCheck {
     font-family: Guest Check, sans-serif;
+  }
+
+  .xl\:font-Pacifico {
+    font-family: pacifico, sans-serif;
   }
 
   .xl\:font-hairline {
