@@ -1,0 +1,20 @@
+@tailwind base;
+
+@font-face {
+    font-family: 'Fox Cat';
+    src: url('../fonts/fox_cat-webfont.woff2') format('woff2'),
+         url('../fonts/fox_cat-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Guest Check';
+    src: url('../fonts/guest_check-webfont.woff2') format('woff2'),
+         url('../fonts/guest_check-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@tailwind components;
+
+@tailwind utilities;
