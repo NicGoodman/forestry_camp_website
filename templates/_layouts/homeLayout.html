@@ -1,0 +1,44 @@
+{% extends "_layouts/baseLayout" %}
+{% block body %}
+<header id="header">
+  {% include "_components/blocks/header" %}
+  {% block header %}{% endblock %}
+</header>
+
+<nav id="navigation">
+  {% include "_components/blocks/navigation" %}
+  {% block navigation %}{% endblock %}
+</nav>
+
+<main id="content" class="flex flex-col">
+  <section id="main" class="">
+    {% include "_sections/main" %}
+    {% block main %}{% endblock %}
+  </section>
+
+  <section id="hoursAndReservations" class="">
+    {% include "_sections/hours" %}
+    {% block hours %}{% endblock %}
+  </section>
+
+  <section id="aboutUs" class="">
+    {% include "_sections/about" %}
+    {% block main %}{% endblock %}
+  </section>
+
+  <section id="Menus" class="">
+    {% include "_sections/menus" %}
+    {% block main %}{% endblock %}
+  </section>
+
+  <section id="Events" class="">
+    {% include "_sections/events" %}
+    {% block main %}{% endblock %}
+  </section>
+</main>
+
+<footer id="footer">
+  {% include "_components/blocks/footer" %}
+  {% block footer %}{% endblock %}
+</footer>
+{% endblock %}

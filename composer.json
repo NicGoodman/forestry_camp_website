@@ -1,6 +1,8 @@
 {
   "require": {
+    "codemonauts/craft-instagram-feed": "^1.0",
     "craftcms/cms": "^3.0.0",
+    "itscoding/facebook-connector": "^1.4",
     "nystudio107/craft-imageoptimize": "^1.6",
     "nystudio107/craft-seomatic": "^3.2",
     "vlucas/phpdotenv": "^2.4.0"
