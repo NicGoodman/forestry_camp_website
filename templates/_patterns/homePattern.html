@@ -1,44 +1,44 @@
 {% extends "_layouts/baseLayout" %}
 {% block body %}
 <header id="header">
-  {% include "_components/header" %}
+  {% include "_organisms/header" %}
   {% block header %}{% endblock %}
 </header>
 
 <nav id="navigation">
-  {% include "_components/navigation" %}
+  {% include "_organisms/navigation" %}
   {% block navigation %}{% endblock %}
 </nav>
 
 <main id="content" class="flex flex-col">
   <section id="main" class="">
-    {% include "_sections/main" %}
+    {% include "_organisms/main" %}
     {% block main %}{% endblock %}
   </section>
 
   <section id="hoursAndReservations" class="">
-    {% include "_sections/hours" %}
+    {% include "_organisms/hours" %}
     {% block hours %}{% endblock %}
   </section>
 
   <section id="aboutUs" class="">
-    {% include "_sections/about" %}
+    {% include "_organisms/about" %}
     {% block about %}{% endblock %}
   </section>
 
   <section id="Menus" class="">
-    {% include "_sections/menus" %}
+    {% include "_organisms/menus" %}
     {% block menus %}{% endblock %}
   </section>
 
   <section id="Events" class="">
-    {% include "_sections/events" %}
+    {% include "_organisms/events" %}
     {% block events %}{% endblock %}
   </section>
 </main>
 
 <footer id="footer">
-  {% include "_components/footer" %}
+  {% include "_organisms/footer" %}
   {% block footer %}{% endblock %}
 </footer>
 {% endblock %}
