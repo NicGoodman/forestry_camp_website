@@ -1,3 +1,7 @@
 {% block main %}
-{% include "_molecules/m-nav-icon" %}
-{% endblock main %}
+  {% for block in entry.navigationLinks.all() %}
+  {% set image = block.navigationImage.one() %}
+  {% set header = block.navigationText %}
+    {% include "_molecules/m-nav-icon" %}
+  {% endfor %}
+{% endblock %}
