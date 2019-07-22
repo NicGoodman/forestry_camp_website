@@ -7,7 +7,7 @@
   {% include "_atoms/a-text-body" %}
   {% set entries = latestBrunchMenu %}
   {% for entry in entries %}
-  {% set menuLink = entry.newMenu %}
+  {% set menuLink = entry.newMenu.one() %}
   <a href="{{ menuLink.getUrl }}">Brunch Menu</a>
   {% endfor %}
 {% endblock %}
