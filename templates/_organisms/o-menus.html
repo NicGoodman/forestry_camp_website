@@ -9,8 +9,30 @@
   {% set latestupstairsDinnerMenus = craft.entries().section('upstairsDinnerMenus').limit(1) %}
   {% set latestbeverageMenus = craft.entries().section('beverageMenus').limit(1) %}
   {% set latestcellarMenus = craft.entries().section('cellarMenus').limit(1) %}
+
   {% for entry in latestBrunchMenu.all() %}
-  {% set menuLink = entry.newMenu.one() %}
-  <a href="{{ menuLink.getUrl }}">Brunch Menu</a>
+    {% set menuLink = entry.newMenu.one() %}
+    <a href="{{ menuLink.getUrl }}">Brunch Menu</a>
   {% endfor %}
+
+  {% for entry in latestdownstairsDinnerMenus.all() %}
+    {% set menuLink = entry.newMenu.one() %}
+    <a href="{{ menuLink.getUrl }}">Downstairs Dinner Menu</a>
+  {% endfor %}
+
+  {% for entry in latestupstairsDinnerMenus.all() %}
+    {% set menuLink = entry.newMenu.one() %}
+    <a href="{{ menuLink.getUrl }}">Upstairs Dinner Menu</a>
+  {% endfor %}
+
+  {% for entry in latestbeverageMenus.all() %}
+    {% set menuLink = entry.newMenu.one() %}
+    <a href="{{ menuLink.getUrl }}">Beverage Menu</a>
+  {% endfor %}
+
+  {% for entry in latestcellarMenus.all() %}
+    {% set menuLink = entry.newMenu.one() %}
+    <a href="{{ menuLink.getUrl }}">Cellar Menu</a>
+  {% endfor %}
+
 {% endblock %}
