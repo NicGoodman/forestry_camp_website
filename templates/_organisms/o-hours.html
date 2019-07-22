@@ -3,9 +3,9 @@
 {% set header = entry.hoursHeaderText %}
 {% set text = entry.hoursTextContent %}
   {% include "_molecules/m-text-header" %}
-  <div class="flex flex-row text-left mt-4 px-2">
+  <div class="flex flex-col text-center mt-4 px-2">
   {% include "_atoms/a-text-body" %}
   {% include "_atoms/a-opentable-plugin" %}
-  </div>
   {% include "_atoms/a-googlemaps-plugin" %}
+  </div>
 {% endblock %}
