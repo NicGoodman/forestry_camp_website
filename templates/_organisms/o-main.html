@@ -1,7 +1,7 @@
 {% block main %}
 <div class="flex flex-col justify-between items-end h-screen py-6">
 {% include "_atoms/a-logo" %}
-<div class="flex flex-row flex-wrap jusify-between items-end w-full">
+<div class="flex flex-row flex-wrap jusify-center items-end w-full">
   {% for block in entry.navigationLinks.all() %}
   {% set image = block.navigationImage.one() %}
   {% set header = block.navigationText %}
