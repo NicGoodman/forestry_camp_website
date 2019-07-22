@@ -14,9 +14,10 @@
   {% for entry in latestBrunchMenu.all() %}
     {% set menuLink = entry.newMenu.one() %}
     <a href="{{ menuLink.getUrl }}">
-      <div class="rounded-full border-fc-black border-2 w-48 h-48 mx-2 bg-cover" style="background-image: url(uploads/images/brunchMenuBG.png)">
-        {% set header = 'Brunch' %}
-        {% include "_atoms/a-text-h3" %}
+      <div class="flex flex-col justify-center rounded-full border-fc-black border-2 w-48 h-48 mx-2 bg-cover" style="background-image: url(uploads/images/brunchMenuBG.png)">
+        <h3 class="font-GuestCheck text-fc-black text-3xl hover:text-white">
+          brunch
+        </h3>
       </div>
     </a>
   {% endfor %}
