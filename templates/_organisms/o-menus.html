@@ -3,6 +3,7 @@
 {% set header = entry.menusHeaderText %}
 {% set text = entry.menusTextContent %}
   {% include "_molecules/m-text-header" %}
+  <div class="text-center mt-4 px-2">
   {% include "_atoms/a-text-body" %}
   {% set latestBrunchMenu = craft.entries().section('brunchMenus').limit(1) %}
   {% set latestdownstairsDinnerMenus = craft.entries().section('downstairsDinnerMenus').limit(1) %}
@@ -10,7 +11,7 @@
   {% set latestbeverageMenus = craft.entries().section('beverageMenus').limit(1) %}
   {% set latestcellarMenus = craft.entries().section('cellarMenus').limit(1) %}
 
-  <div class="flex flex-row flex-wrap justify-center w-full">
+  <div class="flex flex-row flex-wrap justify-center w-full mt-8">
   {% for entry in latestBrunchMenu.all() %}
     {% set menuLink = entry.newMenu.one() %}
     <a href="{{ menuLink.getUrl }}">
@@ -66,5 +67,5 @@
     </a>
   {% endfor %}
   </div>
-
+</div>
 {% endblock %}

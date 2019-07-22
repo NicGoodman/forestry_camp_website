@@ -3,7 +3,9 @@
 {% set header = entry.hoursHeaderText %}
 {% set text = entry.hoursTextContent %}
   {% include "_molecules/m-text-header" %}
+  <div class="text-center mt-4 px-2">
   {% include "_atoms/a-text-body" %}
   {% include "_atoms/a-opentable-plugin" %}
   {% include "_atoms/a-googlemaps-plugin" %}
+  </div>
 {% endblock %}
