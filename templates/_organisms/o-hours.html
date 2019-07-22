@@ -1,5 +1,7 @@
 {% block hours %}
 {% set image = entry.hoursHeaderImage.one() %}
 {% set header = entry.hoursHeaderText %}
+{% set text = entry.hoursTextContent %}
   {% include "_molecules/m-text-header" %}
+  {% include "_atoms/a-text-body" %}
 {% endblock %}

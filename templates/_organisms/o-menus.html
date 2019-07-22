@@ -1,5 +1,8 @@
 {% block menus %}
 {% set image = entry.menusHeaderImage.one() %}
 {% set header = entry.menusHeaderText %}
+{% set text = entry.hoursTextContent %}
   {% include "_molecules/m-text-header" %}
+  {% include "_atoms/a-text-body" %}
+  <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=1042552&type=standard&theme=standard&iframe=false&overlay=false&domain=com&lang=en-US'></script>
 {% endblock %}
