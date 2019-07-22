@@ -1,7 +1,11 @@
 {% block menus %}
+{% set latestBrunchMenu = craft.entries().section('brunchMenus').limit(1) %}
 {% set image = entry.menusHeaderImage.one() %}
 {% set header = entry.menusHeaderText %}
 {% set text = entry.hoursTextContent %}
   {% include "_molecules/m-text-header" %}
   {% include "_atoms/a-text-body" %}
+  {% set entries = latestBrunchMenu %}
+  {% set menuLink = entries.newMenu %}
+  <a href="{{ menuLink.getUrl }}">Brunch Menu</a>
 {% endblock %}
