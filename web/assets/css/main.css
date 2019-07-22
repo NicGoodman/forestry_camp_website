@@ -3741,6 +3741,10 @@ video {
   font-family: pacifico, sans-serif;
 }
 
+.font-GillSansNova {
+  font-family: gill-sans-nova, sans-serif;
+}
+
 .font-hairline {
   font-weight: 100;
 }
@@ -10892,6 +10896,10 @@ video {
 
   .sm\:font-Pacifico {
     font-family: pacifico, sans-serif;
+  }
+
+  .sm\:font-GillSansNova {
+    font-family: gill-sans-nova, sans-serif;
   }
 
   .sm\:font-hairline {
@@ -18048,6 +18056,10 @@ video {
     font-family: pacifico, sans-serif;
   }
 
+  .md\:font-GillSansNova {
+    font-family: gill-sans-nova, sans-serif;
+  }
+
   .md\:font-hairline {
     font-weight: 100;
   }
@@ -25202,6 +25214,10 @@ video {
     font-family: pacifico, sans-serif;
   }
 
+  .lg\:font-GillSansNova {
+    font-family: gill-sans-nova, sans-serif;
+  }
+
   .lg\:font-hairline {
     font-weight: 100;
   }
@@ -32354,6 +32370,10 @@ video {
 
   .xl\:font-Pacifico {
     font-family: pacifico, sans-serif;
+  }
+
+  .xl\:font-GillSansNova {
+    font-family: gill-sans-nova, sans-serif;
   }
 
   .xl\:font-hairline {

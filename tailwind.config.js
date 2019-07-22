@@ -6,6 +6,7 @@ module.exports = {
         FoxCat: ['Fox Cat', 'sans-serif'],
         GuestCheck: ['Guest Check', 'sans-serif'],
         Pacifico: ['pacifico', 'sans-serif'],
+        GillSansNova: ['gill-sans-nova', 'sans-serif'],
       },
       colors: {
         fc: {

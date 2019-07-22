@@ -11,33 +11,38 @@
 </nav>
 
 <main id="content" class="flex flex-col">
-  <section id="main" class="">
+  <section id="main" class="flex flex-col">
+    <a id="main"></a>
     {% include "_organisms/o-main" %}
     {% block main %}{% endblock %}
   </section>
 
-  <section id="hoursAndReservations" class="">
+  <section id="hoursAndReservations" class="flex flex-col">
+    <a id="hoursAndReservations"></a>
     {% include "_organisms/o-hours" %}
     {% block hours %}{% endblock %}
   </section>
 
-  <section id="aboutUs" class="">
+  <section id="aboutUs" class="flex flex-col">
+    <a id="aboutUs"></a>
     {% include "_organisms/o-about" %}
     {% block about %}{% endblock %}
   </section>
 
-  <section id="Menus" class="">
+  <section id="menus" class="flex flex-col">
+    <a id="menus"></a>
     {% include "_organisms/o-menus" %}
     {% block menus %}{% endblock %}
   </section>
 
-  <section id="Events" class="">
+  <section id="events" class="flex flex-col">
+    <a id="events"></a>
     {% include "_organisms/o-events" %}
     {% block events %}{% endblock %}
   </section>
 </main>
 
-<footer id="footer">
+<footer id="footer" class="">
   {% include "_organisms/o-footer" %}
   {% block footer %}{% endblock %}
 </footer>
