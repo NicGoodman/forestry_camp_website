@@ -10,12 +10,12 @@
   {% set latestbeverageMenus = craft.entries().section('beverageMenus').limit(1) %}
   {% set latestcellarMenus = craft.entries().section('cellarMenus').limit(1) %}
 
-  <div class="flex flex-row justify-center">
+  <div class="flex flex-row flex-wrap justify-center w-full">
   {% for entry in latestBrunchMenu.all() %}
     {% set menuLink = entry.newMenu.one() %}
     <a href="{{ menuLink.getUrl }}">
-      <div class="flex flex-col justify-center rounded-full border-fc-black border-2 w-48 h-48 mx-2 bg-cover" style="background-image: url(uploads/images/brunchMenuBG.png)">
-        <h3 class="font-GuestCheck text-fc-black text-3xl hover:text-white">
+      <div class="flex flex-col justify-center rounded-full border-fc-black border-2 w-1/2 h-1/2 md:w-48 md:h-48 mx-2 bg-cover" style="background-image: url(uploads/images/brunchMenuBG.png)">
+        <h3 class="font-GuestCheck text-fc-black text-2xl hover:text-white text-center">
           brunch
         </h3>
       </div>
@@ -24,22 +24,46 @@
 
   {% for entry in latestdownstairsDinnerMenus.all() %}
     {% set menuLink = entry.newMenu.one() %}
-    <a href="{{ menuLink.getUrl }}">Downstairs Dinner Menu</a>
+    <a href="{{ menuLink.getUrl }}">
+      <div class="flex flex-col justify-center rounded-full border-fc-black border-2 w-1/2 h-1/2 md:w-48 md:h-48 mx-2 bg-cover" style="background-image: url(uploads/images/downstairsDinnerMenuBG.png)">
+        <h3 class="font-GuestCheck text-fc-black text-2xl hover:text-white text-center">
+          downstairs dinner
+        </h3>
+      </div>
+    </a>
   {% endfor %}
 
   {% for entry in latestupstairsDinnerMenus.all() %}
     {% set menuLink = entry.newMenu.one() %}
-    <a href="{{ menuLink.getUrl }}">Upstairs Dinner Menu</a>
+    <a href="{{ menuLink.getUrl }}">
+      <div class="flex flex-col justify-center rounded-full border-fc-black border-2 w-1/2 h-1/2 md:w-48 md:h-48 mx-2 bg-cover" style="background-image: url(uploads/images/upstairsDinnerMenuBG.png)">
+        <h3 class="font-GuestCheck text-fc-black text-2xl hover:text-white text-center">
+          upstairs dinner
+        </h3>
+      </div>
+    </a>
   {% endfor %}
 
   {% for entry in latestbeverageMenus.all() %}
     {% set menuLink = entry.newMenu.one() %}
-    <a href="{{ menuLink.getUrl }}">Beverage Menu</a>
+    <a href="{{ menuLink.getUrl }}">
+      <div class="flex flex-col justify-center rounded-full border-fc-black border-2 w-1/2 h-1/2 md:w-48 md:h-48 mx-2 bg-cover" style="background-image: url(uploads/images/beveragesMenuBG.png)">
+        <h3 class="font-GuestCheck text-fc-black text-2xl hover:text-white text-center">
+          beverages
+        </h3>
+      </div>
+    </a>
   {% endfor %}
 
   {% for entry in latestcellarMenus.all() %}
     {% set menuLink = entry.newMenu.one() %}
-    <a href="{{ menuLink.getUrl }}">Cellar Menu</a>
+    <a href="{{ menuLink.getUrl }}">Cellar Menu
+      <div class="flex flex-col justify-center rounded-full border-fc-black border-2 w-1/2 h-1/2 md:w-48 md:h-48 mx-2 bg-cover" style="background-image: url(uploads/images/cellarMenuBG.png)">
+        <h3 class="font-GuestCheck text-fc-black text-2xl hover:text-white text-center">
+          from the cellar
+        </h3>
+      </div>
+    </a>
   {% endfor %}
   </div>
 
