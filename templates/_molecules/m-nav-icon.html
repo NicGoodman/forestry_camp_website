@@ -4,7 +4,7 @@
 {% set image = block.navigationImage.one() %}
 {% set header = block.navigationText.one() %}
 <div class="flex flex-col w-1/2">
-  {% block icon %}{% endblock %}
-  {% block text-h5 %}{% endblock %}
+  {% block icon %}{% endblock icon %}
+  {% block text-h5 %}{% endblock text-h5 %}
 </div>
-{% endblock %}
+{% endblock nav-icon %}
