@@ -6,6 +6,8 @@
   {% include "_molecules/m-text-header" %}
   {% include "_atoms/a-text-body" %}
   {% set entries = latestBrunchMenu %}
+  {% for entry in entries %}
   {% set menuLink = entries.newMenu %}
   <a href="{{ menuLink.getUrl }}">Brunch Menu</a>
+  {% endfor %}
 {% endblock %}
