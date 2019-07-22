@@ -57,7 +57,7 @@
 
   {% for entry in latestcellarMenus.all() %}
     {% set menuLink = entry.newMenu.one() %}
-    <a href="{{ menuLink.getUrl }}">Cellar Menu
+    <a href="{{ menuLink.getUrl }}">
       <div class="flex flex-col justify-center rounded-full border-fc-black border-2 w-32 h-32 md:w-48 md:h-48 mx-2 bg-cover" style="background-image: url(uploads/images/cellarMenuBG.png)">
         <h3 class="font-GuestCheck text-white text-xl hover:text-fc-black text-center">
           from the cellar
