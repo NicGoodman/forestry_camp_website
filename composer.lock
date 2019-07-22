@@ -375,16 +375,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.2.2",
+            "version": "3.2.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "d8145c14be484ed81aa10207f610232cba8d3866"
+                "reference": "e44b9d1b6dd94198d71825345c3ba437d2fd1e91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/d8145c14be484ed81aa10207f610232cba8d3866",
-                "reference": "d8145c14be484ed81aa10207f610232cba8d3866",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/e44b9d1b6dd94198d71825345c3ba437d2fd1e91",
+                "reference": "e44b9d1b6dd94198d71825345c3ba437d2fd1e91",
                 "shasum": ""
             },
             "require": {
@@ -462,7 +462,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2019-07-14T18:34:11+00:00"
+            "time": "2019-07-19T19:56:35+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -799,16 +799,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.9",
+            "version": "2.1.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "128cc721d771ec2c46ce59698f4ca42b73f71b25"
+                "reference": "a6c8d7101b19a451c1707b1b79bbbc56e4bdb7ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/128cc721d771ec2c46ce59698f4ca42b73f71b25",
-                "reference": "128cc721d771ec2c46ce59698f4ca42b73f71b25",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/a6c8d7101b19a451c1707b1b79bbbc56e4bdb7ec",
+                "reference": "a6c8d7101b19a451c1707b1b79bbbc56e4bdb7ec",
                 "shasum": ""
             },
             "require": {
@@ -818,7 +818,8 @@
             "require-dev": {
                 "dominicsayers/isemail": "dev-master",
                 "phpunit/phpunit": "^4.8.35||^5.7||^6.0",
-                "satooshi/php-coveralls": "^1.0.1"
+                "satooshi/php-coveralls": "^1.0.1",
+                "symfony/phpunit-bridge": "^4.4@dev"
             },
             "suggest": {
                 "ext-intl": "PHP Internationalization Libraries are required to use the SpoofChecking validation"
@@ -852,7 +853,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2019-06-23T10:14:27+00:00"
+            "time": "2019-07-19T20:52:08+00:00"
         },
         {
             "name": "elvanto/litemoji",
@@ -1824,16 +1825,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.2.14",
+            "version": "3.2.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "f3fd3998ac7969f830e532b06460e5c319b10be5"
+                "reference": "bd0cd19b967298c3454f0d2be1a8d06e5cc4e6ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/f3fd3998ac7969f830e532b06460e5c319b10be5",
-                "reference": "f3fd3998ac7969f830e532b06460e5c319b10be5",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/bd0cd19b967298c3454f0d2be1a8d06e5cc4e6ef",
+                "reference": "bd0cd19b967298c3454f0d2be1a8d06e5cc4e6ef",
                 "shasum": ""
             },
             "require": {
@@ -1894,7 +1895,7 @@
                 "tags",
                 "twitter"
             ],
-            "time": "2019-07-12T15:58:14+00:00"
+            "time": "2019-07-18T16:37:42+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -3426,23 +3427,24 @@
         },
         {
             "name": "yiisoft/yii2-composer",
-            "version": "2.0.7",
+            "version": "2.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-composer.git",
-                "reference": "1439e78be1218c492e6cde251ed87d3f128b9534"
+                "reference": "5c7ca9836cf80b34db265332a7f2f8438eb469b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/1439e78be1218c492e6cde251ed87d3f128b9534",
-                "reference": "1439e78be1218c492e6cde251ed87d3f128b9534",
+                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/5c7ca9836cf80b34db265332a7f2f8438eb469b9",
+                "reference": "5c7ca9836cf80b34db265332a7f2f8438eb469b9",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.0"
             },
             "require-dev": {
-                "composer/composer": "^1.0"
+                "composer/composer": "^1.0",
+                "phpunit/phpunit": "<7"
             },
             "type": "composer-plugin",
             "extra": {
@@ -3476,7 +3478,7 @@
                 "extension installer",
                 "yii2"
             ],
-            "time": "2018-07-05T15:44:47+00:00"
+            "time": "2019-07-16T13:22:30+00:00"
         },
         {
             "name": "yiisoft/yii2-debug",
