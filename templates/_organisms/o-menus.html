@@ -1,12 +1,15 @@
 {% block menus %}
-{% set latestBrunchMenu = craft.entries().section('brunchMenus').limit(1) %}
 {% set image = entry.menusHeaderImage.one() %}
 {% set header = entry.menusHeaderText %}
-{% set text = entry.hoursTextContent %}
+{% set text = entry.menusTextContent %}
   {% include "_molecules/m-text-header" %}
   {% include "_atoms/a-text-body" %}
-  {% set entries = latestBrunchMenu %}
-  {% for entry in entries %}
+  {% set latestBrunchMenu = craft.entries().section('brunchMenus').limit(1) %}
+  {% set latestdownstairsDinnerMenus = craft.entries().section('downstairsDinnerMenus').limit(1) %}
+  {% set latestupstairsDinnerMenus = craft.entries().section('upstairsDinnerMenus').limit(1) %}
+  {% set latestbeverageMenus = craft.entries().section('beverageMenus').limit(1) %}
+  {% set latestcellarMenus = craft.entries().section('cellarMenus').limit(1) %}
+  {% for entry in latestBrunchMenu.all() %}
   {% set menuLink = entry.newMenu.one() %}
   <a href="{{ menuLink.getUrl }}">Brunch Menu</a>
   {% endfor %}
