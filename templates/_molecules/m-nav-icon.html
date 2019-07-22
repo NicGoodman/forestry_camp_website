@@ -1,6 +1,6 @@
 {% for block in entry.navigationLinks.all() %}
 {% set image = block.navigationImage.one() %}
-{% set header = block.navigationText.one() %}
+{% set header = block.navigationText %}
 <div class="flex flex-col w-1/2">
   {% include "_atoms/a-icon" %}
   {% include "_atoms/a-text-h5" %}
