@@ -10,9 +10,15 @@
   {% set latestbeverageMenus = craft.entries().section('beverageMenus').limit(1) %}
   {% set latestcellarMenus = craft.entries().section('cellarMenus').limit(1) %}
 
+  <div class="flex flex-row justify-center">
   {% for entry in latestBrunchMenu.all() %}
     {% set menuLink = entry.newMenu.one() %}
-    <a href="{{ menuLink.getUrl }}">Brunch Menu</a>
+    <a href="{{ menuLink.getUrl }}">
+      <div class="rounded-full border-fc-black border-2 w-48 h-48 mx-2 bg-cover" style="background-image: url(uploads/images/brunchMenuBG.jpg)">
+        {% set header = 'Brunch' %}
+        {% include "_atoms/a-text-h3" %}
+      </div>
+    </a>
   {% endfor %}
 
   {% for entry in latestdownstairsDinnerMenus.all() %}
@@ -34,5 +40,6 @@
     {% set menuLink = entry.newMenu.one() %}
     <a href="{{ menuLink.getUrl }}">Cellar Menu</a>
   {% endfor %}
+  </div>
 
 {% endblock %}
