@@ -2,7 +2,7 @@
 {% set image = entry.aboutHeaderImage.one() %}
 {% set header = entry.aboutHeaderText %}
   {% include "_molecules/m-text-header" %}
-  {% set text = entry.aboutTextContent | nl2br %}
+  {% set text = entry.aboutTextContent|nl2br %}
     <div class="flex flex-col text-left justify-center mt-4 px-2">
     {% include "_atoms/a-text-body" %}
 {% endblock %}
