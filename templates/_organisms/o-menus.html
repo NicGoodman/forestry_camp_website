@@ -3,7 +3,7 @@
 {% set header = entry.menusHeaderText %}
 {% set text = entry.menusTextContent %}
   {% include "_molecules/m-text-header" %}
-  <div class="text-center mt-4 px-2 md:px-8">
+  <div class="text-center mt-4 px-2 md:px-8 lg:px-16">
   {% include "_atoms/a-text-body" %}
   {% set latestBrunchMenu = craft.entries().section('brunchMenus').limit(1) %}
   {% set latestdownstairsDinnerMenus = craft.entries().section('downstairsDinnerMenus').limit(1) %}
