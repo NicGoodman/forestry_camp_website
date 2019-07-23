@@ -1,13 +1,15 @@
 {% block main %}
-<div class="flex flex-col justify-between items-end h-screen py-6">
-{% include "_atoms/a-logo" %}
-<div class="flex flex-row flex-wrap justify-between w-full">
-  {% for block in entry.navigationLinks.all() %}
-  {% set image = block.navigationImage.one() %}
-  {% set header = block.navigationText %}
-    {% include "_molecules/m-nav-icon" %}
-  {% endfor %}
+<div class="flex flex-col md:flex-row justify-between items-end h-screen pt-6">
+  <div class="flex flex-col w-full md:w-1/4">
+    {% include "_atoms/a-logo" %}
+    <div class="flex flex-row flex-wrap justify-between w-full">
+      {% for block in entry.navigationLinks.all() %}
+      {% set image = block.navigationImage.one() %}
+      {% set header = block.navigationText %}
+      {% include "_molecules/m-nav-icon" %}
+      {% endfor %}
+    </div>
   </div>
-  <img src="uploads/images/landscapeAlt.png" class="w-full h-auto flex-shrink object-cover"/>
+  <img src="uploads/images/landscapeAlt.png" class="w-full h-auto flex-shrink object-cover" />
 </div>
 {% endblock %}
