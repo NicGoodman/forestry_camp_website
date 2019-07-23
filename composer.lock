@@ -375,16 +375,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.2.5.1",
+            "version": "3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "e44b9d1b6dd94198d71825345c3ba437d2fd1e91"
+                "reference": "02739d27edfc4eea0749ee2c3aedbc91745f998c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/e44b9d1b6dd94198d71825345c3ba437d2fd1e91",
-                "reference": "e44b9d1b6dd94198d71825345c3ba437d2fd1e91",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/02739d27edfc4eea0749ee2c3aedbc91745f998c",
+                "reference": "02739d27edfc4eea0749ee2c3aedbc91745f998c",
                 "shasum": ""
             },
             "require": {
@@ -409,7 +409,7 @@
                 "league/oauth2-client": "^2.2.1",
                 "mikehaertl/php-shellcommand": "^1.2.5",
                 "php": ">=7.0.0",
-                "pixelandtonic/imagine": "~0.7.1.2",
+                "pixelandtonic/imagine": "~1.2.2.1",
                 "seld/cli-prompt": "^1.0.3",
                 "symfony/yaml": "^3.2|^4.0",
                 "true/punycode": "^2.1.0",
@@ -462,7 +462,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2019-07-19T19:56:35+00:00"
+            "time": "2019-07-23T14:51:47+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -1997,24 +1997,24 @@
         },
         {
             "name": "pixelandtonic/imagine",
-            "version": "v0.7.1.3",
+            "version": "1.2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pixelandtonic/Imagine.git",
-                "reference": "989656b05410446fde623540bbf83af15087e4ea"
+                "reference": "c70db7d7f6bd6fb0abc7562bdabe51265af2518b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pixelandtonic/Imagine/zipball/989656b05410446fde623540bbf83af15087e4ea",
-                "reference": "989656b05410446fde623540bbf83af15087e4ea",
+                "url": "https://api.github.com/repos/pixelandtonic/Imagine/zipball/c70db7d7f6bd6fb0abc7562bdabe51265af2518b",
+                "reference": "c70db7d7f6bd6fb0abc7562bdabe51265af2518b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.2"
             },
             "require-dev": {
-                "sami/sami": "^3.3",
-                "symfony/phpunit-bridge": "^3.2"
+                "friendsofphp/php-cs-fixer": "2.2.*",
+                "phpunit/phpunit": "^4.8 || ^5.7 || ^6.5 || ^7.4 || ^8.2"
             },
             "suggest": {
                 "ext-gd": "to use the GD implementation",
@@ -2028,8 +2028,8 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Imagine": "lib/"
+                "psr-4": {
+                    "Imagine\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2051,7 +2051,7 @@
                 "image manipulation",
                 "image processing"
             ],
-            "time": "2017-10-26T13:18:33+00:00"
+            "time": "2019-07-19T12:55:50+00:00"
         },
         {
             "name": "psr/http-message",
