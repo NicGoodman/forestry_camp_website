@@ -8,8 +8,11 @@
   {% set latestBrunchMenu = craft.entries().section('brunchMenus').limit(1) %}
   {% set latestdownstairsDinnerMenus = craft.entries().section('downstairsDinnerMenus').limit(1) %}
   {% set latestupstairsDinnerMenus = craft.entries().section('upstairsDinnerMenus').limit(1) %}
-  {% set latestbeverageMenus = craft.entries().section('beverageMenus').limit(1) %}
-  {% set latestcellarMenus = craft.entries().section('cellarMenus').limit(1) %}
+  {% set latestDessertsMenus = craft.entries().section('dessertsMenus').limit(1) %}
+  {% set latestBeerMenus = craft.entries().section('beerMenus').limit(1) %}
+  {% set latestWineMenus = craft.entries().section('wineMenus').limit(1) %}
+  {% set latestCocktailMenus = craft.entries().section('cocktailMenus').limit(1) %}
+  {% set latestCoffeeMenus = craft.entries().section('coffeeMenus').limit(1) %}
   <div class="flex flex-row-reverse border-b border-fc-black w-full md:w-2/3 self-center mt-8">
     {% set header = 'food' %}
     {% include "_atoms/a-text-h3" %}
@@ -47,29 +50,63 @@
       </div>
     </a>
   {% endfor %}
+
+  {% for entry in latestDessertsMenus.all() %}
+    {% set menuLink = entry.newMenu.one() %}
+    <a href="{{ menuLink.getUrl }}">
+      <div class="flex flex-col justify-center rounded-full border-fc-black border-2 w-32 h-32  m-2 bg-cover bg-fc-black hover:bg-transparent text-white text-xl hover:text-fc-black">
+        <h3 class="font-GuestCheck text-center">
+          desserts
+        </h3>
+      </div>
+    </a>
+  {% endfor %}
   </div>
+  
 <div class="flex flex-row-reverse border-b border-fc-black w-full md:w-2/3 self-center mt-8">
   {% set header = 'beverages' %}
   {% include "_atoms/a-text-h3" %}
 </div>
   <div class="flex flex-row flex-wrap justify-center w-full mt-8">
-  {% for entry in latestbeverageMenus.all() %}
+  {% for entry in latestBeerMenus.all() %}
     {% set menuLink = entry.newMenu.one() %}
     <a href="{{ menuLink.getUrl }}">
       <div class="flex flex-col justify-center rounded-full border-fc-black border-2 w-32 h-32  m-2 bg-cover bg-fc-black hover:bg-transparent text-white text-xl hover:text-fc-black">
         <h3 class="font-GuestCheck text-center">
-          beverages
+          beer & cider
         </h3>
       </div>
     </a>
   {% endfor %}
 
-  {% for entry in latestcellarMenus.all() %}
+  {% for entry in latestWineMenus.all() %}
     {% set menuLink = entry.newMenu.one() %}
     <a href="{{ menuLink.getUrl }}">
       <div class="flex flex-col justify-center rounded-full border-fc-black border-2 w-32 h-32  m-2 bg-cover bg-fc-black hover:bg-transparent text-white text-xl hover:text-fc-black">
         <h3 class="font-GuestCheck text-center">
-          from the cellar
+          wine
+        </h3>
+      </div>
+    </a>
+  {% endfor %}
+
+  {% for entry in latestCocktailMenus.all() %}
+    {% set menuLink = entry.newMenu.one() %}
+    <a href="{{ menuLink.getUrl }}">
+      <div class="flex flex-col justify-center rounded-full border-fc-black border-2 w-32 h-32  m-2 bg-cover bg-fc-black hover:bg-transparent text-white text-xl hover:text-fc-black">
+        <h3 class="font-GuestCheck text-center">
+          cocktails & spirits
+        </h3>
+      </div>
+    </a>
+  {% endfor %}
+
+  {% for entry in latestCoffeeMenus.all() %}
+    {% set menuLink = entry.newMenu.one() %}
+    <a href="{{ menuLink.getUrl }}">
+      <div class="flex flex-col justify-center rounded-full border-fc-black border-2 w-32 h-32  m-2 bg-cover bg-fc-black hover:bg-transparent text-white text-xl hover:text-fc-black">
+        <h3 class="font-GuestCheck text-center">
+          espresso & fine tea
         </h3>
       </div>
     </a>
