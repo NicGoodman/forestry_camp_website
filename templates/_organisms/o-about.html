@@ -1,7 +1,7 @@
 {% block about %}
 {% set image = entry.aboutHeaderImage.one() %}
 {% set header = entry.aboutHeaderText %}
-  {% include "_molecules/m-text-header" %}
+  <a id="about">{% include "_molecules/m-text-header" %}</a>
   <div class="text-left mt-4 px-2 md:px-8 lg:px-16">
   {% for block in entry.pageContent.all() %}
 {% include ('_atoms/_components/_block_' ~ block.type.handle) %}
