@@ -18,7 +18,7 @@
                     <h2 id="post-title">
                         {{ fbEntry.fbId }}: {{ fbEntry.start_time|datetime('medium') }} - {{ fbEntry.end_time|datetime('medium') }}
                     </h2>
-                    <p class="">{{ craft.facebook.decode(fbEntry.content) }}</p>
+                    <p class="">{{ craft.facebook.decode(fbEntry.detail) }}</p>
                         {% if fbEntry.target %}
                             <a href="{{ fbEntry.target }}" target="_blank"> Read More</a>
                         {% else %}
