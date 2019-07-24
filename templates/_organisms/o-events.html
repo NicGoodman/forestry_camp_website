@@ -15,10 +15,8 @@
                         {% if fbEntry.target %}
                             <a href="{{ fbEntry.target }}" target="_blank"> {{ fbEntry.title }}</a>
                         {% else %}
-                            Facebook
+                            No Link
                         {% endif %}
-                        {# decode the content, because it was encoded with json to stroe to more types of db's #}
-                        am {{ fbEntry.created|date('d.m.y') }} um {{ craft.facebook.decode(fbEntry.content) }}
                     </p>
                 </div>
                 <div style="float: left;width: 30%">
@@ -26,9 +24,6 @@
                         <img class="img-fluid" src="{{ fbEntry.image_src }}" alt="">
                     {% endif %}
                 </div>
-            {% endif %}
-            <div style="clear: both"></div>
-            <hr>
             </div>
     {% endfor %}
 </div>
