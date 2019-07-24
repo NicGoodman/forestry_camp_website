@@ -1,20 +1,38 @@
 {% do view.registerCssFile(siteUrl ~ "assets/css/main.css") %}
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta charset="utf-8" />
-    <title>Forestry Camp</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <meta name="referrer" content="origin-when-cross-origin" />
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-    <script src="https://kit.fontawesome.com/5bdd2455c6.js"></script>
-    <link rel="stylesheet" href="https://use.typekit.net/uhy5uqy.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8" />
+  <title>Forestry Camp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="referrer" content="origin-when-cross-origin" />
+  <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  <script src="https://kit.fontawesome.com/5bdd2455c6.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+  crossorigin="anonymous"></script>
+  <script>
+    $(document).scroll(function() {
+      var y = $(this).scrollTop();
+      if (y > 800) {
+        $('#footer').fadeIn();
+      } else {
+        $('#footer').fadeOut();
+      }
+
+    });
+  </script>
+  <link rel="stylesheet" href="https://use.typekit.net/uhy5uqy.css">
 </head>
+
 <body class="bg-repeat bg-auto bg-center" style="background-image: url(uploads/images/repeatingWeb_BG_SMALL.jpg);">
   {% block body %}{% endblock %}
   <script>
-		ScrollReveal().reveal('.reveal');
-	</script>
+    ScrollReveal().reveal('.reveal');
+  </script>
 </body>
+
 </html>
