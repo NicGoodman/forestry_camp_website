@@ -8,12 +8,12 @@
         <div style="position: relative;">
                 <div class="post-preview" style="float: left;width: 70%;">
                     <h2 class="post-title">
-                        {{ fbEntry.title }}: {{ fbEntry.start_time|date('m.d.y') }} - {{ fbEntry.end_time|date('m.d.y') }}
+                        {{ fbEntry.title }}: {{ fbEntry.start_time|date('m.d.y H:i') }} - {{ fbEntry.end_time|date('m.d.y H:i') }}
                     </h2>
                     <p style="padding-bottom: 20px">{{ craft.facebook.decode(fbEntry.content) }}</p>
                     <p class="post-meta" style="bottom: 0;position: absolute; ">
                         {% if fbEntry.target %}
-                            <a href="{{ fbEntry.target }}" target="_blank"> {{ fbEntry.title }}</a>
+                            <a href="{{ fbEntry.target }}" target="_blank"> test link</a>
                         {% else %}
                             No Link
                         {% endif %}
