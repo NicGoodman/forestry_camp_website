@@ -3,11 +3,41 @@
 {% set header = entry.eventsHeaderText %}
     <a id="happenings">{% include "_molecules/m-text-header" %}</a>
 <h3 class="reveal font-GuestCheck text-fc-black text-3xl">check back for upcoming events</h3>
-
-<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
+<div class="col-lg-8 col-md-10 mx-auto">
+    {% for fbEntry in craft.facebook.getEntries.where('internal = 0').andWhere('type != "event"').limit(3).all %}
+        <div style="position: relative;">
+            {% if fbEntry.type == 'youtube' %}
+                <h3>    {{ fbEntry.title }}    </h3>
+                <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed{{ fbEntry.video }}?rel=0&amp;controls=0&amp;showinfo=0"
+                        frameborder="0"
+                        allowfullscreen></iframe>
+            {% else %}
+                <div class="post-preview" style="float: left;width: 70%;">
+                    <h2 class="post-title">
+                        {{ fbEntry.title ?: 'Beitrag vom '~fbEntry.created|date('d.m.y') }}
+                    </h2>
+                    <p style="padding-bottom: 20px">{{ fbEntry.content }}</p>
+                    <p class="post-meta" style="bottom: 0;position: absolute; ">
+                        Gepostet auf
+                        {% if fbEntry.target %}
+                            <a href="{{ fbEntry.target }}" target="_blank"> Facebook</a>
+                        {% else %}
+                            Facebook
+                        {% endif %}
+                        {# decode the content, because it was encoded with json to stroe to more types of db's #}
+                        am {{ fbEntry.created|date('d.m.y') }} um {{ craft.facebook.decode(fbEntry.content) }}
+                    </p>
+                </div>
+                <div style="float: left;width: 30%">
+                    {% if fbEntry.image_src %}
+                        <img class="img-fluid" src="{{ fbEntry.image_src }}" alt="">
+                    {% endif %}
+                </div>
+            {% endif %}
+            <div style="clear: both"></div>
+            <hr>
+            </div>
+    {% endfor %}
 </div>
 {% endblock %}
