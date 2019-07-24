@@ -11,8 +11,8 @@
       {% endif %}
       </div>
     {% case "halfWidth" %}
-    <div id="halfImage" class="w-1/2 h-full mt-3 mb-3">
-      <img src="{{ image.getUrl }}" class="reveal container w-full h-full rounded-lg border-2 border-fc-black mx-auto" />
+    <div id="halfImage" class="w-1/2 h-full mt-3 mb-3 container mx-auto text-center">
+      <img src="{{ image.getUrl }}" class="reveal w-full h-full rounded-lg border-2 border-fc-black" />
       {% if block.caption %}
         <p class="font-GillSansNova font-bold text-xs text-fc-black ml-2 mt-1">{{ block.caption }}</p>
       {% endif %}
