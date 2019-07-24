@@ -2,12 +2,12 @@
 {% set image = entry.eventsHeaderImage.one() %}
 {% set header = entry.eventsHeaderText %}
 <a id="happenings">{% include "_molecules/m-text-header" %}</a>
-<div class="reveal flex flex-row-reverse border-b border-fc-black w-full md:w-2/3 self-center mt-8">
-  {% set header = 'events' %}
-  {% include "_atoms/a-text-h3" %}
-</div>
 {% set facebookEvents = craft.entries().section('events').limit(5) %}
 <div id="facebook-feed" class="flex flex-col w-full lg:w-1/2">
+  <div class="reveal flex flex-row-reverse border-b border-fc-black w-full my-8">
+    {% set header = 'events' %}
+    {% include "_atoms/a-text-h3" %}
+  </div>
   {% for entry in facebookEvents.all() %}
   {% set image = entry.eventImage.one() %}
   <div id="facebook-event" class="flex flex-row w-full">
@@ -16,11 +16,11 @@
       <img src="{{ image.getUrl }}" class="w-full h-auto object-cover border-2 border-fc-black rounded-lg" />
     </a>
         </div>
-    <div id="facebook-event-info" class="w-2/3">
+    <div id="facebook-event-info" class="w-2/3 pl-4">
       <a href="https://www.facebook.com/events/{{ entry.eventFacebookId }}">
         <h3 class="font-GuestCheck text-fc-black text-base lg:text-xl">{{ entry.eventName }}</h3>
       </a>
-      <h4 class="font-GillSansNova text-fc-black font-bold text-sm lg:text-base">{{ entry.eventStartTime }} • {{ entry.eventEndTime }}</h4>
+      <h4 class="font-GillSansNova text-fc-black font-bold text-sm lg:text-base">{{ entry.eventStartTime|date ('short') }} • {{ entry.eventEndTime }}</h4>
       <p class="font-GillSansNova text-fc-black text-base">{{ entry.eventDescription }}</p>
     </div>
   </div>
