@@ -1,3 +1,13 @@
-<div class="">
-test
+<div class="flex flex-row">
+  {% for block in entry.navigationLinks.all() %}
+  {% set image = block.navigationImage.one() %}
+  {% set header = block.navigationText %}
+  {% set anchor = block.navigationAnchor %}
+  <div class="flex flex-col w-10 pb-4 px-2 self-start text-center">
+    <a href="/#{{ anchor }}">
+    {% include "_atoms/a-icon-nav" %}
+    {% include "_atoms/a-text-h5" %}
+    </a>
+  </div>
+  {% endfor %}
 </div>
