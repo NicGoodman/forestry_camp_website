@@ -1,11 +1,19 @@
-<div class="flex flex-row justify-between">
+<div class="flex flex-row justify-between items-center">
+  <div class="flex flex-col w-16 pb-4 px-2 self-start text-center"  style="filter: invert(100%);">
+    <a href="/#home">
+      <img src="uploads/images/logoNav.png" class="reveal w-full h-full object-scale-down pb-2" alt="" />
+    <h5 class="reveal font-GuestCheck text-fc-black text-xs">
+      home
+    </h5>
+    </a>
+  </div>
   {% for block in entry.navigationLinks.all() %}
   {% set image = block.navigationImage.one() %}
   {% set header = block.navigationText %}
   {% set anchor = block.navigationAnchor %}
-  <div class="flex flex-col w-20 pb-4 px-2 self-start text-center"  style="filter: invert(100%);">
+  <div class="flex flex-col w-16 pb-4 px-2 self-start text-center"  style="filter: invert(100%);">
     <a href="/#{{ anchor }}">
-    {% include "_atoms/a-icon-nav" %}
+      <img src="{{ image.getUrl }}" class="reveal w-full h-full object-scale-down pb-2" alt="" />
     <h5 class="reveal font-GuestCheck text-fc-black text-xs">
       {{ header }}
     </h5>
