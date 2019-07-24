@@ -16,7 +16,7 @@
           </div>
                 <div id="post-content" class="flex flex-col w-2/3">
                     <h2 id="post-title">
-                        {{ fbEntry.title }}: {{ fbEntry.start_time|datetime('medium') }} - {{ fbEntry.end_time|datetime('medium') }}
+                        {{ fbEntry.fbId }}: {{ fbEntry.start_time|datetime('medium') }} - {{ fbEntry.end_time|datetime('medium') }}
                     </h2>
                     <p class="">{{ craft.facebook.decode(fbEntry.content) }}</p>
                         {% if fbEntry.target %}
