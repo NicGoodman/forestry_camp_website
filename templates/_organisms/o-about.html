@@ -2,6 +2,7 @@
 {% set image = entry.aboutHeaderImage.one() %}
 {% set header = entry.aboutHeaderText %}
   {% include "_molecules/m-text-header" %}
-    <div class="flex flex-col text-left justify-center mt-4 px-2 md:px-8 lg:px-16 font-GillSansNova">
-      </div>
+  {% for block in entry.pageContent.all() %}
+{% include ('_partials/components/_block_' ~ block.type.handle) %}
+{% endfor %}
 {% endblock %}

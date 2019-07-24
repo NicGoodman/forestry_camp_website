@@ -13,11 +13,11 @@
   {% set latestWineMenus = craft.entries().section('wineMenus').limit(1) %}
   {% set latestCocktailMenus = craft.entries().section('cocktailMenus').limit(1) %}
   {% set latestCoffeeMenus = craft.entries().section('coffeeMenus').limit(1) %}
-  <div class="flex flex-row-reverse border-b border-fc-black w-full md:w-2/3 self-center mt-8">
+  <div class="reveal flex flex-row-reverse border-b border-fc-black w-full md:w-2/3 self-center mt-8">
     {% set header = 'food' %}
     {% include "_atoms/a-text-h3" %}
   </div>
-  <div class="flex flex-row flex-wrap justify-center w-full mt-8">
+  <div class="reveal flex flex-row flex-wrap justify-center w-full mt-8">
   {% for entry in latestBrunchMenu.all() %}
     {% set menuLink = entry.newMenu.one() %}
     <a href="{{ menuLink.getUrl }}">
@@ -62,12 +62,12 @@
     </a>
   {% endfor %}
   </div>
-  
-<div class="flex flex-row-reverse border-b border-fc-black w-full md:w-2/3 self-center mt-8">
+
+<div class="reveal flex flex-row-reverse border-b border-fc-black w-full md:w-2/3 self-center mt-8">
   {% set header = 'beverages' %}
   {% include "_atoms/a-text-h3" %}
 </div>
-  <div class="flex flex-row flex-wrap justify-center w-full mt-8">
+  <div class="reveal flex flex-row flex-wrap justify-center w-full mt-8">
   {% for entry in latestBeerMenus.all() %}
     {% set menuLink = entry.newMenu.one() %}
     <a href="{{ menuLink.getUrl }}">
