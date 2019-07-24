@@ -27,7 +27,7 @@
   {% endfor %}
 </div>
 <div class="w-full lg:w-1/3 flex flex-row lg:flex-col">
-  {% for item in craft.instagram.getFeed() %}
+  {% for item in craft.instagram.getFeed()[:5] %}
 <a href="https://www.instagram.com/p/{{ item.shortcode }}/" target="_blank">
   <img src="{{ item.src }}" alt="" class="border-2 border-fc-black rounded-lg "/>
 </a>
