@@ -8,7 +8,7 @@
         <div style="position: relative;">
                 <div class="post-preview" style="float: left;width: 70%;">
                     <h2 class="post-title">
-                        {{ fbEntry.title }}: {{ fbEntry.start_time|date('m.d.y H:i') }} - {{ fbEntry.end_time|date('m.d.y H:i') }}
+                        {{ fbEntry.title }}: {{ fbEntry.start_time|date('medium', 'short') }} - {{ fbEntry.end_time|date('medium', 'short') }}
                     </h2>
                     <p style="padding-bottom: 20px">{{ craft.facebook.decode(fbEntry.content) }}</p>
                     <p class="post-meta" style="bottom: 0;position: absolute; ">
