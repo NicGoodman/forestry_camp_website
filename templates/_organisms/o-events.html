@@ -20,7 +20,7 @@
       <a href="https://www.facebook.com/events/{{ entry.eventFacebookId }}">
         <h3 class="font-GuestCheck text-fc-black text-base lg:text-xl">{{ entry.eventName }}</h3>
       </a>
-      <h4 class="font-GillSansNova text-fc-black font-bold text-sm lg:text-base">{{ entry.eventStartTime|date ('short') }} • {{ entry.eventEndTime }}</h4>
+      <h4 class="font-GillSansNova text-fc-black font-bold text-sm lg:text-base">{{ entry.eventStartTime|date('M d Y - g i A') }} • {{ entry.eventEndTime|date('M d Y - g i A') }}</h4>
       <p class="font-GillSansNova text-fc-black text-base">{{ entry.eventDescription }}</p>
     </div>
   </div>
