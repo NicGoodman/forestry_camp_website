@@ -4,7 +4,7 @@
 {% if image %}
   {% switch block.imageType %}
     {% case "normal" %}
-    <div id="halfImage" class="w-1/2 md:w-1/3 lg:w-1/4 h-full inline float-right">
+    <div id="normal" class="w-1/2 md:w-1/3 lg:w-1/4 h-full inline float-right">
       <img src="{{ image.getUrl }}" class="w-full h-full m-3 rounded-lg border-2 border-fc-black"/>
       {% if block.caption %}
         <p class="font-GillSansNova font-bold text-xs text-fc-black ml-2 mt-1">{{ block.caption }}</p>
@@ -12,7 +12,7 @@
       </div>
     {% case "halfWidth" %}
     <div id="halfImage" class="w-1/2 h-full mt-3 mb-3">
-      <img src="{{ image.getUrl }}" class="w-full h-full rounded-lg border-2 border-fc-black self-center" />
+      <img src="{{ image.getUrl }}" class="w-full h-full rounded-lg border-2 border-fc-black text-center" />
       {% if block.caption %}
         <p class="font-GillSansNova font-bold text-xs text-fc-black ml-2 mt-1">{{ block.caption }}</p>
       {% endif %}
