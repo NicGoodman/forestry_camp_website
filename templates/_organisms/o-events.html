@@ -6,22 +6,14 @@
 <div class="col-lg-8 col-md-10 mx-auto">
     {% for fbEntry in craft.facebook.getEntries.where('internal = 0').andWhere('type = "event"').limit(3).all %}
         <div style="position: relative;">
-            {% if fbEntry.type == 'youtube' %}
-                <h3>    {{ fbEntry.title }}    </h3>
-                <iframe width="560" height="315"
-                        src="https://www.youtube.com/embed{{ fbEntry.video }}?rel=0&amp;controls=0&amp;showinfo=0"
-                        frameborder="0"
-                        allowfullscreen></iframe>
-            {% else %}
                 <div class="post-preview" style="float: left;width: 70%;">
                     <h2 class="post-title">
-                        {{ fbEntry.title ?: 'Beitrag vom '~fbEntry.created|date('d.m.y') }}
+                        {{ fbEntry.title }}: {{ fbEntry.start_time }} - {{ fbEntry.end_time }}
                     </h2>
                     <p style="padding-bottom: 20px">{{ fbEntry.content }}</p>
                     <p class="post-meta" style="bottom: 0;position: absolute; ">
-                        Gepostet auf
                         {% if fbEntry.target %}
-                            <a href="{{ fbEntry.target }}" target="_blank"> Facebook</a>
+                            <a href="{{ fbEntry.target }}" target="_blank"> {{ fbEntry.title }}</a>
                         {% else %}
                             Facebook
                         {% endif %}
