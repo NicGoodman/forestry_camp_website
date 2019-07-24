@@ -17,6 +17,8 @@
                         {% else %}
                             No Link
                         {% endif %}
+                        {# decode the content, because it was encoded with json to stroe to more types of db's #}
+                        am {{ fbEntry.start_time|date('d.m.y') }} um {{ craft.facebook.decode(fbEntry.content) }}
                     </p>
                 </div>
                 <div style="float: left;width: 30%">
