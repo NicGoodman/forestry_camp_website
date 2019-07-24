@@ -1,31 +1,26 @@
 {% block events %}
 {% set image = entry.eventsHeaderImage.one() %}
 {% set header = entry.eventsHeaderText %}
-    <a id="happenings">{% include "_molecules/m-text-header" %}</a>
-    <div class="reveal flex flex-row-reverse border-b border-fc-black w-full md:w-2/3 self-center mt-8">
-      {% set header = 'events' %}
-      {% include "_atoms/a-text-h3" %}
+<a id="happenings">{% include "_molecules/m-text-header" %}</a>
+<div class="reveal flex flex-row-reverse border-b border-fc-black w-full md:w-2/3 self-center mt-8">
+  {% set header = 'events' %}
+  {% include "_atoms/a-text-h3" %}
+</div>
+{% set facebookEvents = craft.entries().section('events').limit(5) %}
+<div id="facebook-feed" class="flex flex-col w-full lg:w-1/2">
+  {% for entry in facebookEvents.all() %}
+  {% set image = entry.eventImage.one() %}
+  <div id="facebook-event" class="flex flex-row ">
+    <a href="https://www.facebook.com/events/{{ entry.eventFacebookId }}">
+      <img src="{{ image.getUrl }}" class="w-1/3 h-auto object-cover border-2 border-fc-black" />
+    </a>
+    <div id="facebook-event-info" class="w-2/3">
+      <a href="https://www.facebook.com/events/{{ entry.eventFacebookId }}">
+        <h3 class="font-GuestCheck text-fc-black text-base lg:text-xl">{{ entry.eventName }}</h3>
+      </a>
+      <h4 class="font-GillSansNova text-fc-black font-bold text-sm lg:text-base">{{ entry.eventStartTime }} • {{ entry.eventEndTime }}</h4>
+      <p class="font-GillSansNova text-fc-black text-base">{{ entry.eventDescription }}</p>
     </div>
-<div id="event-feed" class="flex flex-col w-full lg:w-1/2">
-    {% for fbEntry in craft.facebook.getEntries.where('internal = 0').andWhere('type = "event"').limit(3).all %}
-        <div id="post" class="flex flex-row">
-          <div id="post-image" class="w-1/3">
-              {% if fbEntry.image_src %}
-                  <img class="" src="{{ fbEntry.image_src }}" alt="">
-              {% endif %}
-          </div>
-                <div id="post-content" class="flex flex-col w-2/3">
-                    <h2 id="post-title">
-                        {{ fbEntry.title }}: {{ fbEntry.start_time|datetime('medium') }} - {{ fbEntry.end_time|datetime('medium') }}
-                    </h2>
-                    <p class="">{{ craft.facebook.decode(fbEntry.content) }}</p>
-                        {% if fbEntry.target %}
-                            <a href="{{ fbEntry.target }}" target="_blank"> Read More</a>
-                        {% else %}
-                            No Link
-                        {% endif %}
-                </div>
-            </div>
-    {% endfor %}
+  </div>
 </div>
 {% endblock %}
