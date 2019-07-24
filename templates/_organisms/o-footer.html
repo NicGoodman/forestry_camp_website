@@ -1,12 +1,14 @@
-<div class="flex flex-row">
+<div class="flex flex-row justify-between">
   {% for block in entry.navigationLinks.all() %}
   {% set image = block.navigationImage.one() %}
   {% set header = block.navigationText %}
   {% set anchor = block.navigationAnchor %}
-  <div class="flex flex-col w-10 pb-4 px-2 self-start text-center">
+  <div class="flex flex-col w-20 pb-4 px-2 self-start text-center"  style="filter: invert(100%);">
     <a href="/#{{ anchor }}">
     {% include "_atoms/a-icon-nav" %}
-    {% include "_atoms/a-text-h5" %}
+    <h5 class="reveal font-GuestCheck text-fc-black text-xs">
+      {{ header }}
+    </h5>
     </a>
   </div>
   {% endfor %}
