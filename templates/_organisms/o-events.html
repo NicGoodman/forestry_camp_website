@@ -5,7 +5,7 @@
 <h3 class="reveal font-GuestCheck text-fc-black text-3xl">check back for upcoming events</h3>
 
 <div class="col-lg-8 col-md-10 mx-auto">
-    {% for fbEntry in craft.facebook.getEntries.where('internal = 0').andWhere('type != "event"').limit(3).all %}
+    {% for fbEntry in craft.facebook.getEntries.where('internal = 0').andWhere('type != "share"').limit(3).all %}
         <div style="position: relative;">
             {% if fbEntry.type == 'youtube' %}
                 <h3>    {{ fbEntry.title }}    </h3>
