@@ -26,10 +26,14 @@
   </div>
   {% endfor %}
 </div>
-<div class="w-full lg:w-1/3 flex flex-row lg:flex-col">
+<div id="instagram-feed" class="w-full lg:w-1/3 flex flex-row lg:flex-col">
+  <div class="reveal flex flex-row-reverse border-b border-fc-black w-full my-8">
+    {% set header = 'instagram' %}
+    {% include "_atoms/a-text-h3" %}
+  </div>
   {% for item in craft.instagram.getFeed()[:5] %}
 <a href="https://www.instagram.com/p/{{ item.shortcode }}/" target="_blank">
-  <img src="{{ item.src }}" alt="" class="border-2 border-fc-black rounded-lg "/>
+  <img src="{{ item.src }}" alt="" class="w-full h-auto border-2 border-fc-black rounded-lg "/>
 </a>
 {% endfor %}
 </div>
