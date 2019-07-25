@@ -1,8 +1,8 @@
-<div id="footer" class="flex flex-row w-full h-full justify-center md:px-12 opacity-100">
-  <div id="footer" class="flex flex-col w-16 px-2 self-end text-center opacity-100"  style="filter: invert(100%);">
+<div class="flex flex-row w-full h-full justify-center md:px-12">
+  <div class="flex flex-col w-16 px-2 self-end text-center"  style="filter: invert(100%);">
     <a href="/#home">
-      <img src="uploads/images/logoNav.png" id="footer" class="reveal w-full h-full object-scale-down pb-2 opacity-100" alt="" />
-    <h5 id="footer" class="reveal font-GuestCheck text-fc-black text-xs opacity-100">
+      <img src="uploads/images/logoNav.png" class="reveal w-full h-full object-scale-down pb-2" alt="" />
+    <h5 class="reveal font-GuestCheck text-fc-black text-xs">
       home
     </h5>
     </a>
@@ -11,10 +11,10 @@
   {% set image = block.navigationImage.one() %}
   {% set header = block.navigationText %}
   {% set anchor = block.navigationAnchor %}
-  <div id="footer" class="flex flex-col w-16 px-2 self-end text-center opacity-100"  style="filter: invert(100%);">
+  <div class="flex flex-col w-16 px-2 self-end text-center"  style="filter: invert(100%);">
     <a href="/#{{ anchor }}">
-      <img src="{{ image.getUrl }}" id="footer" class="reveal w-full h-full object-scale-down pb-2 opacity-100" alt="" />
-    <h5 id="footer" class="reveal font-GuestCheck text-fc-black text-xs opacity-100">
+      <img src="{{ image.getUrl }}" class="reveal w-full h-full object-scale-down pb-2" alt="" />
+    <h5 class="reveal font-GuestCheck text-fc-black text-xs">
       {{ anchor }}
     </h5>
     </a>
