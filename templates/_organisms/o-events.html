@@ -32,7 +32,7 @@
     {% set header = 'instagram' %}
     {% include "_atoms/a-text-h3" %}
   </div>
-  <div class="w-full lg:w-2/3 flex flex-row lg:flex-col items-center ">
+  <div class="w-full lg:w-2/3 flex flex-row items-center ">
     {% for item in craft.instagram.getFeed()[:5] %}
     <a href="https://www.instagram.com/p/{{ item.shortcode }}/" target="_blank" class="mx-2">
       <img src="{{ item.src }}" alt="" class="w-24 h-24 object-cover border-2 border-fc-black rounded-lg" />
