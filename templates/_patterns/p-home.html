@@ -31,13 +31,13 @@
     {% block menus %}{% endblock %}
   </section>
 
-  <section id="happenings" class="flex flex-col lg:flex-row px-6 md:px-12 lg:px-24 xl:px-48 h-64 pb-24 h-full">
+  <section id="happenings" class="flex flex-col px-6 md:px-12 lg:px-24 xl:px-48 h-64 pb-24 h-full">
     {% include "_organisms/o-events" %}
     {% block events %}{% endblock %}
   </section>
 </main>
 
-<footer id="footer" class="w-screen h-24 pb-2 flex flex-row sticky bottom-0 border-t-2 border-white lg:invisible" style="background-color: rgba(35, 31, 32, 0.90);">
+<footer id="footer" class="w-screen h-24 pb-4 flex flex-row sticky bottom-0 border-t-2 border-white lg:hidden" style="background-color: rgba(35, 31, 32, 0.90);">
   {% include "_organisms/o-footer" %}
   {% block footer %}{% endblock %}
 </footer>

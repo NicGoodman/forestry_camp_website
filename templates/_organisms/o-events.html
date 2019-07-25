@@ -3,6 +3,7 @@
 {% set header = entry.eventsHeaderText %}
 <a id="happenings">{% include "_molecules/m-text-header" %}</a>
 {% set facebookEvents = craft.entries().section('events').limit(5) %}
+<div id="feeds" class="flex flex-col lg:flex-row">
 <div id="facebook-feed" class="flex flex-col w-full lg:w-2/3 mb-24">
   <div class="reveal flex flex-row-reverse border-b border-fc-black w-full my-8">
     {% set header = 'events' %}
@@ -27,7 +28,7 @@
   {% endfor %}
 </div>
 <div id="instagram-feed" class="w-full lg:w-1/3 flex flex-col">
-  <div class="reveal flex flex-row-reverse border-b border-fc-black w-full my-8">
+  <div class="reveal flex flex-row-reverse border-b border-fc-black w-full my-8 flex-wrap">
     {% set header = 'instagram' %}
     {% include "_atoms/a-text-h3" %}
   </div>
@@ -38,5 +39,6 @@
     </a>
     {% endfor %}
   </div>
+</div>
 </div>
 {% endblock %}
