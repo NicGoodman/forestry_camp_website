@@ -2,30 +2,28 @@
 {% set image = block.image.one().optimizedImages %}
 
 {% if image %}
-  {% switch block.imageType %}
-    {% case "normal" %}
-    <div id="normal" class="reveal w-full md:w-1/2 xl:w-1/4 h-full inline float-left my-3 md:mx-3">
-      <img class="lazyload w-full h-full rounded-lg border-2 border-fc-black" src="{{ image.placeholderBox() }}"
-         data-srcset="{{ image.srcset() }}"
-         sizes="100vw"/>
-      {% if block.caption %}
-        <p class="font-GillSansNova font-bold text-xs text-fc-black ml-2 mt-1">{{ block.caption }}</p>
-      {% endif %}
-      </div>
-    {% case "halfWidth" %}
-    <div id="halfImage" class="reveal w-full md:w-1/2 h-full mt-3 mb-3 container mx-auto text-center">
-      <img src="{{ image.getUrl }}" class="lazyload w-full h-full rounded-lg border-2 border-fc-black" />
-      {% if block.caption %}
-        <p class="font-GillSansNova font-bold text-xs text-fc-black ml-2 mt-1">{{ block.caption }}</p>
-      {% endif %}
-    </div>
-    {% case "fullWidth" %}
-    <div id="fullImage" class="reveal w-full h-full mt-3 mb-3">
-      <img src="{{ image.getUrl }}" class="lazyload w-full h-full rounded-lg border-2 border-fc-black" />
-      {% if block.caption %}
-        <p class="font-GillSansNova font-bold text-xs text-fc-black ml-2 mt-1">{{ block.caption }}</p>
-      {% endif %}
-    </div>
-    {% endswitch %}
+{% switch block.imageType %}
+{% case "normal" %}
+<div id="normal" class="reveal w-full md:w-1/2 xl:w-1/4 h-full inline float-left my-3 md:mx-3">
+  <img class="lazyload w-full h-full rounded-lg border-2 border-fc-black" src="{{ image.placeholderBox() }}" data-srcset="{{ image.srcset() }}" sizes="100vw" />
+  {% if block.caption %}
+  <p class="font-GillSansNova font-bold text-xs text-fc-black ml-2 mt-1">{{ block.caption }}</p>
   {% endif %}
+</div>
+{% case "halfWidth" %}
+<div id="halfImage" class="reveal w-full md:w-1/2 h-full mt-3 mb-3 container mx-auto text-center">
+  <img class="lazyload w-full h-full rounded-lg border-2 border-fc-black" src="{{ image.placeholderBox() }}" data-srcset="{{ image.srcset() }}" sizes="100vw" />
+  {% if block.caption %}
+  <p class="font-GillSansNova font-bold text-xs text-fc-black ml-2 mt-1">{{ block.caption }}</p>
+  {% endif %}
+</div>
+{% case "fullWidth" %}
+<div id="fullImage" class="reveal w-full h-full mt-3 mb-3">
+  <img class="lazyload w-full h-full rounded-lg border-2 border-fc-black" src="{{ image.placeholderBox() }}" data-srcset="{{ image.srcset() }}" sizes="100vw" />
+  {% if block.caption %}
+  <p class="font-GillSansNova font-bold text-xs text-fc-black ml-2 mt-1">{{ block.caption }}</p>
+  {% endif %}
+</div>
+{% endswitch %}
+{% endif %}
 {% endblock %}
