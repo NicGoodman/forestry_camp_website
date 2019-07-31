@@ -1,5 +1,6 @@
 {% block menus %}
 {% set image = entry.menusHeaderImage.one().optimizedImages %}
+{% set altText = entry.menusHeaderImage.one().title %}
 {% set header = entry.menusHeaderText %}
 {% set text = entry.menusTextContent %}
   <a id="menus">{% include "_molecules/m-text-header" %}</a>
