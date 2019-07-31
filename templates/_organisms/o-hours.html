@@ -9,9 +9,8 @@
   <div class="flex flex-col lg:flex-row-reverse">
     <div class="reveal p-4 lg:text-left lg:w-1/2">
       <h3 class="font-GuestCheck text-fc-black text-3xl">hours</h3>
-      <dl>
         {% for day in entry.restaurantHours %}
-        <dt>
+        <div id="hoursList">
           <span class="font-GillSansNova font-bold text-fc-black text-base">{{ day.name }}</span>
           <span class="font-GillSansNova text-fc-black text-base">
           {% if day.isBlank %}
@@ -21,8 +20,7 @@
           {% endif %}
           </span>
         {% endfor %}
-        </dt>
-      </dl>
+        </div>
     </div>
     {% include "_atoms/a-googlemaps-plugin" %}
   </div>
