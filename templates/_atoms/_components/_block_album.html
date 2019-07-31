@@ -10,10 +10,10 @@
   {% endfor %}
 </div>
 {% case "filmStrip" %}
-<div id="filmStrip" class="reveal flex flex-col md:flex-row md:flex-wrap w-full h-full md:h-full justify-center">
+<div id="filmStrip" class="reveal flex flex-col md:flex-row md:flex-wrap w-full h-full justify-center">
   {% for image in block.image.all() %}
     {% set image = image.optimizedImages %}
-  <img class="lazyload w-full h-auto md:w-auto md:max-w-sm md:h-full rounded-lg border-2 border-fc-black my-2 md:mx-2" src="{{ image.placeholderBox() }}" data-srcset="{{ image.srcset() }}" sizes="100vw" />
+  <img class="lazyload w-full h-auto md:w-auto md:h-64 rounded-lg border-2 border-fc-black my-2 md:mx-2" src="{{ image.placeholderBox() }}" data-srcset="{{ image.srcset() }}" sizes="100vw" />
   {% endfor %}
 </div>
 {% endswitch %}
