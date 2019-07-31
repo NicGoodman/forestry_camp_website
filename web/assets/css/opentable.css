@@ -1,5 +1,6 @@
 .ot-title {
       font-family: pacifico, sans-serif !important;
+      font-size: 2em;
 }
 
 .ot-dtp-picker.wide .ot-dtp-picker-form {
@@ -8,6 +9,7 @@
 
 .ot-dtp-picker .ot-dtp-picker-form {
     margin: 0 !important;
+    margin-bottom: 1em !important;
     border: 2px solid #231f20 !important;
     border-radius: 10px !important;
   }
@@ -26,8 +28,8 @@
     border-radius: 0 0 2px 2px !important;
     height: 48px !important;
     margin: 0 !important;
-    /* -webkit-box-shadow: 0 0 0 1px #da3743; */
-    /* box-shadow: 0 0 0 1px #da3743; */
+    -webkit-box-shadow: 0 0 0 0px !important;
+    box-shadow: 0 0 0 0px !important;
     -webkit-appearance: none !important;
 }
 
@@ -35,8 +37,8 @@
     border-radius: 0 0 2px 2px !important;
     height: 48px !important;
     margin: 0 1!important;
-    /* -webkit-box-shadow: 0 0 0 1px #da3743; */
-    /* box-shadow: 0 0 0 1px #da3743; */
+    -webkit-box-shadow: 0 0 0 0px !important;
+    box-shadow: 0 0 0 0px !important;
     -webkit-appearance: none !important;
 }
 
@@ -44,7 +46,7 @@
 .ot-button {
     background-color: #231f20 !important;
     border-radius: 10px !important;
-    /* border: 1px solid #da3743; */
+    border: 0px solid #da3743 !important;
     border-radius: 4px !important;
     color: white !important;
     cursor: pointer !important;
