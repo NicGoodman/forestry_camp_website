@@ -13,7 +13,7 @@
   {% set anchor = block.navigationAnchor %}
   <div class="flex flex-col w-16 px-2 self-end text-center">
     <a href="/#{{ anchor }}">
-      <img src="{{ image.placeholderBox() }}" data-srcset="{{ image.srcset() }}" sizes="100vw" class="lazyload reveal w-full h-full object-scale-down" alt="" />
+      <img src="{{ image.placeholderBox() }}" data-srcset="{{ image.srcset() }}" sizes="100vw" class="lazyload w-full h-full object-scale-down" alt="" />
     <h5 class="font-GuestCheck text-fc-black text-xs"  style="filter: invert(100%);">
       {{ anchor }}
     </h5>
