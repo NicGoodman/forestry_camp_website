@@ -1,5 +1,5 @@
 {% block image %}
-{% set image = block.image.one().optimizedImagesField %}
+{% set image = block.image.one().optimizedImages %}
 
 {% if image %}
   {% switch block.imageType %}
