@@ -2,7 +2,7 @@
 <div class="flex flex-col lg:flex-row justify-between md:justify-start items-end md:items-center content-center h-screen border-b-2 border-fc-black"><a id="home"></a>
   <div class="flex flex-col w-full lg:w-1/2 px-6 pt-6 justify-center lg:max-h-full lg:py-6">
     {% include "_atoms/a-logo" %}
-    <div class="flex flex-row flex-wrap justify-between lg:w-5/6 lg:h-full lg:px-2 lg:max-w-sm self-center">
+    <div class="flex flex-row flex-wrap justify-between lg:h-full lg:px-2 lg:max-w-xs self-center">
       {% for block in entry.navigationLinks.all() %}
       {% set image = block.navigationImage.one() %}
       {% set header = block.navigationText %}
