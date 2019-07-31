@@ -478,16 +478,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.2.7",
+            "version": "3.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "510b08602f51e95cdeffae05b14406ca8a4e7936"
+                "reference": "1239460455a61552510153fd249e48e3c325c27f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/510b08602f51e95cdeffae05b14406ca8a4e7936",
-                "reference": "510b08602f51e95cdeffae05b14406ca8a4e7936",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/1239460455a61552510153fd249e48e3c325c27f",
+                "reference": "1239460455a61552510153fd249e48e3c325c27f",
                 "shasum": ""
             },
             "require": {
@@ -537,6 +537,7 @@
             "require-dev": {
                 "codeception/codeception": "^3.0",
                 "codeception/mockery-module": "^0.3",
+                "codeception/phpunit-wrapper": "^7.7",
                 "codeception/specify": "^0.4",
                 "codeception/verify": "^1.0",
                 "fzaninotto/faker": "^1.8",
@@ -565,7 +566,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2019-07-25T18:54:29+00:00"
+            "time": "2019-07-30T16:49:10+00:00"
         },
         {
             "name": "craftcms/feed-me",

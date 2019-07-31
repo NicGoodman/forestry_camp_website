@@ -3,8 +3,8 @@
 {% set header = entry.eventsHeaderText %}
 <a id="happenings">{% include "_molecules/m-text-header" %}</a>
 {% set facebookEvents = craft.entries().section('events').limit(5) %}
-<div id="feeds" class="flex flex-col lg:flex-row mt-4">
-<div id="facebook-feed" class="flex flex-col w-full lg:w-2/3 mb-24 lg:mb-0">
+<div id="feeds" class="flex flex-col lg:flex-row mt-8 mb-24 lg:mb-0">
+<div id="facebook-feed" class="flex flex-col w-full lg:w-2/3 mb-8">
   <!--<div class="reveal flex flex-row-reverse border-b border-fc-black w-full my-8">
     {% set header = 'events' %}
     {% include "_atoms/a-text-h3" %}
