@@ -1,0 +1,57 @@
+.ot-title {
+      font-family: pacifico, sans-serif;
+}
+
+.ot-dtp-picker.wide .ot-dtp-picker-form {
+    height: 50px;
+}
+
+.ot-dtp-picker .ot-dtp-picker-form {
+    margin: 0;
+    border: 2px solid #231f20;
+    border-radius: 10px;
+  }
+
+  .ot-dtp-picker.wide .ot-dtp-picker-form .ot-dtp-picker-selector + .ot-dtp-picker-selector {
+    border-left: 2px solid #231f20;
+}
+
+.ot-dtp-picker.wide .ot-dtp-picker-form .ot-dtp-picker-button {
+    border-radius: 10px;
+    width: 200px;
+    float: right;
+}
+
+.ot-dtp-picker .ot-dtp-picker-button {
+    border-radius: 0 0 2px 2px;
+    height: 48px;
+    margin: 0 !important;
+    /* -webkit-box-shadow: 0 0 0 1px #da3743; */
+    /* box-shadow: 0 0 0 1px #da3743; */
+    -webkit-appearance: none;
+}
+
+.ot-dtp-picker .ot-dtp-picker-button {
+    border-radius: 0 0 2px 2px;
+    height: 48px;
+    margin: 0 1!important;
+    /* -webkit-box-shadow: 0 0 0 1px #da3743; */
+    /* box-shadow: 0 0 0 1px #da3743; */
+    -webkit-appearance: none;
+}
+
+
+.ot-button {
+    background-color: #231f20;
+    border-radius: 10px;
+    /* border: 1px solid #da3743; */
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    padding: 14px 0 15px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
