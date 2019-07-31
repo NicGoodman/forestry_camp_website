@@ -1,5 +1,5 @@
 {% block hours %}
-{% set image = entry.hoursHeaderImage.one() %}
+{% set image = entry.hoursHeaderImage.one().optimizedImages %}
 {% set header = entry.hoursHeaderText %}
 {% set text = entry.hoursTextContent %}
   <a id="hours">{% include "_molecules/m-text-header" %}</a>

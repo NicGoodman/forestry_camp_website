@@ -1,15 +1,5 @@
 {% extends "_patterns/p-base" %}
 {% block body %}
-<header id="header">
-  {% include "_organisms/o-header" %}
-  {% block header %}{% endblock %}
-</header>
-
-<nav id="navigation">
-  {% include "_organisms/o-navigation" %}
-  {% block navigation %}{% endblock %}
-</nav>
-
 <main id="content" class="flex flex-col">
   <section id="main" class="flex flex-col h-screen w-full">
     {% include "_organisms/o-main" %}
