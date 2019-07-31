@@ -10,7 +10,7 @@
   {% endfor %}
 </div>
 {% case "filmStrip" %}
-<div id="filmStrip" class="reveal flex flex-col md:flex-row w-full h-full inline">
+<div id="filmStrip" class="reveal flex flex-col md:flex-row w-full h-auto">
   {% for image in block.image.all() %}
     {% set image = image.optimizedImages %}
   <img class="lazyload w-full h-full rounded-lg border-2 border-fc-black m-6" src="{{ image.placeholderBox() }}" data-srcset="{{ image.srcset() }}" sizes="100vw" />
