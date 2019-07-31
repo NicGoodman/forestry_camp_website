@@ -31,13 +31,6 @@
   <p class="font-GillSansNova font-bold text-xs text-fc-black ml-2 mt-1">{{ block.caption }}</p>
   {% endif %}
 </div>
-{% case "filmStrip" %}
-<div id="filmStrip" class="reveal w-full md:w-1/2 xl:w-1/4 h-full inline float-left my-3 md:mx-3">
-  <img class="lazyload w-full h-full rounded-lg border-2 border-fc-black" src="{{ image.placeholderBox() }}" data-srcset="{{ image.srcset() }}" sizes="100vw" />
-  {% if block.caption %}
-  <p class="font-GillSansNova font-bold text-xs text-fc-black ml-2 mt-1">{{ block.caption }}</p>
-  {% endif %}
-</div>
 {% endswitch %}
 {% endif %}
 {% endblock %}

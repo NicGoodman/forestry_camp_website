@@ -1,0 +1,21 @@
+{% block album %}
+
+{% if album %}
+{% switch block.imageType %}
+{% case "grid" %}
+<div id="grid" class="reveal w-full md:w-1/2 xl:w-1/4 h-full inline float-left my-3 md:mx-3">
+  {% for asset in block.image.all() %}
+  {% set image = block.image.one().optimizedImages %}
+  <img class="lazyload w-full h-full rounded-lg border-2 border-fc-black" src="{{ image.placeholderBox() }}" data-srcset="{{ image.srcset() }}" sizes="100vw" />
+  {% endfor %}
+</div>
+{% case "filmStrip" %}
+<div id="filmStrip" class="reveal w-full md:w-1/2 xl:w-1/4 h-full inline float-right my-3 md:mx-3">
+  {% for asset in block.image.all() %}
+  {% set image = block.image.one().optimizedImages %}
+  <img class="lazyload w-full h-full rounded-lg border-2 border-fc-black" src="{{ image.placeholderBox() }}" data-srcset="{{ image.srcset() }}" sizes="100vw" />
+  {% endfor %}
+</div>
+{% endswitch %}
+{% endif %}
+{% endblock %}
