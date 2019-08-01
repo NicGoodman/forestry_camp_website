@@ -4,7 +4,14 @@
 }
 .ot-dtp-picker.wide {
   padding: 0 !important;
+  margin: auto !important;
 }
+
+.ot-dtp-picker {
+  padding: 0 !important;
+  margin: auto !important;
+}
+
 .ot-dtp-picker.wide .ot-dtp-picker-form {
     height: 50px !important;
     width: 38em !important;
