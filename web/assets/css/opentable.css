@@ -1,10 +1,28 @@
 .ot-title {
       font-family: Guest Check, sans-serif !important;
+      text-transform: lowercase !important;
 }
 
 .ot-dtp-picker.wide .ot-dtp-picker-form {
     height: 50px !important;
+    width: 38em !important;
 }
+
+.ot-dtp-picker .ot-dtp-picker-selector select {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    height: 100%;
+    width: 0 !important;
+    cursor: pointer;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    color: #2d333f;
+    font-size: 16px;
+    background-color: white;
+    z-index: 2;
+  }
 
 .ot-dtp-picker .ot-dtp-picker-form {
     margin: 0 !important;
@@ -55,4 +73,12 @@
     text-align: center !important;
     text-decoration: none !important;
     width: 100% !important;
+}
+
+.ot-dtp-picker {
+    background: none !important;
+    position: relative;
+    width: 192px;
+    padding: 16px;
+    border-radius: 2px;
 }
