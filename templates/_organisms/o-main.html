@@ -1,9 +1,9 @@
 {% block main %}
 {% set landscape = entry.landscapeImage.one().optimizedImages %}
 <div class="flex flex-col lg:flex-row justify-between md:justify-start items-end md:items-center content-center h-screen border-b-2 border-fc-black"><a id="home"></a>
-  <div class="flex flex-col w-full lg:w-1/2 px-6 mt-6 mb-6 justify-center lg:max-h-full lg:py-6">
+  <div class="flex flex-col w-full lg:w-1/2 px-6 mt-6 justify-center lg:max-h-full lg:py-6">
     {% include "_atoms/a-logo" %}
-    <div class="flex flex-row flex-wrap justify-between lg:h-full lg:px-2 lg:max-w-xs xl:max-w-md self-center flex-shrink">
+    <div class="flex flex-row flex-wrap justify-between lg:h-full lg:px-2 lg:max-w-xs xl:max-w-md self-center">
       {% for block in entry.navigationLinks.all() %}
       {% set image = block.navigationImage.one().optimizedImages %}
       {% set altText = block.navigationImage.one().text %}
@@ -24,6 +24,6 @@
       </a>
     </div>
   </div>
-  <img src="{{ landscape.src() }}" data-srcset="{{ landscape.srcset() }}" sizes="100vw" class="lazyload reveal w-full h-auto flex-shrink object-cover object-top lg:self-end overflow-hidden lg:hidden" alt="Illustration by David P. Seymour of Burial Brewing Company's Forestry Camp bar and restaurant, located in Asheville North Carolina"/>
+  <img src="{{ landscape.src() }}" data-srcset="{{ landscape.srcset() }}" sizes="100vw" class="lazyload reveal w-full h-auto flex-shrink object-cover object-top lg:self-end overflow-hidden lg:hidden mt-6" alt="Illustration by David P. Seymour of Burial Brewing Company's Forestry Camp bar and restaurant, located in Asheville North Carolina"/>
 </div>
 {% endblock %}
