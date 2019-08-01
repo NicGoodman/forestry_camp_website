@@ -92,3 +92,8 @@
     padding: 16px;
     border-radius: 2px;
 }
+
+.ot-dtp-picker.wide .ot-powered-by {
+    background-position: center !important;
+    margin-top: 1em !important;
+}
