@@ -1,6 +1,7 @@
 .ot-title {
       font-family: Guest Check, sans-serif !important;
       text-transform: lowercase !important;
+      text-align: center !important;
 }
 .ot-dtp-picker.wide {
   padding: 0 !important;
@@ -14,6 +15,7 @@
 .ot-dtp-picker.wide .ot-dtp-picker-form {
     height: 50px !important;
     width: 38em !important;
+    margin: auto !important;
 }
 
 .ot-dtp-picker .ot-dtp-picker-selector select {
