@@ -627,6 +627,12 @@ html {
   box-sizing: inherit;
 }
 
+@media screen and ( max-height: 666px ){
+  #mobile-landscape {
+    display: none;
+  }
+}
+
 .container {
   width: 100%;
 }
