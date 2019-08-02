@@ -13,7 +13,7 @@
   {% for entry in facebookEvents.all() %}
   {% set image = entry.eventImage.one().optimizedImages %}
   {% set altText = entry.eventImage.one().title %}
-  <div id="facebook-event" class="flex flex-col md:flex-row w-full items-center">
+  <div id="facebook-event" class="reveal flex flex-col md:flex-row w-full items-center">
     <div class="w-2/3 md:w-1/3 h-auto">
       <a href="https://www.facebook.com/events/{{ entry.eventFacebookId }}" rel="noreferrer">
         <img src="{{ image.placeholderBox() }}" data-srcset="{{ image.srcset() }}" sizes="100vw" class="lazyload w-full h-auto object-cover border-2 border-fc-black rounded-lg" alt="{{ altText }}"/>
@@ -29,7 +29,7 @@
   </div>
   {% endfor %}
 </div>
-<div id="instagram-feed" class="w-full xl:w-1/3 flex flex-col lg:pl-4">
+<div id="instagram-feed" class="reveal w-full xl:w-1/3 flex flex-col lg:pl-4">
   <!--<div class="reveal flex flex-row-reverse border-b border-fc-black w-full my-8">
     {% set header = 'instagram' %}
     {% include "_atoms/a-text-h3" %}
