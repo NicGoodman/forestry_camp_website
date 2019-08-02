@@ -37,7 +37,7 @@
   <div class="w-full flex flex-row justify-center flex-wrap">
     {% for item in craft.instagram.getFeed()[:8] %}
     <a href="https://www.instagram.com/p/{{ item.shortcode }}/" target="_blank" rel="noreferrer" class="m-1">
-      <img src="{{ item.src }}" alt="forestry camp image from instagram" class="reveal w-40 h-40 xl:w-32 xl:w-32 object-cover border-2 border-fc-black rounded-lg" />
+      <img src="{{ item.src }}" alt="forestry camp image from instagram" class="reveal w-40 h-40 xl:w-32 xl:h-32 object-cover border-2 border-fc-black rounded-lg" />
     </a>
     {% endfor %}
   </div>
