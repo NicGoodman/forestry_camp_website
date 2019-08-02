@@ -29,6 +29,10 @@ html {
     #mobile-landscape {
       display: none;
     }
+
+    #main-section-content {
+      justify-content: flex-start;
+    }
 }
 
 @tailwind components;
