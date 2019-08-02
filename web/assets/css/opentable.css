@@ -2,6 +2,7 @@
       font-family: Guest Check, sans-serif !important;
       text-transform: lowercase !important;
       text-align: center !important;
+      display: none !important;
 }
 .ot-dtp-picker.wide {
   padding: 0 !important;
