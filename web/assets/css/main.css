@@ -637,6 +637,12 @@ html {
   }
 }
 
+@media only screen and ( max-width: 320px) {
+  #logo {
+    height: 10rem;
+  }
+}
+
 .container {
   width: 100%;
 }
