@@ -627,6 +627,16 @@ html {
   box-sizing: inherit;
 }
 
+@media only screen and ( max-height: 620px ){
+  #mobile-landscape {
+    display: none;
+  }
+
+  #main-section-content {
+    justify-content: flex-start;
+  }
+}
+
 .container {
   width: 100%;
 }
