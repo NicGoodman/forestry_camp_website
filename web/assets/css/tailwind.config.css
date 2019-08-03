@@ -25,7 +25,7 @@ html {
   box-sizing: inherit;
 }
 
-@media only screen and ( max-height: 620px ){
+@media only screen and ( max-height: 634px ){
     #mobile-landscape {
       display: none;
     }
