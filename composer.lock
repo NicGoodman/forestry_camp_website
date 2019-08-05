@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e71ac429ca51f1f26890a1f6805ffdf",
+    "content-hash": "2a56b75f23152db1cdcad93f77f9e9a3",
     "packages": [
         {
             "name": "cakephp/core",
@@ -223,16 +223,16 @@
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.2.1",
+            "version": "1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "33810d865dd06a674130fceb729b2f279dc79e8c"
+                "reference": "f26a67e397be0e5c00d7c52ec7b5010098e15ce5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/33810d865dd06a674130fceb729b2f279dc79e8c",
-                "reference": "33810d865dd06a674130fceb729b2f279dc79e8c",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/f26a67e397be0e5c00d7c52ec7b5010098e15ce5",
+                "reference": "f26a67e397be0e5c00d7c52ec7b5010098e15ce5",
                 "shasum": ""
             },
             "require": {
@@ -275,7 +275,7 @@
                 "ssl",
                 "tls"
             ],
-            "time": "2019-07-31T08:13:16+00:00"
+            "time": "2019-08-02T09:05:43+00:00"
         },
         {
             "name": "composer/composer",
@@ -1064,6 +1064,57 @@
                 "php"
             ],
             "time": "2019-06-08T11:03:04+00:00"
+        },
+        {
+            "name": "doublesecretagency/craft-cpjs",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doublesecretagency/craft-cpjs.git",
+                "reference": "9c40c3d26978bfb649add7059bd9df3bcb1508c3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doublesecretagency/craft-cpjs/zipball/9c40c3d26978bfb649add7059bd9df3bcb1508c3",
+                "reference": "9c40c3d26978bfb649add7059bd9df3bcb1508c3",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.1.5"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Control Panel JS",
+                "handle": "cp-js",
+                "schemaVersion": "2.0.0",
+                "changelogUrl": "https://raw.githubusercontent.com/doublesecretagency/craft-cpjs/v2/CHANGELOG.md",
+                "class": "doublesecretagency\\cpjs\\CpJs"
+            },
+            "autoload": {
+                "psr-4": {
+                    "doublesecretagency\\cpjs\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Double Secret Agency",
+                    "homepage": "https://www.doublesecretagency.com/plugins"
+                }
+            ],
+            "description": "Add custom JavaScript to your Control Panel.",
+            "keywords": [
+                "Craft",
+                "cms",
+                "cp-js",
+                "craft-plugin",
+                "craftcms",
+                "javascript"
+            ],
+            "time": "2019-06-24T22:25:51+00:00"
         },
         {
             "name": "egulias/email-validator",
