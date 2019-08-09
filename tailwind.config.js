@@ -7,7 +7,7 @@ module.exports = {
         GuestCheck: ['Guest Check', 'sans-serif'],
         Pacifico: ['pacifico', 'sans-serif'],
         GillSansNova: ['gill-sans-nova', 'sans-serif'],
-        FellRomanSc: ['Historical', 'sans-serif'],
+        FellRomanSc: ['Historical', 'serif'],
       },
       colors: {
         fc: {

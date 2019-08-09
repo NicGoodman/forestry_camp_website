@@ -3831,7 +3831,7 @@ html {
 }
 
 .font-FellRomanSc {
-  font-family: Historical, sans-serif;
+  font-family: Historical, serif;
 }
 
 .font-hairline {
@@ -11104,7 +11104,7 @@ html {
   }
 
   .sm\:font-FellRomanSc {
-    font-family: Historical, sans-serif;
+    font-family: Historical, serif;
   }
 
   .sm\:font-hairline {
@@ -18378,7 +18378,7 @@ html {
   }
 
   .md\:font-FellRomanSc {
-    font-family: Historical, sans-serif;
+    font-family: Historical, serif;
   }
 
   .md\:font-hairline {
@@ -25652,7 +25652,7 @@ html {
   }
 
   .lg\:font-FellRomanSc {
-    font-family: Historical, sans-serif;
+    font-family: Historical, serif;
   }
 
   .lg\:font-hairline {
@@ -32926,7 +32926,7 @@ html {
   }
 
   .xl\:font-FellRomanSc {
-    font-family: Historical, sans-serif;
+    font-family: Historical, serif;
   }
 
   .xl\:font-hairline {
