@@ -17,8 +17,8 @@ module.exports = {
           green: '#265529',
           tan: '#9b9472',
           red: '#ae2724',
-          md_gray: '#989898',
-          dk_gray: '#555452',
+          mdgray: '#989898',
+          dkgray: '#555452',
         }
       }
     }
