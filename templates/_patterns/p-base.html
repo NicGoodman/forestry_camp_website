@@ -52,6 +52,25 @@
         window.open("https://maps.google.com/maps?daddr=35.562860,-82.536960&amp;ll=");
     }
   </script>
+  <style>
+.accordion {
+  transition: 0.4s;
+}
+
+.accordion:before {
+  content: '\002B'"\00a0";
+
+}
+
+.active:before {
+  content: "\2212""\00a0";
+}
+
+.panel {
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+</style>
 </head>
 
 <body class="bg-repeat bg-auto bg-top overflow-x-hidden" style="background-image: url({{ siteUrl }}uploads/images/repeatingWeb_BG_SMALL.jpg);">
@@ -59,6 +78,22 @@
   <script>
     ScrollReveal().reveal('.reveal');
   </script>
+  <script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+</script>
 </body>
 
 </html>

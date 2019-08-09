@@ -1,0 +1,10 @@
+{% block text %}
+<p class="reveal font-FellRomanSc font-normal text-base">
+  {% if block.heading |length %}
+  <h3 id="heading" class="ont-FellRomanSc font-bold text-xl text-white pb-4">
+    {{ block.heading }}
+  </h3>
+  {% endif %}
+  {{ block.text }}
+</p>
+{% endblock %}
