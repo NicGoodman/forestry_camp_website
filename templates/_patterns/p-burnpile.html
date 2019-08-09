@@ -98,7 +98,7 @@
 
   <section id="info" class="flex flex-col">
     {% for block in entry.bpPageContent.all() %}
-    {% include ('_atoms/components/burnpile/_block_' ~ block.type.handle) %}
+    {% include (siteUrl ~ '_atoms/components/burnpile/_block_' ~ block.type.handle) %}
     {% endfor %}
   </section>
 </main>
