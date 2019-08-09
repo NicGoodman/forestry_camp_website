@@ -7,6 +7,7 @@ module.exports = {
         GuestCheck: ['Guest Check', 'sans-serif'],
         Pacifico: ['pacifico', 'sans-serif'],
         GillSansNova: ['gill-sans-nova', 'sans-serif'],
+        FellRomanSc: ['Historical', 'sans-serif'],
       },
       colors: {
         fc: {
@@ -16,6 +17,8 @@ module.exports = {
           green: '#265529',
           tan: '#9b9472',
           red: '#ae2724',
+          md_gray: '#989898',
+          dk_gray: '#555452',
         }
       }
     }
