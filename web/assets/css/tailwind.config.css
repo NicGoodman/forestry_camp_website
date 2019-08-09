@@ -19,8 +19,8 @@
 
 @font-face {
   font-family: 'Historical';
-  src: url('../fonts/Historical-FellTypeRomanSC.woff2'),
-       url('../fonts/Historical-FellTypeRomanSC.woff');
+  src: url('../fonts/Historical-FellTypeRomanSC.woff2') format('woff2'),
+       url('../fonts/Historical-FellTypeRomanSC.woff') format('woff');
   font-weight: 500;
   font-style: normal;
 }
