@@ -59,7 +59,7 @@
     {% for block in entry.offTopicSchedule.all() %}
     <div id="off-topic-schedule-entry" class="flex flex-col w-full p-8">
       <div id="off-topic-schedule-entry-content" class="flex flex-row border-t border-fc-dkgray p-6">
-        <div id="entry-time" class="text-center text-6xl font-bold text-fc-mdgray font-FellRomanSc self-center pr-3">
+        <div id="entry-time" class="text-center text-3xl font-bold text-fc-mdgray font-FellRomanSc self-center pr-3">
           {{ block.entryTime }}
         </div>
         <div id="ticket-info" class="flex flex-col">
@@ -80,16 +80,16 @@
     {% for block in entry.stageSchedule.all() %}
     <div id="off-topic-schedule-entry" class="flex flex-col w-full p-8">
       <div id="off-topic-schedule-entry-content" class="flex flex-row border-t border-fc-dkgray p-6">
-        <div id="entry-time" class="text-center text-6xl font-bold text-fc-mdgray font-FellRomanSc self-center pr-3">
+        <div id="entry-time" class="text-center text-3xl font-bold text-fc-mdgray font-FellRomanSc self-center pr-3">
           {{ block.entryTime }}
         </div>
         <div id="ticket-info" class="flex flex-col">
-          <div id="entry-title" class="w-full text-left text-3xl font-bold text-fc-mdgray font-FellRomanSc">
+          <div id="entry-title" class="w-full text-left text-3xl font-bold text-fc-mdgray font-FellRomanSc self-center">
             {{ block.entryTitle }}
           </div>
-          <div id="entry-description" class="w-full font-base font-normal font-FellRomanSc">
+          <!--<div id="entry-description" class="w-full font-base font-normal font-FellRomanSc">
             {{ block.entryDescription }}
-          </div>
+          </div>-->
         </div>
       </div>
     </div>
