@@ -63,7 +63,7 @@
           {{ block.entryTime }}
         </div>
         <div id="ticket-info" class="flex flex-col">
-          <div id="entry-title" class="w-full text-center text-3xl font-bold text-fc-mdgray font-FellRomanSc">
+          <div id="entry-title" class="w-full text-left text-3xl font-bold text-fc-mdgray font-FellRomanSc">
             {{ block.entryTitle }}
           </div>
           <div id="entry-description" class="w-full font-base font-normal font-FellRomanSc">
@@ -84,7 +84,7 @@
           {{ block.entryTime }}
         </div>
         <div id="ticket-info" class="flex flex-col">
-          <div id="entry-title" class="w-full text-center text-3xl font-bold text-fc-mdgray font-FellRomanSc">
+          <div id="entry-title" class="w-full text-left text-3xl font-bold text-fc-mdgray font-FellRomanSc">
             {{ block.entryTitle }}
           </div>
           <div id="entry-description" class="w-full font-base font-normal font-FellRomanSc">
@@ -96,7 +96,7 @@
     {% endfor %}
   </section>
 
-  <section id="info" class="flex flex-col">
+  <section id="info" class="flex flex-col h-full">
     {% for block in entry.bpPageContent.all() %}
     {% include ('_atoms/_components/burnpile/_block_' ~ block.type.handle) %}
     {% endfor %}
