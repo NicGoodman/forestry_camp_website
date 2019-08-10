@@ -7,10 +7,10 @@
   <section id="intro" class="flex flex-col md:flex-row">
     {% set image = entry.introImage.one().optimizedImages %}
     {% set altText = entry.introImage.one().title %}
-    <div id="intro-image" class="w-full md:w-1/2 lg:w-1/3">
+    <div id="intro-image" class="self-center md:self-start w-2/3 md:w-1/2 lg:w-1/3">
       <img src="{{ image.placeholderBox() }}" data-srcset="{{ image.srcset() }}" sizes="100vw" alt="{{ altText }}" class="lazyload w-full" />
     </div>
-    <div id="intro-info" class="w-full md:w-1/2 lg:w-2/3 font-FellRomanSc text-right self-center">
+    <div id="intro-info" class="w-full md:w-1/2 lg:w-2/3 font-FellRomanSc text-center md:text-right self-center">
       {{ entry.introInfo }}
     </div>
   </section>
@@ -59,7 +59,7 @@
     {% for block in entry.offTopicSchedule.all() %}
     <div id="off-topic-schedule-entry" class="flex flex-col w-full p-8">
       <div id="off-topic-schedule-entry-content" class="flex flex-col md:flex-row border-t border-fc-dkgray p-6">
-        <div id="entry-time" class="text-left md:text-center text-3xl font-bold text-fc-mdgray font-FellRomanSc self-center pr-3">
+        <div id="entry-time" class="text-left md:text-center text-3xl font-bold text-fc-mdgray font-FellRomanSc self-start md:self-center pr-3">
           {{ block.entryTime }}
         </div>
         <div id="ticket-info" class="flex flex-col">
@@ -84,7 +84,7 @@
           {{ block.entryTime }}
         </div>
         <div id="ticket-info" class="flex flex-col">
-          <div id="entry-title" class="w-full text-left text-xl font-bold text-fc-mdgray font-FellRomanSc self-center align-middle">
+          <div id="entry-title" class="w-full text-left text-xl font-bold text-fc-mdgray font-FellRomanSc self-center align-text-bottom">
             {{ block.entryTitle }}
           </div>
           <!--<div id="entry-description" class="w-full font-base font-normal font-FellRomanSc">
