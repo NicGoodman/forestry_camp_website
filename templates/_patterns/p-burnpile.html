@@ -53,7 +53,7 @@
   </section>
 
   <section id="schedules" class="flex flex-col">
-    <h3 id="heading" class="font-FellRomanSc font-bold text-xl text-white pb-4">
+    <h3 id="heading" class="font-FellRomanSc font-bold text-2xl text-white pb-4">
       OFF TOPIC SCHEDULE FOR VIP TICKET HOLDERS
     </h3>
     {% for block in entry.offTopicSchedule.all() %}
@@ -63,7 +63,7 @@
           {{ block.entryTime }}
         </div>
         <div id="ticket-info" class="flex flex-col">
-          <div id="entry-title" class="w-full text-left text-3xl font-bold text-fc-mdgray font-FellRomanSc">
+          <div id="entry-title" class="w-full text-left text-xl font-bold text-fc-mdgray font-FellRomanSc">
             {{ block.entryTitle }}
           </div>
           <div id="entry-description" class="w-full font-base font-normal font-FellRomanSc">
@@ -74,7 +74,7 @@
     </div>
     {% endfor %}
 
-    <h3 id="heading" class="font-FellRomanSc font-bold text-xl text-white pb-4">
+    <h3 id="heading" class="font-FellRomanSc font-bold text-2xl text-white pb-4">
       STAGE SCHEDULE
     </h3>
     {% for block in entry.stageSchedule.all() %}
@@ -84,7 +84,7 @@
           {{ block.entryTime }}
         </div>
         <div id="ticket-info" class="flex flex-col">
-          <div id="entry-title" class="w-full text-left text-3xl font-bold text-fc-mdgray font-FellRomanSc self-center">
+          <div id="entry-title" class="w-full text-left text-xl font-bold text-fc-mdgray font-FellRomanSc self-center">
             {{ block.entryTitle }}
           </div>
           <!--<div id="entry-description" class="w-full font-base font-normal font-FellRomanSc">
@@ -96,13 +96,13 @@
     {% endfor %}
   </section>
 
-  <section id="info" class="flex flex-col h-full">
+  <section id="info" class="flex flex-col h-full font-FellRomanSc">
     {% for block in entry.bpPageContent.all() %}
     {% include ('_atoms/_components/burnpile/_block_' ~ block.type.handle) %}
     {% endfor %}
   </section>
 </main>
 
-<footer>
+<footer class="h-24">
 </footer>
 {% endblock %}
