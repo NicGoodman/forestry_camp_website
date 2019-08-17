@@ -9,7 +9,8 @@
     "nystudio107/craft-imageoptimize": "^1.6",
     "nystudio107/craft-seomatic": "^3.2",
     "superbig/craft3-templateselect": "^2.0",
-    "vlucas/phpdotenv": "^2.4.0"
+    "vlucas/phpdotenv": "^2.4.0",
+    "verbb/default-dashboard": "^1.0.5"
   },
   "autoload": {
     "psr-4": {
