@@ -53,7 +53,7 @@
   </section>
 
   <section id="schedules" class="flex flex-col">
-    <h3 id="heading" class="font-FellRomanSc font-bold text-3xl text-fc-rust pb-4">
+    <h3 id="heading" class="font-FellRomanSc font-bold text-3xl text-fc-rust pb-4 px-2 md:px-0">
       OFF TOPIC SCHEDULE
     </h3>
     {% for block in entry.offTopicSchedule.all() %}
@@ -74,7 +74,7 @@
     </div>
     {% endfor %}
 
-    <h3 id="heading" class="font-FellRomanSc font-bold text-3xl text-fc-rust pb-4">
+    <h3 id="heading" class="font-FellRomanSc font-bold text-3xl text-fc-rust pb-4 px-2 md:px-0">
       STAGE SCHEDULE
     </h3>
     {% for block in entry.stageSchedule.all() %}
@@ -98,37 +98,37 @@
 
   <section id="food-info" class="flex flex-col h-full font-FellRomanSc mt-8">
     <a id="food">
-    <h3 id="heading" class="font-FellRomanSc font-bold text-3xl text-fc-rust ">
+    <h3 id="heading" class="font-FellRomanSc font-bold text-3xl text-fc-rust px-2 md:px-0">
       FOOD
     </h3>
     </a>
-    <p class="font-FellRomanSc font-bold text-base text-fc-mdgray">
+    <p class="font-FellRomanSc font-bold text-base text-fc-mdgray px-4 md:px-2">
       {{ entry.foodInfo }}
     </p>
   </section>
 
   <section id="beer-releases" class="flex flex-col h-full font-FellRomanSc mt-8">
     <a id="beer-release-info">
-    <h3 id="heading" class="font-FellRomanSc font-bold text-3xl text-fc-rust">BEER RELEASES & PICK UP INFORMATION
+    <h3 id="heading" class="font-FellRomanSc font-bold text-3xl text-fc-rust px-2 md:px-0">BEER RELEASES & PICK UP INFORMATION
     </h3>
     </a>
-    <p class="font-FellRomanSc font-bold text-base text-fc-mdgray">
+    <p class="font-FellRomanSc font-bold text-base text-fc-mdgray px-4 md:px-2">
       {{ entry.beerReleaseInfo }}
     </p>
   </section>
 
   <section id="volunteer-info" class="flex flex-col h-full font-FellRomanSc mt-8">
     <a id="volunteer-info">
-    <h3 id="heading" class="font-FellRomanSc font-bold text-3xl text-fc-rust">VOLUNTEER OPPORTUNITIES
+    <h3 id="heading" class="font-FellRomanSc font-bold text-3xl text-fc-rust px-2 md:px-0">VOLUNTEER OPPORTUNITIES
     </h3>
     </a>
-    <p class="font-FellRomanSc font-bold text-base text-fc-mdgray">
+    <p class="font-FellRomanSc font-bold text-base text-fc-mdgray px-4 md:px-2">
       {{ entry.volunteerOpportunitiesInfo }}
     </p>
   </section>
 
   <section id="other-questions" class="flex flex-col h-full font-FellRomanSc mt-8">
-    <h3 id="heading" class="font-FellRomanSc font-bold text-3xl text-fc-rust">
+    <h3 id="heading" class="font-FellRomanSc font-bold text-3xl text-fc-rust px-2 md:px-0">
       <a id="faq">OTHER QUESTIONS</a>
     </h3>
     {% for block in entry.faqContent.all() %}
