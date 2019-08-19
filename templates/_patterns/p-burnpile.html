@@ -74,7 +74,7 @@
     </div>
     {% endfor %}
 
-    <h3 id="heading" class="font-FellRomanSc font-bold text-2xl text-fc-fc-rust pb-4">
+    <h3 id="heading" class="font-FellRomanSc font-bold text-2xl text-fc-rust pb-4">
       STAGE SCHEDULE
     </h3>
     {% for block in entry.stageSchedule.all() %}
@@ -96,20 +96,20 @@
     {% endfor %}
   </section>
 
-  <section id="food-info" class="flex flex-col h-full font-FellRomanSc">
+  <section id="food-info" class="flex flex-col h-full font-FellRomanSc mt-4">
     <a id="food">
-    <h3 id="heading" class="font-FellRomanSc font-bold text-2xl text-fc-rust pb-4">
+    <h3 id="heading" class="font-FellRomanSc font-bold text-2xl text-fc-rust ">
       FOOD
     </h3>
     </a>
-    <p class="font-FellRomanSc font-bold text-base text-fc-mdgray pb-4">
+    <p class="font-FellRomanSc font-bold text-base text-fc-mdgray">
       {{ entry.foodInfo }}
     </p>
   </section>
 
-  <section id="beer-releases" class="flex flex-col h-full font-FellRomanSc">
+  <section id="beer-releases" class="flex flex-col h-full font-FellRomanSc mt-4">
     <a id="beer-release-info">
-    <h3 id="heading" class="font-FellRomanSc font-bold text-2xl text-fc-rust pb-4">BEER RELEASES & PICK UP INFORMATION
+    <h3 id="heading" class="font-FellRomanSc font-bold text-2xl text-fc-rust">BEER RELEASES & PICK UP INFORMATION
     </h3>
     </a>
     <p class="font-FellRomanSc font-bold text-base text-fc-mdgray pb-4">
@@ -117,9 +117,9 @@
     </p>
   </section>
 
-  <section id="volunteer-info" class="flex flex-col h-full font-FellRomanSc">
+  <section id="volunteer-info" class="flex flex-col h-full font-FellRomanSc mt-4">
     <a id="volunteer-info">
-    <h3 id="heading" class="font-FellRomanSc font-bold text-2xl text-fc-rust pb-4">VOLUNTEER OPPORTUNITIES
+    <h3 id="heading" class="font-FellRomanSc font-bold text-2xl text-fc-rust">VOLUNTEER OPPORTUNITIES
     </h3>
     </a>
     <p class="font-FellRomanSc font-bold text-base text-fc-mdgray pb-4">
@@ -127,8 +127,8 @@
     </p>
   </section>
 
-  <section id="other-questions" class="flex flex-col h-full font-FellRomanSc">
-    <h3 id="heading" class="font-FellRomanSc font-bold text-2xl text-fc-rust pt-4">
+  <section id="other-questions" class="flex flex-col h-full font-FellRomanSc mt-4">
+    <h3 id="heading" class="font-FellRomanSc font-bold text-2xl text-fc-rust">
       <a id="faq">OTHER QUESTIONS</a>
     </h3>
     {% for block in entry.faqContent.all() %}
