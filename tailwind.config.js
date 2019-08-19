@@ -19,6 +19,7 @@ module.exports = {
           red: '#ae2724',
           mdgray: '#989898',
           dkgray: '#555452',
+          rust: '#995b27',
         }
       }
     }

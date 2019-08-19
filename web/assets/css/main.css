@@ -1104,6 +1104,10 @@ html {
   background-color: #555452;
 }
 
+.bg-fc-rust {
+  background-color: #995b27;
+}
+
 .hover\:bg-transparent:hover {
   background-color: transparent;
 }
@@ -1508,6 +1512,10 @@ html {
   background-color: #555452;
 }
 
+.hover\:bg-fc-rust:hover {
+  background-color: #995b27;
+}
+
 .focus\:bg-transparent:focus {
   background-color: transparent;
 }
@@ -1910,6 +1918,10 @@ html {
 
 .focus\:bg-fc-dkgray:focus {
   background-color: #555452;
+}
+
+.focus\:bg-fc-rust:focus {
+  background-color: #995b27;
 }
 
 .bg-bottom {
@@ -2396,6 +2408,10 @@ html {
   border-color: #555452;
 }
 
+.border-fc-rust {
+  border-color: #995b27;
+}
+
 .hover\:border-transparent:hover {
   border-color: transparent;
 }
@@ -2800,6 +2816,10 @@ html {
   border-color: #555452;
 }
 
+.hover\:border-fc-rust:hover {
+  border-color: #995b27;
+}
+
 .focus\:border-transparent:focus {
   border-color: transparent;
 }
@@ -3202,6 +3222,10 @@ html {
 
 .focus\:border-fc-dkgray:focus {
   border-color: #555452;
+}
+
+.focus\:border-fc-rust:focus {
+  border-color: #995b27;
 }
 
 .rounded-none {
@@ -6693,6 +6717,10 @@ html {
   color: #555452;
 }
 
+.text-fc-rust {
+  color: #995b27;
+}
+
 .hover\:text-transparent:hover {
   color: transparent;
 }
@@ -7097,6 +7125,10 @@ html {
   color: #555452;
 }
 
+.hover\:text-fc-rust:hover {
+  color: #995b27;
+}
+
 .focus\:text-transparent:focus {
   color: transparent;
 }
@@ -7499,6 +7531,10 @@ html {
 
 .focus\:text-fc-dkgray:focus {
   color: #555452;
+}
+
+.focus\:text-fc-rust:focus {
+  color: #995b27;
 }
 
 .text-xs {
@@ -8377,6 +8413,10 @@ html {
     background-color: #555452;
   }
 
+  .sm\:bg-fc-rust {
+    background-color: #995b27;
+  }
+
   .sm\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -8781,6 +8821,10 @@ html {
     background-color: #555452;
   }
 
+  .sm\:hover\:bg-fc-rust:hover {
+    background-color: #995b27;
+  }
+
   .sm\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -9183,6 +9227,10 @@ html {
 
   .sm\:focus\:bg-fc-dkgray:focus {
     background-color: #555452;
+  }
+
+  .sm\:focus\:bg-fc-rust:focus {
+    background-color: #995b27;
   }
 
   .sm\:bg-bottom {
@@ -9669,6 +9717,10 @@ html {
     border-color: #555452;
   }
 
+  .sm\:border-fc-rust {
+    border-color: #995b27;
+  }
+
   .sm\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -10073,6 +10125,10 @@ html {
     border-color: #555452;
   }
 
+  .sm\:hover\:border-fc-rust:hover {
+    border-color: #995b27;
+  }
+
   .sm\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -10475,6 +10531,10 @@ html {
 
   .sm\:focus\:border-fc-dkgray:focus {
     border-color: #555452;
+  }
+
+  .sm\:focus\:border-fc-rust:focus {
+    border-color: #995b27;
   }
 
   .sm\:rounded-none {
@@ -13966,6 +14026,10 @@ html {
     color: #555452;
   }
 
+  .sm\:text-fc-rust {
+    color: #995b27;
+  }
+
   .sm\:hover\:text-transparent:hover {
     color: transparent;
   }
@@ -14370,6 +14434,10 @@ html {
     color: #555452;
   }
 
+  .sm\:hover\:text-fc-rust:hover {
+    color: #995b27;
+  }
+
   .sm\:focus\:text-transparent:focus {
     color: transparent;
   }
@@ -14772,6 +14840,10 @@ html {
 
   .sm\:focus\:text-fc-dkgray:focus {
     color: #555452;
+  }
+
+  .sm\:focus\:text-fc-rust:focus {
+    color: #995b27;
   }
 
   .sm\:text-xs {
@@ -15651,6 +15723,10 @@ html {
     background-color: #555452;
   }
 
+  .md\:bg-fc-rust {
+    background-color: #995b27;
+  }
+
   .md\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -16055,6 +16131,10 @@ html {
     background-color: #555452;
   }
 
+  .md\:hover\:bg-fc-rust:hover {
+    background-color: #995b27;
+  }
+
   .md\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -16457,6 +16537,10 @@ html {
 
   .md\:focus\:bg-fc-dkgray:focus {
     background-color: #555452;
+  }
+
+  .md\:focus\:bg-fc-rust:focus {
+    background-color: #995b27;
   }
 
   .md\:bg-bottom {
@@ -16943,6 +17027,10 @@ html {
     border-color: #555452;
   }
 
+  .md\:border-fc-rust {
+    border-color: #995b27;
+  }
+
   .md\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -17347,6 +17435,10 @@ html {
     border-color: #555452;
   }
 
+  .md\:hover\:border-fc-rust:hover {
+    border-color: #995b27;
+  }
+
   .md\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -17749,6 +17841,10 @@ html {
 
   .md\:focus\:border-fc-dkgray:focus {
     border-color: #555452;
+  }
+
+  .md\:focus\:border-fc-rust:focus {
+    border-color: #995b27;
   }
 
   .md\:rounded-none {
@@ -21240,6 +21336,10 @@ html {
     color: #555452;
   }
 
+  .md\:text-fc-rust {
+    color: #995b27;
+  }
+
   .md\:hover\:text-transparent:hover {
     color: transparent;
   }
@@ -21644,6 +21744,10 @@ html {
     color: #555452;
   }
 
+  .md\:hover\:text-fc-rust:hover {
+    color: #995b27;
+  }
+
   .md\:focus\:text-transparent:focus {
     color: transparent;
   }
@@ -22046,6 +22150,10 @@ html {
 
   .md\:focus\:text-fc-dkgray:focus {
     color: #555452;
+  }
+
+  .md\:focus\:text-fc-rust:focus {
+    color: #995b27;
   }
 
   .md\:text-xs {
@@ -22925,6 +23033,10 @@ html {
     background-color: #555452;
   }
 
+  .lg\:bg-fc-rust {
+    background-color: #995b27;
+  }
+
   .lg\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -23329,6 +23441,10 @@ html {
     background-color: #555452;
   }
 
+  .lg\:hover\:bg-fc-rust:hover {
+    background-color: #995b27;
+  }
+
   .lg\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -23731,6 +23847,10 @@ html {
 
   .lg\:focus\:bg-fc-dkgray:focus {
     background-color: #555452;
+  }
+
+  .lg\:focus\:bg-fc-rust:focus {
+    background-color: #995b27;
   }
 
   .lg\:bg-bottom {
@@ -24217,6 +24337,10 @@ html {
     border-color: #555452;
   }
 
+  .lg\:border-fc-rust {
+    border-color: #995b27;
+  }
+
   .lg\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -24621,6 +24745,10 @@ html {
     border-color: #555452;
   }
 
+  .lg\:hover\:border-fc-rust:hover {
+    border-color: #995b27;
+  }
+
   .lg\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -25023,6 +25151,10 @@ html {
 
   .lg\:focus\:border-fc-dkgray:focus {
     border-color: #555452;
+  }
+
+  .lg\:focus\:border-fc-rust:focus {
+    border-color: #995b27;
   }
 
   .lg\:rounded-none {
@@ -28514,6 +28646,10 @@ html {
     color: #555452;
   }
 
+  .lg\:text-fc-rust {
+    color: #995b27;
+  }
+
   .lg\:hover\:text-transparent:hover {
     color: transparent;
   }
@@ -28918,6 +29054,10 @@ html {
     color: #555452;
   }
 
+  .lg\:hover\:text-fc-rust:hover {
+    color: #995b27;
+  }
+
   .lg\:focus\:text-transparent:focus {
     color: transparent;
   }
@@ -29320,6 +29460,10 @@ html {
 
   .lg\:focus\:text-fc-dkgray:focus {
     color: #555452;
+  }
+
+  .lg\:focus\:text-fc-rust:focus {
+    color: #995b27;
   }
 
   .lg\:text-xs {
@@ -30199,6 +30343,10 @@ html {
     background-color: #555452;
   }
 
+  .xl\:bg-fc-rust {
+    background-color: #995b27;
+  }
+
   .xl\:hover\:bg-transparent:hover {
     background-color: transparent;
   }
@@ -30603,6 +30751,10 @@ html {
     background-color: #555452;
   }
 
+  .xl\:hover\:bg-fc-rust:hover {
+    background-color: #995b27;
+  }
+
   .xl\:focus\:bg-transparent:focus {
     background-color: transparent;
   }
@@ -31005,6 +31157,10 @@ html {
 
   .xl\:focus\:bg-fc-dkgray:focus {
     background-color: #555452;
+  }
+
+  .xl\:focus\:bg-fc-rust:focus {
+    background-color: #995b27;
   }
 
   .xl\:bg-bottom {
@@ -31491,6 +31647,10 @@ html {
     border-color: #555452;
   }
 
+  .xl\:border-fc-rust {
+    border-color: #995b27;
+  }
+
   .xl\:hover\:border-transparent:hover {
     border-color: transparent;
   }
@@ -31895,6 +32055,10 @@ html {
     border-color: #555452;
   }
 
+  .xl\:hover\:border-fc-rust:hover {
+    border-color: #995b27;
+  }
+
   .xl\:focus\:border-transparent:focus {
     border-color: transparent;
   }
@@ -32297,6 +32461,10 @@ html {
 
   .xl\:focus\:border-fc-dkgray:focus {
     border-color: #555452;
+  }
+
+  .xl\:focus\:border-fc-rust:focus {
+    border-color: #995b27;
   }
 
   .xl\:rounded-none {
@@ -35788,6 +35956,10 @@ html {
     color: #555452;
   }
 
+  .xl\:text-fc-rust {
+    color: #995b27;
+  }
+
   .xl\:hover\:text-transparent:hover {
     color: transparent;
   }
@@ -36192,6 +36364,10 @@ html {
     color: #555452;
   }
 
+  .xl\:hover\:text-fc-rust:hover {
+    color: #995b27;
+  }
+
   .xl\:focus\:text-transparent:focus {
     color: transparent;
   }
@@ -36594,6 +36770,10 @@ html {
 
   .xl\:focus\:text-fc-dkgray:focus {
     color: #555452;
+  }
+
+  .xl\:focus\:text-fc-rust:focus {
+    color: #995b27;
   }
 
   .xl\:text-xs {
