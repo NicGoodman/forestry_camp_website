@@ -127,7 +127,7 @@
     <h3 id="heading" class="font-FellRomanSc font-bold text-2xl text-rust pb-4">
       <a id="faq">Other Questions</a>
     </h3>
-    {% for block in entry.bpPageContent.all() %}
+    {% for block in entry.faqContent.all() %}
     {% include ('_atoms/_components/burnpile/_block_' ~ block.type.handle) %}
     {% endfor %}
   </section>
