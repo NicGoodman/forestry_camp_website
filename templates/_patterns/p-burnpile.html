@@ -4,6 +4,15 @@
 </header>
 
 <main id="content" class="flex flex-col text-white px-3 md:px-12 lg:px-20 xl:px-32 pt-8 min-h-screen" style="background-color: rgba(0, 0, 0, 0.85);">
+  <nav id="navigation" class="flex flex-row flex-wrap font-base font-normal font-FellRomanSc hover:text-fc-rust">
+    <a href="tickets">TICKETS</a>
+    <a href="off-topic-schedule">OFF TOPIC SCHEDULE</a>
+    <a href="stage-schedule">STAGE SCHEDULE</a>
+    <a href="food">FOOD</a>
+    <a href="beer-release-info">BEER RELEASES & PICK UP INFORMATION</a>
+    <a href="volunteer-info">VOLUNTEER OPPORTUNITIES</a>
+    <a href="faq">OTHER QUESTIONS</a>
+  </nav>
   <section id="intro" class="flex flex-col md:flex-row">
     {% set image = entry.introImage.one().optimizedImages %}
     {% set altText = entry.introImage.one().title %}
@@ -15,7 +24,8 @@
     </div>
   </section>
 
-  <section id="tickets" class="flex flex-col justify-center md:flex-wrap md:flex-row">
+  <section id="ticket-levels" class="flex flex-col justify-center md:flex-wrap md:flex-row">
+    <a id="tickets"></a>
     {% for block in entry.ticketLevels.all() %}
     {% switch block.cardType %}
     {% case "small" %}
@@ -53,9 +63,11 @@
   </section>
 
   <section id="schedules" class="flex flex-col">
+    <a id="off-topic-schedule">
     <h3 id="heading" class="font-FellRomanSc font-bold text-3xl text-fc-rust pb-4 px-2 md:px-0">
       OFF TOPIC SCHEDULE
     </h3>
+    </a>
     {% for block in entry.offTopicSchedule.all() %}
     <div id="off-topic-schedule-entry" class="flex flex-col w-full p-8">
       <div id="off-topic-schedule-entry-content" class="flex flex-col md:flex-row border-t border-fc-dkgray p-6">
@@ -74,9 +86,11 @@
     </div>
     {% endfor %}
 
+    <a id="stage-schedule">
     <h3 id="heading" class="font-FellRomanSc font-bold text-3xl text-fc-rust pb-4 px-2 md:px-0">
       STAGE SCHEDULE
     </h3>
+    </a>
     {% for block in entry.stageSchedule.all() %}
     <div id="off-topic-schedule-entry" class="flex flex-col w-full px-8 pt-8">
       <div id="off-topic-schedule-entry-content" class="flex flex-col md:flex-row border-t border-fc-dkgray p-6">
