@@ -24,7 +24,7 @@
         <h3 class="font-GuestCheck text-fc-black text-base lg:text-xl">{{ entry.eventName|lower }}</h3>
       </a>
       <h4 class="font-GillSansNova text-fc-black font-bold text-sm lg:text-base">{{ entry.eventStartTime|date('M d Y g:iA') }} • {{ entry.eventEndTime|date('M d Y g:iA') }}</h4>
-      <p class="font-GillSansNova text-fc-black text-base">{{ entry.eventDescription }}</p>
+      <div class="font-GillSansNova text-fc-black text-base">{{ entry.eventDescription }}</div>
     </div>
   </div>
   {% endfor %}
