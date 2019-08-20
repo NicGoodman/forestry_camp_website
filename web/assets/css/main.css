@@ -628,6 +628,17 @@ video {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Historical-Roman';
+
+  src: url('../fonts/Historical-FellTypeRoman.woff2') format('woff2'),
+        url('../fonts/Historical-FellTypeRoman.woff') format('woff');
+
+  font-weight: 500;
+
+  font-style: normal;
+}
+
 /* apply a natural box layout model to all elements, but allowing components to change */
 
 html {
@@ -3856,6 +3867,10 @@ html {
 
 .font-FellRomanSc {
   font-family: Historical, serif;
+}
+
+.font-FellRoman {
+  font-family: Historical-Roman, serif;
 }
 
 .font-hairline {
@@ -11165,6 +11180,10 @@ html {
 
   .sm\:font-FellRomanSc {
     font-family: Historical, serif;
+  }
+
+  .sm\:font-FellRoman {
+    font-family: Historical-Roman, serif;
   }
 
   .sm\:font-hairline {
@@ -18477,6 +18496,10 @@ html {
     font-family: Historical, serif;
   }
 
+  .md\:font-FellRoman {
+    font-family: Historical-Roman, serif;
+  }
+
   .md\:font-hairline {
     font-weight: 100;
   }
@@ -25787,6 +25810,10 @@ html {
     font-family: Historical, serif;
   }
 
+  .lg\:font-FellRoman {
+    font-family: Historical-Roman, serif;
+  }
+
   .lg\:font-hairline {
     font-weight: 100;
   }
@@ -33095,6 +33122,10 @@ html {
 
   .xl\:font-FellRomanSc {
     font-family: Historical, serif;
+  }
+
+  .xl\:font-FellRoman {
+    font-family: Historical-Roman, serif;
   }
 
   .xl\:font-hairline {

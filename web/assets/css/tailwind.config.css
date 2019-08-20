@@ -25,6 +25,14 @@
   font-style: normal;
 }
 
+@font-face {
+    font-family: 'Historical-Roman';
+    src: url('../fonts/Historical-FellTypeRoman.woff2') format('woff2'),
+        url('../fonts/Historical-FellTypeRoman.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
   box-sizing: border-box;

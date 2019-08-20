@@ -8,6 +8,7 @@ module.exports = {
         Pacifico: ['pacifico', 'sans-serif'],
         GillSansNova: ['gill-sans-nova', 'sans-serif'],
         FellRomanSc: ['Historical', 'serif'],
+        FellRoman: ['Historical-Roman', 'serif'],
       },
       colors: {
         fc: {
