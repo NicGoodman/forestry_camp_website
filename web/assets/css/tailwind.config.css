@@ -49,6 +49,11 @@ p {
   margin-bottom: 0.5em;
 }
 
+#breweries a:hover {
+  cursor: pointer;
+  opacity: .75;
+}
+
 @media only screen and ( max-height: 634px ){
     #mobile-landscape {
       display: none;
