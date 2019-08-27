@@ -29,8 +29,8 @@
     {% for block in entry.ticketLevels.all() %}
     {% switch block.cardType %}
     {% case "small" %}
-    <a href="https://burialburnpile.brownpapertickets.com" class="flex flex-col w-full flex-grow md:w-1/3 p-8 hover:text-fc-rust hover:pointer">
-    <div id="ticket-card" class="h-full">
+    <a href="https://burialburnpile.brownpapertickets.com" class="flex flex-col w-full flex-grow md:w-1/3 p-8 hover:text-fc-rust cursor-pointer">
+
       <div id="ticket-content" class="flex flex-grow flex-col w-full border-fc-dkgray border p-6">
         <div id="ticket-callout" class="w-full text-center text-6xl font-bold text-fc-mdgray font-FellRomanSc">
           {{ block.ticketCallout }}
@@ -42,7 +42,7 @@
           {{ block.ticketDescription }}
         </div>
       </div>
-    </div>
+
     </a>
     {% case "full" %}
     <a href="https://burialburnpile.brownpapertickets.com" class="flex flex-col w-full p-8 hover:text-fc-rust hover:cursor-pointer">
