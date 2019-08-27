@@ -53,6 +53,10 @@ p {
   cursor: pointer;
   opacity: .75;
 }
+  #entry-description a:hover {
+    cursor: pointer;
+    opacity: .75;
+  }
 
 @media only screen and ( max-height: 634px ){
     #mobile-landscape {
