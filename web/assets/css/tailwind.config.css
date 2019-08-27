@@ -53,6 +53,10 @@ p {
     #main-section-content {
       justify-content: flex-start;
     }
+
+    #breweries {
+      column-count: 2;
+    }
 }
 
 @media only screen and ( max-width: 320px) {

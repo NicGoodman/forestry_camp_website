@@ -661,6 +661,11 @@ p {
   #main-section-content {
     justify-content: flex-start;
   }
+
+  #breweries {
+    -webkit-column-count: 2;
+            column-count: 2;
+  }
 }
 
 @media only screen and ( max-width: 320px) {
