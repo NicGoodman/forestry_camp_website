@@ -24,74 +24,6 @@
       {{ entry.introInfo }}
     </div>
   </section>
-  <section id="brewery-section" class="flex flex-col">
-    <a id="brewery-list">
-    <h3 id="heading" class="font-FellRomanSc font-bold text-3xl text-fc-rust pb-4 px-2 md:px-0">
-      BREWERIES
-    </h3>
-    </a>
-    <div id="breweries" class="text-left" style="column-count: 3;">
-      18th St. Brewery
-      Allagash Brewing Company
-      Alvarado Street Brewery/Yeast of Eden
-      Anchorage Brewing
-      Arizona Wilderness Brewing Co.
-      Barrier Brewing Co.
-      Bearded Iris Brewing
-      Bellwoods Brewery
-      Brewery Bhavana
-      Birds Fly South Ale Project
-      Birrificio Italiano
-      Blackberry Farm Brewery
-      Breakside Brewery
-      Burial Beer Co.
-      Cascade Brewing
-      Civil Society Brewing
-      Cloudburst Brewing
-      Cloudwater Brew Co
-      Crak Brewery
-      Creature Comforts Brewing Co
-      Cruz Blanca Brewery
-      Dry & Bitter Brewing Company
-      Evil Twin Brewing
-      Fair State Brewing Cooperative
-      Finback Brewery
-      Fonta Flora Brewery
-      Forest & Main Brewing Co
-      Garage Beer Project
-      Green Cheek Beer Co.
-      Half Acre Beer
-      Heater Allen Brewing
-      Highland Park Brewery
-      Hi-Wire Brewing
-      Holy Mountain Brewing
-      Industrial Arts Brewing Company
-      Interboro Spirits and Ales
-      J. Wakefield Brewing
-      Jackie O's Pub and  Brewery
-      Jester King Brewery
-      Modern Times Beer
-      Other Half Brewing
-      Our Mutual Friend Brewing Company
-      Oxbow Brewing Company
-      Pinthouse Pizza
-      The Rare Barrel
-      Salud Cerveceria
-      Separatist Beer
-      Stillwater Artisanal Ales
-      The Veil Brewing Co
-      Threes Brewing
-      Transmitter Brewing
-      Trillium Brewing Company
-      Trophy Brewing Co.
-      TRVE Brewing Company
-      Wayfinder Beer
-      WeldWerks Brewing Co
-      Wrecking Bar Brewpub
-      Zillicoah Beer Co
-    </div>
-  </section>
-
   <section id="ticket-levels" class="flex flex-col justify-center md:flex-wrap md:flex-row">
     <a id="tickets"></a>
     {% for block in entry.ticketLevels.all() %}
@@ -128,6 +60,74 @@
     </a>
     {% endswitch %}
     {% endfor %}
+  </section>
+
+  <section id="brewery-section" class="flex flex-col">
+    <a id="brewery-list">
+    <h3 id="heading" class="font-FellRomanSc font-bold text-3xl text-fc-rust pb-4 px-2 md:px-0">
+      BREWERIES
+    </h3>
+    </a>
+    <div id="breweries" class="text-left text-white font-FellRomanSc" style="column-count: 3;">
+      18th St. Brewery<br />
+      Allagash Brewing Company<br />
+      Alvarado Street Brewery/Yeast of Eden<br />
+      Anchorage Brewing<br />
+      Arizona Wilderness Brewing Co.<br />
+      Barrier Brewing Co.<br />
+      Bearded Iris Brewing<br />
+      Bellwoods Brewery<br />
+      Brewery Bhavana<br />
+      Birds Fly South Ale Project<br />
+      Birrificio Italiano<br />
+      Blackberry Farm Brewery<br />
+      Breakside Brewery<br />
+      Burial Beer Co.<br />
+      Cascade Brewing<br />
+      Civil Society Brewing<br />
+      Cloudburst Brewing<br />
+      Cloudwater Brew Co<br />
+      Crak Brewery<br />
+      Creature Comforts Brewing Co<br />
+      Cruz Blanca Brewery<br />
+      Dry & Bitter Brewing Company<br />
+      Evil Twin Brewing<br />
+      Fair State Brewing Cooperative<br />
+      Finback Brewery<br />
+      Fonta Flora Brewery<br />
+      Forest & Main Brewing Co<br />
+      Garage Beer Project<br />
+      Green Cheek Beer Co.<br />
+      Half Acre Beer<br />
+      Heater Allen Brewing<br />
+      Highland Park Brewery<br />
+      Hi-Wire Brewing<br />
+      Holy Mountain Brewing<br />
+      Industrial Arts Brewing Company<br />
+      Interboro Spirits and Ales<br />
+      J. Wakefield Brewing<br />
+      Jackie O's Pub and  Brewery<br />
+      Jester King Brewery<br />
+      Modern Times Beer<br />
+      Other Half Brewing<br />
+      Our Mutual Friend Brewing Company<br />
+      Oxbow Brewing Company<br />
+      Pinthouse Pizza<br />
+      The Rare Barrel<br />
+      Salud Cerveceria<br />
+      Separatist Beer<br />
+      Stillwater Artisanal Ales<br />
+      The Veil Brewing Co<br />
+      Threes Brewing<br />
+      Transmitter Brewing<br />
+      Trillium Brewing Company<br />
+      Trophy Brewing Co.<br />
+      TRVE Brewing Company<br />
+      Wayfinder Beer<br />
+      WeldWerks Brewing Co<br />
+      Wrecking Bar Brewpub<br />
+      Zillicoah Beer Co
+    </div>
   </section>
 
   <section id="schedules" class="flex flex-col">
