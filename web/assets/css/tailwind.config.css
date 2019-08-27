@@ -63,7 +63,7 @@ p {
 
 @media only screen and ( max-width: 639px ) {
   #breweries {
-    column-count: 2;
+    column-count: 2 !important;
   }
 }
 
