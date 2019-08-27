@@ -45,6 +45,10 @@ p {
   margin-bottom: 1em;
 }
 
+#breweries p {
+  margin-bottom: 0.5em;
+}
+
 @media only screen and ( max-height: 634px ){
     #mobile-landscape {
       display: none;
