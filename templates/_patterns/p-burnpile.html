@@ -24,12 +24,12 @@
       {{ entry.introInfo }}
     </div>
   </section>
+  <a id="tickets">
+    <h3 id="heading" class="font-FellRomanSc font-bold text-3xl text-fc-rust pb-4 px-2 md:px-0">
+      Tickets On Sale 9/3 @ 12pm!
+    </h3>
+  </a>
   <section id="ticket-levels" class="flex flex-col justify-center md:flex-wrap md:flex-row">
-    <a id="tickets">
-      <h3 id="heading" class="font-FellRomanSc font-bold text-3xl text-fc-rust pb-4 px-2 md:px-0">
-        Tickets On Sale 9/3 @ 12pm!
-      </h3>
-    </a>
     {% for block in entry.ticketLevels.all() %}
     {% switch block.cardType %}
     {% case "small" %}
