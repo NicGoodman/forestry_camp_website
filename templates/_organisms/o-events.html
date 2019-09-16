@@ -35,7 +35,8 @@
     {% include "_atoms/a-text-h3" %}
   </div>-->
   <div class="w-full flex flex-row justify-center flex-wrap">
-    {% for item in craft.instagram.getFeed()[:8] %}
+    {% set items = craft.instagram.getFeed("forestrycamp")[:8] %}
+    {% for item in items %}
     <a href="https://www.instagram.com/p/{{ item.shortcode }}/" target="_blank" rel="noreferrer" class="m-1">
       <img src="{{ item.src }}" alt="forestry camp image from instagram" class="w-32 h-32 object-cover border-2 border-fc-black rounded-lg" />
     </a>
