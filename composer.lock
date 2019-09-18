@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2a3ff0468733409c995cd6ced256fade",
+    "content-hash": "48e3e346b46e47a711af0202a98ae110",
     "packages": [
         {
             "name": "cakephp/core",
@@ -171,16 +171,16 @@
         },
         {
             "name": "codemonauts/craft-instagram-feed",
-            "version": "1.0.4",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/codemonauts/craft-instagram-feed.git",
-                "reference": "d905fdb2b20f238f12b922793e270b773fadb1b0"
+                "reference": "fb5b3d97755a7353bbe04789860d6ddfbff47d18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codemonauts/craft-instagram-feed/zipball/d905fdb2b20f238f12b922793e270b773fadb1b0",
-                "reference": "d905fdb2b20f238f12b922793e270b773fadb1b0",
+                "url": "https://api.github.com/repos/codemonauts/craft-instagram-feed/zipball/fb5b3d97755a7353bbe04789860d6ddfbff47d18",
+                "reference": "fb5b3d97755a7353bbe04789860d6ddfbff47d18",
                 "shasum": ""
             },
             "require": {
@@ -219,7 +219,7 @@
                 "craftcms",
                 "instagram"
             ],
-            "time": "2019-09-15T13:28:46+00:00"
+            "time": "2019-09-18T07:48:35+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -5286,7 +5286,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "codemonauts/craft-instagram-feed": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

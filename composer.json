@@ -1,6 +1,6 @@
 {
   "require": {
-    "codemonauts/craft-instagram-feed": "^1.0",
+    "codemonauts/craft-instagram-feed": "dev-master",
     "craftcms/cms": "^3.0.0",
     "craftcms/feed-me": "^4.1",
     "craftcms/redactor": "2.3.3.2",
