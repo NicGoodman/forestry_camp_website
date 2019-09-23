@@ -7,5 +7,8 @@
   {% for block in entry.pageContent.all() %}
 {% include ('_atoms/_components/_block_' ~ block.type.handle) %}
 {% endfor %}
+<div id="contact-buttons"class="flex flex-col md:flex-row w-full items-center md:justify-around">
+<a href="mailto:info@forestrycamp.com" class="cursor-pointer text-center"><h5 class="font-GuestCheck border-t-2 border-b-2 mt-4 border-fc-black text-fc-black text-2xl font-bold hover:text-fc-green w-52">send us an email</h5></a>
+</div>
   </div>
 {% endblock %}
