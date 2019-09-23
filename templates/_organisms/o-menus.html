@@ -8,7 +8,7 @@
   {% include "_atoms/a-text-body" %}
   {% set latestBrunchMenu = craft.entries().section('brunchMenus').limit(1) %}
   {% set latestDinnerMenus = craft.entries().section('dinnerMenus').limit(1) %}
-  {% set latesttaproomFoodMenus = craft.entries().section('taproomFoodMenus').limit(1) %}
+  {% set latestBarSnacksMenus = craft.entries().section('barSnacksMenus').limit(1) %}
   {% set latestDessertsMenus = craft.entries().section('dessertsMenus').limit(1) %}
   {% set latestBeerMenus = craft.entries().section('beerMenus').limit(1) %}
   {% set latestWineMenus = craft.entries().section('wineMenus').limit(1) %}
@@ -35,18 +35,18 @@
     <a href="{{ menuLink.getUrl }}" class="">
       <div class="flex flex-col justify-center rounded-full border-fc-black border-2 w-32 h-32  m-2 bg-cover bg-fc-black hover:bg-transparent text-white text-xl hover:text-fc-black">
         <h3 class="font-GuestCheck text-center">
-          dinner
+          upstairs<br/>dinner
         </h3>
       </div>
     </a>
   {% endfor %}
 
-  {% for entry in latesttaproomFoodMenus.all() %}
+  {% for entry in latestBarSnacksMenus.all() %}
     {% set menuLink = entry.newMenu.one() %}
     <a href="{{ menuLink.getUrl }}" class="">
       <div class="flex flex-col justify-center rounded-full border-fc-black border-2 w-32 h-32  m-2 bg-cover bg-fc-black hover:bg-transparent text-white text-xl hover:text-fc-black">
         <h3 class="font-GuestCheck text-center">
-          downstairs<br/>snacks
+          bar snacks
         </h3>
       </div>
     </a>
