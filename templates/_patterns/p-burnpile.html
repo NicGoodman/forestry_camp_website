@@ -25,8 +25,8 @@
     </div>
   </section>
   <a id="tickets">
-    <h3 id="heading" class="text-center self-center font-FellRomanSc font-bold text-3xl text-fc-rust pb-4 px-2 md:px-0">
-      Tickets On Sale 9/3 @ 12pm!
+    <h3 id="heading" class="text-center self-center font-FellRomanSc font-bold text-3xl pb-4 pt-2 px-2 md:px-0">
+      <a href="https://burialburnpile.brownpapertickets.com" class="text-fc-rust hover:text-fc-mdgray">For Burnpile ticket packages and Presale beers please click here.</a>
     </h3>
   </a>
   <section id="ticket-levels" class="flex flex-col justify-center md:flex-wrap md:flex-row">
@@ -123,6 +123,19 @@
       </div>
     </div>
     {% endfor %}
+  </section>
+
+  <section id="map">
+    <a id="event-map">
+    <h3 id="heading" class="font-FellRomanSc font-bold text-3xl text-fc-rust px-2 md:px-0">
+      EVENT MAP
+    </h3>
+    </a>
+    {% set image = entry.eventMap.one().optimizedImages %}
+    {% set altText = entry.eventMap.one().title %}
+    <div id="event-map-image" class="self-center w-full md:w-1/2 xl:w-1/3">
+      <img src="{{ image.placeholderBox() }}" data-srcset="{{ image.srcset() }}" sizes="100vw" alt="{{ altText }}" class="lazyload w-full" />
+    </div>
   </section>
 
   <section id="food-info" class="flex flex-col h-full font-FellRomanSc mt-8">
