@@ -3,12 +3,7 @@
 {% set altText = entry.eventsHeaderImage.one().title %}
 {% set header = entry.eventsHeaderText %}
 <a id="happenings">{% include "_molecules/m-text-header" %}</a>
-{% set facebookEvents = craft.entries({
-    section:  'events',
-    eventEndTime:  '> ' ~ now,
-    order: 'eventStartTime desc',
-    limit: '5'
-}).find() %}
+{% set facebookEvents = craft.entries().section('events').limit(5) %}
 <div id="feeds" class="flex flex-col xl:flex-row items-center xl:items-start mt-8 mb-24 lg:mb-0">
 <div id="facebook-feed" class="flex flex-col w-full lg:w-2/3 mb-8 flex-shrink-0">
   <!--<div class="reveal flex flex-row-reverse border-b border-fc-black w-full my-8">
@@ -18,6 +13,7 @@
   {% for entry in facebookEvents.all() %}
   {% set image = entry.eventImage.one().optimizedImages %}
   {% set altText = entry.eventImage.one().title %}
+  {% if entry.eventEndTime|date('M d Y g:iA') > now|date('M d Y g:iA') %}
   <div id="facebook-event" class="reveal flex flex-col md:flex-row w-full items-center mb-4">
     <div class="w-2/3 md:w-1/3 h-auto">
       <a href="https://www.facebook.com/events/{{ entry.eventFacebookId }}" rel="noreferrer">
@@ -32,6 +28,7 @@
       <div class="font-GillSansNova text-fc-black text-base">{{ entry.eventDescription }}</div>
     </div>
   </div>
+  {% endif %}
   {% endfor %}
 </div>
 <div id="instagram-feed" class="reveal w-full xl:w-1/3 flex flex-col lg:pl-4">
