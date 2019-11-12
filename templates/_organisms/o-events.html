@@ -3,7 +3,7 @@
 {% set altText = entry.eventsHeaderImage.one().title %}
 {% set header = entry.eventsHeaderText %}
 <a id="happenings">{% include "_molecules/m-text-header" %}</a>
-{% set facebookEvents = craft.entries().section('events').limit(5).eventEndTime( '< ' ~ now ) %}
+{% set facebookEvents = craft.entries().section('events').limit(5) if entry.eventEndTime < now %}
 <div id="feeds" class="flex flex-col xl:flex-row items-center xl:items-start mt-8 mb-24 lg:mb-0">
 <div id="facebook-feed" class="flex flex-col w-full lg:w-2/3 mb-8 flex-shrink-0">
   <!--<div class="reveal flex flex-row-reverse border-b border-fc-black w-full my-8">
