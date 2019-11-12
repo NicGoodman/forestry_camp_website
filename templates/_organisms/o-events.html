@@ -23,9 +23,13 @@
     <div id="facebook-event-info" class="w-full md:2/3 pl-4 pt-4">
       <a href="https://www.facebook.com/events/{{ entry.eventFacebookId }}">
         <h3 class="font-GuestCheck text-fc-black text-base lg:text-xl">{{ entry.eventName|lower }}</h3>
-      </a>
+        {% if entry.eventEndTime|length > 0 %}
+      <h4 class="font-GillSansNova text-fc-black font-bold text-sm lg:text-base">{{ entry.eventStartTime|date('M d Y g:iA') }} • {{ entry.eventEndTime|date('M d Y g:iA') }}</h4>
+      {else}
       <h4 class="font-GillSansNova text-fc-black font-bold text-sm lg:text-base">{{ entry.eventStartTime|date('M d Y g:iA') }}</h4>
-      <div class="font-GillSansNova text-fc-black text-base">{{ description|length > 600 ? description|slice(0, 600) ~ '...' : description }}</div>
+      {% endif %}
+      <div class="font-GillSansNova text-fc-black text-base">{{ description|length > 600 ? description|slice(0, 600) ~ '...Read More' : description }}</div>
+      </a>
     </div>
   </div>
   {% else %}
