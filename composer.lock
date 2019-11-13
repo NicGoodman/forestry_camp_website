@@ -2035,16 +2035,16 @@
         },
         {
             "name": "nystudio107/craft-imageoptimize",
-            "version": "1.6.4",
+            "version": "1.6.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-imageoptimize.git",
-                "reference": "d83c7aeeab812c4131d7619da6b0593ff41598a6"
+                "reference": "f9e26dce57080cd1232d3ad47524f1cb2870c06c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/d83c7aeeab812c4131d7619da6b0593ff41598a6",
-                "reference": "d83c7aeeab812c4131d7619da6b0593ff41598a6",
+                "url": "https://api.github.com/repos/nystudio107/craft-imageoptimize/zipball/f9e26dce57080cd1232d3ad47524f1cb2870c06c",
+                "reference": "f9e26dce57080cd1232d3ad47524f1cb2870c06c",
                 "shasum": ""
             },
             "require": {
@@ -2097,7 +2097,7 @@
                 "optimize",
                 "optimize-images"
             ],
-            "time": "2019-10-31T19:28:39+00:00"
+            "time": "2019-11-13T16:06:00+00:00"
         },
         {
             "name": "nystudio107/craft-imageoptimize-imgix",
