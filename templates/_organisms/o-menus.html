@@ -14,6 +14,11 @@
   {% set latestWineMenus = craft.entries().section('wineMenus').limit(1) %}
   {% set latestCocktailMenus = craft.entries().section('cocktailMenus').limit(1) %}
   {% set latestCoffeeMenus = craft.entries().section('coffeeMenus').limit(1) %}
+
+  {% set latestToGoDinnerMenus = craft.entries().section('toGoDinnerMenus').limit(1) %}
+  {% set latestProvisionsPackagesMenus = craft.entries().section('provisionsPackagesMenus').limit(1) %}
+  {% set latestBurialToGoMenus = craft.entries().section('burialToGoMenus').limit(1) %}
+  {% set latestGuestBeerMenus = craft.entries().section('guestBeerMenus').limit(1) %}
   <div class="reveal flex flex-row-reverse border-b border-fc-black w-full md:w-2/3 self-center mt-8">
     {% set header = 'food' %}
     {% include "_atoms/a-text-h3" %}
