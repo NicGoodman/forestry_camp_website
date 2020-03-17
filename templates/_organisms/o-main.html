@@ -3,7 +3,7 @@
 {% set announcementMessage = entry.announcementMessage %}
 {% if announcementMessage|length %}
 <div id="announcement-bar" class="w-full h-auto text-white bg-fc-green absolute text-center align-middle font-GillSansNova font-normal text-base">
-  <p>{{ entry.announcementMessage }}</p>
+  <p class="py-1">{{ entry.announcementMessage }}</p>
 </div>
 {% endif %}
 <div id="main-section-content"class="flex flex-col lg:flex-row justify-between md:justify-start items-end md:items-center content-center min-h-screen max-h-full border-b-2 border-fc-black"><a id="home"></a>
