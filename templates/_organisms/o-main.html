@@ -1,6 +1,9 @@
 {% block main %}
 {% set landscape = entry.landscapeImage.one().optimizedImages %}
 <div id="main-section-content"class="flex flex-col lg:flex-row justify-between md:justify-start items-end md:items-center content-center min-h-screen max-h-full border-b-2 border-fc-black"><a id="home"></a>
+  <div id="announcement-bar" class="w-full h-auto text-white bg-fc-black">
+    <p>{{ entry.announcementMessage }}</p>
+  </div>
   <div id="logo-and-nav" class="flex flex-col w-full h-auto lg:w-1/2 px-6 py-6 justify-center lg:max-h-full flex-shrink-0">
     <div id="logo" class="flex self-center max-w-sm md:h-56 h-48 flex-shrink mb-3">
     {% include "_atoms/a-logo" %}
