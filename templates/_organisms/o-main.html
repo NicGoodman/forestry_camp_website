@@ -2,7 +2,7 @@
 {% set landscape = entry.landscapeImage.one().optimizedImages %}
 {% set announcementMessage = entry.announcementMessage %}
 {% if announcementMessage|length %}
-<div id="announcement-bar" class="w-full h-auto text-white bg-fc-black absolute">
+<div id="announcement-bar" class="w-full h-auto text-white bg-fc-green absolute text-center">
   <p>{{ entry.announcementMessage }}</p>
 </div>
 {% endif %}
