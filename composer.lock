@@ -477,16 +477,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.4.10",
+            "version": "3.4.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "734435d99b60712241dcfd020a7b22f2c8b73649"
+                "reference": "2613dc758987a2d986ccf0a0c4f59b4c303eef1c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/734435d99b60712241dcfd020a7b22f2c8b73649",
-                "reference": "734435d99b60712241dcfd020a7b22f2c8b73649",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/2613dc758987a2d986ccf0a0c4f59b4c303eef1c",
+                "reference": "2613dc758987a2d986ccf0a0c4f59b4c303eef1c",
                 "shasum": ""
             },
             "require": {
@@ -570,20 +570,20 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2020-03-17T16:41:49+00:00"
+            "time": "2020-03-18T13:20:28+00:00"
         },
         {
             "name": "craftcms/feed-me",
-            "version": "4.2.0.1",
+            "version": "4.2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/feed-me.git",
-                "reference": "3bef830fca9a39ada61fe42119a5c8878f751c52"
+                "reference": "3789007c284b236890553ee81da32c4eba61e348"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/feed-me/zipball/3bef830fca9a39ada61fe42119a5c8878f751c52",
-                "reference": "3bef830fca9a39ada61fe42119a5c8878f751c52",
+                "url": "https://api.github.com/repos/craftcms/feed-me/zipball/3789007c284b236890553ee81da32c4eba61e348",
+                "reference": "3789007c284b236890553ee81da32c4eba61e348",
                 "shasum": ""
             },
             "require": {
@@ -631,7 +631,7 @@
                 "craftcms",
                 "feed me"
             ],
-            "time": "2020-01-15T18:53:36+00:00"
+            "time": "2020-03-17T21:36:54+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -727,16 +727,16 @@
         },
         {
             "name": "craftcms/redactor",
-            "version": "2.6.0.1",
+            "version": "2.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/redactor.git",
-                "reference": "c8cc5b6bd6ac0258666744a4a530496da8d966c3"
+                "reference": "835eaf0d7442acb1bc716985f9672c7cd4e8531c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/redactor/zipball/c8cc5b6bd6ac0258666744a4a530496da8d966c3",
-                "reference": "c8cc5b6bd6ac0258666744a4a530496da8d966c3",
+                "url": "https://api.github.com/repos/craftcms/redactor/zipball/835eaf0d7442acb1bc716985f9672c7cd4e8531c",
+                "reference": "835eaf0d7442acb1bc716985f9672c7cd4e8531c",
                 "shasum": ""
             },
             "require": {
@@ -771,7 +771,7 @@
                 "html",
                 "yii2"
             ],
-            "time": "2020-02-17T15:25:01+00:00"
+            "time": "2020-03-18T14:47:04+00:00"
         },
         {
             "name": "craftcms/server-check",
@@ -2981,16 +2981,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.2.47",
+            "version": "3.2.48",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "8d491cab541a944fbae90baed2a5cc7b3a8ce4f6"
+                "reference": "c35aad8da75d6da41b88eb4539c7b1d78eff32ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/8d491cab541a944fbae90baed2a5cc7b3a8ce4f6",
-                "reference": "8d491cab541a944fbae90baed2a5cc7b3a8ce4f6",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/c35aad8da75d6da41b88eb4539c7b1d78eff32ba",
+                "reference": "c35aad8da75d6da41b88eb4539c7b1d78eff32ba",
                 "shasum": ""
             },
             "require": {
@@ -3051,7 +3051,7 @@
                 "tags",
                 "twitter"
             ],
-            "time": "2020-03-06T00:46:42+00:00"
+            "time": "2020-03-18T13:47:11+00:00"
         },
         {
             "name": "opis/closure",
