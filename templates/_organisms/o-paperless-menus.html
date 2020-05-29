@@ -35,12 +35,12 @@
 					</div>
 					<div id="menu-items" class="flex flex-col font-GillSansNova">
 						{% for block in row.menuItems.all() %}
-							{% if block.type('subHeading') %}
+							{% if block.type.handle == "subHeading" %}
 								{% set subHeading = block.subHeadingText %}
 								<div class="flex flex-row justify-start w-full pb-1 mt-16 border-b border-fc-black font-GuestCheck lowercase text-lg text-fc-black mb-2">
 									<h3>{{ subHeading }}</h3>
 								</div>
-							{% elseif block.type('menuItem') %}
+							{% elseif block.type.handle == "menuItem" %}
 								<div id="menu-item-wrapper" class="flex flex-col w-full mb-4">
 									<div id="menu-item-top-line" class="flex flex-row justify-between w-full font-bold uppercase text-lg text-fc-black">
 										<div class="text-left">
