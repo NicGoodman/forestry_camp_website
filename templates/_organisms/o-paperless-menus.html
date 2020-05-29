@@ -33,7 +33,7 @@
 					<div id="{{ anchorLink }}" class="flex flex-row justify-end w-full pb-1 mt-16 border-b border-fc-black font-GuestCheck uppercase text-xl text-fc-black mb-4">
 						<h3>{{ menuSectionHeader }}</h3>
 					</div>
-					<div id="menu-items" class="flex flex-col font-GillSansNova">
+					<div id="menu-items" class="flex flex-col font-GillSansNova px-4">
 						{% for block in row.menuItems.all() %}
 							{% if block.type.handle == "subHeading" %}
 								{% set subHeading = block.subHeadingText %}
