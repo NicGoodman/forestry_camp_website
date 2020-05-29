@@ -41,6 +41,10 @@
 									<h3>{{ subHeading }}</h3>
 								</div>
 							{% elseif block.type.handle == "menuItem" %}
+								{% set itemName = block.itemName %}
+								{% set itemDescription = block.itemDescription %}
+								{% set price = block.price %}
+								{% set priceDescription = block.priceDescription %}
 								<div id="menu-item-wrapper" class="flex flex-col w-full mb-4">
 									<div id="menu-item-top-line" class="flex flex-row justify-between w-full font-bold uppercase text-lg text-fc-black">
 										<div class="text-left">
