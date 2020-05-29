@@ -34,10 +34,10 @@
 					</div>
 					<div id="menu-items" class="flex flex-col">
 						{% for block in row.menuItems.all() %}
-							{% set itemName = block.getFieldValue(itemName) %}
-							{% set itemDescription = block.getFieldValue(itemDescription) %}
-							{% set price = block.getFieldValue(price) %}
-							{% set priceDescription = block.getFieldValue(priceDescription) %}
+							{% set itemName = block.itemName %}
+							{% set itemDescription = block.itemDescription %}
+							{% set price = block.price %}
+							{% set priceDescription = block.priceDescription %}
 							<div id="menu-item-wrapper" class="flex flex-col">
 								<div id="menu-item-top-line" class="flex flex-row space-between">
 									<div><h4>{{ itemName }}</h4></div>
