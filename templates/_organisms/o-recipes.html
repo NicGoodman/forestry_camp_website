@@ -36,26 +36,32 @@
 						</div>
 						<div id="recipe-entries" class="flex flex-col font-GillSansNova">
 							<div id="recipe-entry-wrapper" class="flex flex-col w-full mb-4">
+								<div class="font-bold uppercase text-fc-black">
+									<h3>Ingredients</h3>
+								</div>
 								{% for block in row.recipeContent.type('ingredient') %}
 									{% set ingredientMeasurement = block.ingredientMeasurement %}
 									{% set ingredientName = block.ingredientName %}
-									<div id="ingredient" class="flex flex-row justify-start w-full font-bold uppercase text-fc-black">
+									<div id="ingredient" class="flex flex-row justify-start w-full text-fc-dkgray">
 										<div class="text-left font-bold">
 											<h4>{{ ingredientMeasurement }}</h4>
 										</div>
-										<div class="text-left pl-10">
+										<div class="text-left pl-4">
 											<h4>{{ ingredientName }}</h4>
 										</div>
 									</div>
 								{% endfor %}
+                                <div class="font-bold uppercase text-fc-black">
+									<h3>Steps</h3>
+								</div>
 								{% for block in row.recipeContent.type('step') %}
 									{% set stepNumber = block.stepNumber %}
 									{% set stepText = block.stepText %}
 									<div id="step" class="flex flex-row justify-start w-full text-fc-dkgray">
-										<div class="text-left">
+										<div class="text-left font-bold">
 											{{ stepNumber }}
 										</div>
-										<div class="text-left pl-10">
+										<div class="text-left pl-4">
 											{{ stepText | nl2br }}
 										</div>
 									</div>
