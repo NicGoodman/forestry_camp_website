@@ -40,7 +40,7 @@
 									<h3>Ingredients</h3>
 								</div>
                                 
-								{% for block in row.recipeContent.all().type('ingredient') %}
+								{% for block in row.recipeContent.type('ingredient').all() %}
 									{% set ingredientMeasurement = block.ingredientMeasurement %}
 									{% set ingredientName = block.ingredientName %}
 									<div id="ingredient" class="flex flex-row justify-start w-full text-fc-dkgray">
@@ -57,7 +57,7 @@
 								<div class="font-bold uppercase text-fc-black">
 									<h3>Steps</h3>
 								</div>
-								{% for block in row.recipeContent.all().type('step') %}
+								{% for block in row.recipeContent.type('step').all() %}
 									{% set stepNumber = block.stepNumber %}
 									{% set stepText = block.stepText %}
 									<div id="step" class="flex flex-row justify-start w-full text-fc-dkgray">
