@@ -39,19 +39,20 @@
 								<div class="font-bold uppercase text-fc-black mb-2">
 									<h3>Ingredients</h3>
 								</div>
-								<div id="recipe-ingredients-list" style="column-count: 2 !important;"></div>
-								{% for block in row.recipeContent.type('ingredient').all() %}
-									{% set ingredientMeasurement = block.ingredientMeasurement %}
-									{% set ingredientName = block.ingredientName %}
-									<div id="ingredient" class="flex flex-row justify-start w-full text-fc-dkgray">
-										<div class="text-left font-bold">
-											<h4>{{ ingredientMeasurement }}</h4>
+								<div id="recipe-ingredients-list" style="column-count: 2 !important;">
+									{% for block in row.recipeContent.type('ingredient').all() %}
+										{% set ingredientMeasurement = block.ingredientMeasurement %}
+										{% set ingredientName = block.ingredientName %}
+										<div id="ingredient" class="flex flex-row justify-start w-full text-fc-dkgray">
+											<div class="text-left font-bold">
+												<h4>{{ ingredientMeasurement }}</h4>
+											</div>
+											<div class="text-left pl-4">
+												<h4>{{ ingredientName }}</h4>
+											</div>
 										</div>
-										<div class="text-left pl-4">
-											<h4>{{ ingredientName }}</h4>
-										</div>
-									</div>
-								{% endfor %}
+									{% endfor %}
+								</div>
 							</div>
 						</div>
 						<div id="recipe-steps-wrapper" class="flex flex-col w-full mb-4 items-start">
