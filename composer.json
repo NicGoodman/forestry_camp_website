@@ -9,6 +9,7 @@
     "nystudio107/craft-imageoptimize": "^1.6",
     "nystudio107/craft-seomatic": "^3.2",
     "superbig/craft3-templateselect": "^2.0",
+    "verbb/super-table": "^2.4",
     "vlucas/phpdotenv": "^2.4.0"
   },
   "autoload": {
