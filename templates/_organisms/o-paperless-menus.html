@@ -9,7 +9,7 @@
 				{% if customAnchor|length %}
 					{% set anchorLink = row.customAnchor %}
 				{% else %}
-					{% set anchorLink = menuSectionHeader|anchor %}
+					{% set anchorLink = menuSectionHeader|anchors %}
 				{% endif %}
 			{% endif %}
 			<a href="{{ anchorLink }}">
@@ -22,7 +22,7 @@
 				{% if customAnchor|length %}
 					{% set anchorLink = row.customAnchor %}
 				{% else %}
-					{% set anchorLink = menuSectionHeader|anchor %}
+					{% set anchorLink = menuSectionHeader|anchors %}
 				{% endif %}
 				<div id="paperless-menu-section" class="flex flex-col">
 					<div id="{{ anchorLink }}" class="flex flex-row justify-between items-start w-full px-1 mt-16 border-b-2 border-fc-black">
