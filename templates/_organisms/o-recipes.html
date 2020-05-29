@@ -54,23 +54,23 @@
 									{% endfor %}
 								</div>
 							</div>
-						</div>
-						<div id="recipe-steps-wrapper" class="flex flex-col w-full mb-4 items-start">
-							<div class="font-bold uppercase text-fc-black">
-								<h3>Steps</h3>
-							</div>
-							{% for block in row.recipeContent.type('step').all() %}
-								{% set stepNumber = block.stepNumber %}
-								{% set stepText = block.stepText %}
-								<div id="step" class="flex flex-row justify-start w-full text-fc-dkgray">
-									<div class="text-left font-bold">
-										{{ stepNumber }}
-									</div>
-									<div class="text-left pl-4">
-										{{ stepText | nl2br }}
-									</div>
+							<div id="recipe-steps-wrapper" class="flex flex-col w-full mb-4 items-start">
+								<div class="font-bold uppercase text-fc-black">
+									<h3>Steps</h3>
 								</div>
-							{% endfor %}
+								{% for block in row.recipeContent.type('step').all() %}
+									{% set stepNumber = block.stepNumber %}
+									{% set stepText = block.stepText %}
+									<div id="step" class="flex flex-row justify-start w-full text-fc-dkgray">
+										<div class="text-left font-bold">
+											{{ stepNumber }}
+										</div>
+										<div class="text-left pl-4">
+											{{ stepText | nl2br }}
+										</div>
+									</div>
+								{% endfor %}
+							</div>
 						</div>
 					</div>
 				</div>
