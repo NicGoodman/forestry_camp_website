@@ -4,22 +4,23 @@
 	{% set altText = entry.paperlessMenuHeaderImage.one().title %}
 	<a id="paperless-menu">{% include "_molecules/m-text-header" %}</a>
 	<div id="paperless-menu-content" class="flex flex-col text-center justify-center mt-4 px-2 md:px-8 lg:px-16">
-		<div id="paperless-menu-navigation" class="flex flex-row flex-wrap space-between"></div>
-		{% for row in entry.menuSections.all() %}
-			{% if row.navigationOption == 1 %}
-				{% set menuSectionHeader = row.sectionHeader %}
-				{% set customAnchor = row.customAnchor %}
-				{% if customAnchor|length %}
-					{% set anchorLink = customAnchor|anchors %}
-				{% else %}
-					{% set anchorLink = menuSectionHeader|anchors %}
+		<div id="paperless-menu-navigation" class="flex flex-row flex-wrap space-between w-3/4">
+			{% for row in entry.menuSections.all() %}
+				{% if row.navigationOption == 1 %}
+					{% set menuSectionHeader = row.sectionHeader %}
+					{% set customAnchor = row.customAnchor %}
+					{% if customAnchor|length %}
+						{% set anchorLink = customAnchor|anchors %}
+					{% else %}
+						{% set anchorLink = menuSectionHeader|anchors %}
+					{% endif %}
 				{% endif %}
-			{% endif %}
-			<a href="{{ anchorLink }}">
-				<h3>{{ menuSectionHeader }}</h3>
-			</a>
-		{% endfor %}
-		<div id="paperless-menu-sections" class="flex flex-col">
+				<a href="#{{ anchorLink }}">
+					<h3>{{ menuSectionHeader }}</h3>
+				</a>
+			{% endfor %}
+		</div>
+		<div id="paperless-menu-sections" class="flex flex-col w-full">
 			{% for row in entry.menuSections.all() %}
 				{% set menuSectionHeader = row.sectionHeader %}
 				{% set customAnchor = row.customAnchor %}
@@ -38,14 +39,22 @@
 							{% set itemDescription = block.itemDescription %}
 							{% set price = block.price %}
 							{% set priceDescription = block.priceDescription %}
-							<div id="menu-item-wrapper" class="flex flex-col">
-								<div id="menu-item-top-line" class="flex flex-row space-between">
-									<div><h4>{{ itemName }}</h4></div>
-									<div><h4>{{ price }}</h4></div>
+							<div id="menu-item-wrapper" class="flex flex-col w-full">
+								<div id="menu-item-top-line" class="flex flex-row space-between w-full">
+									<div>
+										<h4>{{ itemName }}</h4>
+									</div>
+									<div>
+										<h4>{{ price }}</h4>
+									</div>
 								</div>
-								<div id="menu-item-bottom-line" class="flex flex-row space-between">
-									<div><p>{{ itemDescription }}</p></div>
-									<div><p>{{ priceDescription }}</p></div>
+								<div id="menu-item-bottom-line" class="flex flex-row space-between w-full">
+									<div>
+										<p>{{ itemDescription }}</p>
+									</div>
+									<div>
+										<p>{{ priceDescription }}</p>
+									</div>
 								</div>
 							</div>
 						{% endfor %}
