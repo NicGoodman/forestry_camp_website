@@ -20,7 +20,7 @@
 				</a>
 			{% endfor %}
 		</div>
-		<div id="paperless-menu-sections" class="flex flex-col w-full">
+		<div id="recipe-sections" class="flex flex-col w-full">
 			{% for row in entry.recipeSections.all() %}
 				{% set recipeName = row.recipeName %}
 				{% set customAnchor = row.customAnchor %}
@@ -30,13 +30,13 @@
 					{% else %}
 						{% set anchorLink = recipeName|replace(' ', '-')|lower %}
 					{% endif %}
-					<div id="recipe-section" class="flex flex-col">
+					<div id="recipe-section" class="flex flex-col mb-6">
 						<div id="{{ anchorLink }}" class="flex flex-row justify-end w-full pb-1 mt-16 border-b border-fc-black font-GuestCheck uppercase text-xl text-fc-black mb-4">
 							<h3>{{ recipeName }}</h3>
 						</div>
 						<div id="recipe-entries" class="flex flex-col font-GillSansNova">
 							<div id="recipe-ingredients-wrapper" class="flex flex-col w-full mb-4 items-start">
-								<div class="font-bold uppercase text-fc-black mb-2">
+								<div class="font-bold uppercase text-fc-black">
 									<h3>Ingredients</h3>
 								</div>
 								<div id="recipe-ingredients-list" style="column-count: 2 !important;">
@@ -54,14 +54,14 @@
 									{% endfor %}
 								</div>
 							</div>
-							<div id="recipe-steps-wrapper" class="flex flex-col w-full mb-4 items-start">
+							<div id="recipe-steps-wrapper" class="flex flex-col w-full items-start">
 								<div class="font-bold uppercase text-fc-black">
 									<h3>Steps</h3>
 								</div>
 								{% for block in row.recipeContent.type('step').all() %}
 									{% set stepNumber = block.stepNumber %}
 									{% set stepText = block.stepText %}
-									<div id="step" class="flex flex-row justify-start w-full text-fc-dkgray">
+									<div id="step" class="flex flex-row justify-start w-full text-fc-dkgray mb-2">
 										<div class="text-left font-bold">
 											{{ stepNumber }}
 										</div>
