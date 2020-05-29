@@ -4,7 +4,7 @@
 	{% set altText = entry.paperlessMenuHeaderImage.one().title %}
 	<a id="paperless-menu">{% include "_molecules/m-text-header" %}</a>
 	<div id="paperless-menu-content" class="flex flex-col text-center justify-center mt-4 px-2 md:px-8 lg:px-16">
-		<div id="paperless-menu-navigation" class="flex flex-row flex-wrap justify-between w-3/4 self-center font-GuestCheck lowercase text-lg">
+		<div id="paperless-menu-navigation" class="flex flex-row flex-wrap justify-between w-3/4 self-center font-GuestCheck lowercase text-lg mb-10">
 			{% for row in entry.menuSections.all() %}
 				{% if row.navigationOption == 1 %}
 					{% set menuSectionHeader = row.sectionHeader %}
@@ -15,7 +15,7 @@
 						{% set anchorLink = menuSectionHeader|replace(' ', '-')|lower %}
 					{% endif %}
 				{% endif %}
-				<a href="#{{ anchorLink }}">
+				<a href="#{{ anchorLink }}" class="hover:text-fc-dark_green">
 					<h3>{{ menuSectionHeader }}</h3>
 				</a>
 			{% endfor %}
@@ -30,7 +30,7 @@
 					{% set anchorLink = menuSectionHeader|replace(' ', '-')|lower %}
 				{% endif %}
 				<div id="paperless-menu-section" class="flex flex-col">
-					<div id="{{ anchorLink }}" class="flex flex-row justify-end w-full pb-1 mt-16 border-b border-fc-black font-GuestCheck uppercase text-xl">
+					<div id="{{ anchorLink }}" class="flex flex-row justify-end w-full pb-1 mt-16 border-b border-fc-black font-GuestCheck uppercase text-xl text-fc-black">
 						<h3>{{ menuSectionHeader }}</h3>
 					</div>
 					<div id="menu-items" class="flex flex-col font-GillSansNova">
@@ -40,7 +40,7 @@
 							{% set price = block.price %}
 							{% set priceDescription = block.priceDescription %}
 							<div id="menu-item-wrapper" class="flex flex-col w-full">
-								<div id="menu-item-top-line" class="flex flex-row justify-between w-full font-bold uppercase text-lg">
+								<div id="menu-item-top-line" class="flex flex-row justify-between w-full font-bold uppercase text-lg text-fc-black">
 									<div>
 										<h4>{{ itemName }}</h4>
 									</div>
@@ -48,7 +48,7 @@
 										<h4>{{ price }}</h4>
 									</div>
 								</div>
-								<div id="menu-item-bottom-line" class="flex flex-row justify-between w-full font-light text-gray-800">
+								<div id="menu-item-bottom-line" class="flex flex-row justify-between w-full font-light text-fc-dkgray">
 									<div class="text-left">
 										{{ itemDescription }}
 									</div>
