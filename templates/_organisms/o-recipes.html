@@ -1,0 +1,71 @@
+{% block recipes %}
+	{% set header = entry.recipesPageHeader %}
+	{% set image = entry.recipesHeaderImage.one().optimizedImages %}
+	{% set altText = entry.recipesHeaderImage.one().title %}
+	<a id="paperless-menu">{% include "_molecules/m-text-header" %}</a>
+	<div id="paperless-menu-content" class="flex flex-col text-center justify-center mt-4 px-2 md:px-8 lg:px-16">
+		<div id="paperless-menu-navigation" class="flex flex-row flex-wrap justify-around w-3/4 self-center font-GuestCheck lowercase text-lg mb-10">
+			{% for row in entry.recipeSections.all() %}
+				{% if row.navigationOption == 1 and row.visibility == 1 %}
+					{% set recipeName = row.recipeName %}
+					{% set customAnchor = row.customAnchor %}
+					{% if customAnchor|length %}
+						{% set anchorLink = customAnchor|replace(' ', '-')|lower %}
+					{% else %}
+						{% set anchorLink = recipeName|replace(' ', '-')|lower %}
+					{% endif %}
+				{% endif %}
+				<a href="#{{ anchorLink }}" class="hover:text-fc-dark_green">
+					<h3>{{ recipeName }}</h3>
+				</a>
+			{% endfor %}
+		</div>
+		<div id="paperless-menu-sections" class="flex flex-col w-full">
+			{% for row in entry.recipeSections.all() %}
+				{% set recipeName = row.recipeName %}
+				{% set customAnchor = row.customAnchor %}
+				{% if row.visibility == 1 %}
+					{% if customAnchor|length %}
+						{% set anchorLink = customAnchor|replace(' ', '-')|lower %}
+					{% else %}
+						{% set anchorLink = recipeName|replace(' ', '-')|lower %}
+					{% endif %}
+					<div id="recipe-section" class="flex flex-col">
+						<div id="{{ anchorLink }}" class="flex flex-row justify-end w-full pb-1 mt-16 border-b border-fc-black font-GuestCheck uppercase text-xl text-fc-black mb-4">
+							<h3>{{ recipeName }}</h3>
+						</div>
+						<div id="recipe-entries" class="flex flex-col font-GillSansNova">
+							{% for block in row.recipeContent.all() %}
+								<div id="recipe-entry-wrapper" class="flex flex-col w-full mb-4">
+									{% if block.type == block.ingredient %}
+										{% set ingredientMeasurement = block.ingredientMeasurement %}
+										{% set ingredientName = block.ingredientName %}
+										<div id="ingredient" class="flex flex-row justify-start w-full font-bold uppercase text-fc-black">
+											<div class="text-left font-bold">
+												<h4>{{ ingredientMeasurement }}</h4>
+											</div>
+											<div class="text-left pl-10">
+												<h4>{{ ingredientName }}</h4>
+											</div>
+										</div>
+									{% elseif block.type == block.step %}
+										{% set stepNumber = block.stepNumber %}
+										{% set stepText = block.stepText %}
+										<div id="step" class="flex flex-row justify-start w-full text-fc-dkgray">
+											<div class="text-left">
+												{{ stepNumber }}
+											</div>
+											<div class="text-left pl-10">
+												{{ stepText | nl2br }}
+											</div>
+										</div>
+									{% endif %}
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}
