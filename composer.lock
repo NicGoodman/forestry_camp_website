@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a689d942534416374d205403604a744d",
+    "content-hash": "9532308d9107542fae8171596eb5c4bf",
     "packages": [
         {
             "name": "cakephp/core",
@@ -485,6 +485,55 @@
                 "validator"
             ],
             "time": "2020-02-14T07:44:31+00:00"
+        },
+        {
+            "name": "craftcms/anchors",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/craftcms/anchors.git",
+                "reference": "6e427fe65974ca29e4d290793c1b1a513f3b27c2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/anchors/zipball/6e427fe65974ca29e4d290793c1b1a513f3b27c2",
+                "reference": "6e427fe65974ca29e4d290793c1b1a513f3b27c2",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.0.0-beta.27"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Anchors",
+                "handle": "anchors",
+                "changelogUrl": "https://raw.githubusercontent.com/craftcms/anchors/v2/CHANGELOG.md",
+                "downloadUrl": "https://github.com/craftcms/anchors/archive/v2.zip"
+            },
+            "autoload": {
+                "psr-4": {
+                    "craft\\anchors\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "Add anchor links to headings in your Craft CMS website content.",
+            "keywords": [
+                "anchors",
+                "cms",
+                "craftcms",
+                "html",
+                "yii2"
+            ],
+            "time": "2019-02-23T15:59:45+00:00"
         },
         {
             "name": "craftcms/cms",

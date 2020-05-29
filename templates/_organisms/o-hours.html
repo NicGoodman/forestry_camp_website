@@ -1,38 +1,43 @@
 {% block hours %}
-{% set image = entry.hoursHeaderImage.one().optimizedImages %}
-{% set altText = entry.hoursHeaderImage.one().title %}
-{% set header = entry.hoursHeaderText %}
-{% set text = entry.hoursTextContent %}
-  <a id="hours">{% include "_molecules/m-text-header" %}</a>
-<div id="hours-and-reservations-content" class="flex flex-col text-center justify-center mt-4 px-2 md:px-8 lg:px-16">
-  {% include "_atoms/a-text-body" %}
-  <div id="contact-buttons"class="flex flex-col w-full items-center md:justify-around">
-    <a href="http://shop.forestrycamp.com/" class="font-GuestCheck text-3xl px-4 py-2 bg-fc-green text-orange-100 text-center hover:text-fc-black rounded-lg">
-      our store
-    </a>
-    <p class="font-GillSansNova font-normal text-fc-black text-base text-center pt-2">Visit our store or call us to purchase food, beer and wine for pickup or delivery. We also ship merchandise and gift cards nationwide.</p>
-<a href="tel:1-828-505-4452" class="cursor-pointer text-center"><h5 class="font-GuestCheck border-t-2 border-b-2 mt-4 border-fc-black text-fc-black text-2xl font-bold hover:text-fc-green w-52">give us a call</h5></a>
-</div>
-  <div id="hours-and-map-content" class="flex flex-col lg:flex-row-reverse justify-center items-center my-20">
-    <div id="hours-content" class="reveal p-4 lg:text-left lg:w-auto">
-      <h3 id="hours-header"class="font-GuestCheck text-fc-black text-2xl">hours</h3>
-      <p class="font-GillSansNova font-normal text-fc-black text-base text-left">For Pickup and Delivery Only</p>
-      <div id="hours-list"class="flex flex-col">
-        {% for day in entry.restaurantHours %}
-        <div>
-          <span class="font-GillSansNova font-bold text-fc-black text-base">{{ day.name }}</span><span class="font-GillSansNova text-fc-black text-base">
-          {% if day.isBlank %}
-          Closed
-          {% else %}
-          {{ day.open|time('short') }} - {{ day.close|time('short') }}
-          {% endif %}
-          </span>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-    {% include "_atoms/a-googlemaps-plugin" %}
-  </div>
-  {% include "_atoms/a-opentable-plugin" %}
-</div>
+	{% set image = entry.hoursHeaderImage.one().optimizedImages %}
+	{% set altText = entry.hoursHeaderImage.one().title %}
+	{% set header = entry.hoursHeaderText %}
+	{% set text = entry.hoursTextContent %}
+	<a id="hours">{% include "_molecules/m-text-header" %}</a>
+	<div id="hours-and-reservations-content" class="flex flex-col text-center justify-center mt-4 px-2 md:px-8 lg:px-16">
+		{% include "_atoms/a-text-body" %}
+		<div id="contact-buttons" class="flex flex-col w-full items-center md:justify-around">
+			<a href="http://shop.forestrycamp.com/" class="font-GuestCheck text-3xl px-4 py-2 bg-fc-green text-orange-100 text-center hover:text-fc-black rounded-lg">
+				our store
+			</a>
+			<p class="font-GillSansNova font-normal text-fc-black text-base text-center pt-2">Visit our store or call us to purchase food, beer and wine for pickup or delivery. We also ship merchandise and gift cards nationwide.</p>
+			<a href="tel:1-828-505-4452" class="cursor-pointer text-center">
+				<h5 class="font-GuestCheck border-t-2 border-b-2 mt-4 border-fc-black text-fc-black text-2xl font-bold hover:text-fc-green w-52">give us a call</h5>
+			</a>
+		</div>
+		<div id="hours-and-map-content" class="flex flex-col lg:flex-row-reverse justify-center items-center my-20">
+			<div id="hours-content" class="reveal p-4 lg:text-left lg:w-auto">
+				<h3 id="hours-header" class="font-GuestCheck text-fc-black text-2xl">hours</h3>
+				<p class="font-GillSansNova font-normal text-fc-black text-base text-left">For Pickup and Delivery Only</p>
+				<div id="hours-list" class="flex flex-col">
+					{% for day in entry.restaurantHours %}
+						<div>
+							<span class="font-GillSansNova font-bold text-fc-black text-base">{{ day.name }}</span>
+							<span class="font-GillSansNova text-fc-black text-base">
+								{% if day.isBlank %}
+									Closed
+								{% else %}
+									{{ day.open|time('short') }}
+									-
+									{{ day.close|time('short') }}
+								{% endif %}
+							</span>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+			{% include "_atoms/a-googlemaps-plugin" %}
+		</div>
+		{% include "_atoms/a-opentable-plugin" %}
+	</div>
 {% endblock %}

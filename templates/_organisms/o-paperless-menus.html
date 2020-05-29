@@ -1,0 +1,53 @@
+{% block hours %}
+	{% set header = entry.paperlessMenuHeader %}
+	<a id="paperless-menu">{% include "_molecules/m-text-header" %}</a>
+	<div id="paperless-menu-content" class="flex flex-col text-center justify-center mt-4 px-2 md:px-8 lg:px-16">
+		<div id="paperless-menu-navigation" class="flex flex-row flex-wrap space-between"></div>
+		{% for row in entry.menuSections.all() %}
+			{% if navigationOption == 1 %}
+				{% set menuSectionHeader = row.sectionHeader %}
+				{% if customAnchor|length %}
+					{% set anchorLink = row.customAnchor %}
+				{% else %}
+					{% set anchorLink = menuSectionHeader|anchor %}
+				{% endif %}
+			{% endif %}
+			<a href="{{ anchorLink }}">
+				<h3>{{ menuSectionHeader }}</h3>
+			</a>
+		{% endfor %}
+		<div id="paperless-menu-sections" class="flex flex-col">
+			{% for row in entry.menuSections.all() %}
+				{% set menuSectionHeader = row.sectionHeader %}
+				{% if customAnchor|length %}
+					{% set anchorLink = row.customAnchor %}
+				{% else %}
+					{% set anchorLink = menuSectionHeader|anchor %}
+				{% endif %}
+				<div id="paperless-menu-section" class="flex flex-col">
+					<div id="{{ anchorLink }}" class="flex flex-row justify-between items-start w-full px-1 mt-16 border-b-2 border-fc-black">
+						<h3>{{ menuSectionHeader }}</h3>
+					</div>
+					<div id="menu-items" class="flex flex-col">
+						{% for block in row.menuItems.all() %}
+							{% set itemName = block.getFieldValue(itemName) %}
+							{% set itemDescription = block.getFieldValue(itemDescription) %}
+							{% set price = block.getFieldValue(price) %}
+							{% set priceDescription = block.getFieldValue(priceDescription) %}
+							<div id="menu-item-wrapper" class="flex flex-col">
+								<div id="menu-item-top-line" class="flex flex-row space-between">
+									<div><h4>{{ itemName }}</h4></div>
+									<div><h4>{{ price }}</h4></div>
+								</div>
+								<div id="menu-item-bottom-line" class="flex flex-row space-between">
+									<div><p>{{ itemDescription }}</p></div>
+									<div><p>{{ priceDescription }}</p></div>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}
