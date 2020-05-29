@@ -8,8 +8,9 @@
 		{% for row in entry.menuSections.all() %}
 			{% if row.navigationOption == 1 %}
 				{% set menuSectionHeader = row.sectionHeader %}
+				{% set customAnchor = row.customAnchor %}
 				{% if customAnchor|length %}
-					{% set anchorLink = row.customAnchor %}
+					{% set anchorLink = customAnchor|anchors %}
 				{% else %}
 					{% set anchorLink = menuSectionHeader|anchors %}
 				{% endif %}
@@ -21,8 +22,9 @@
 		<div id="paperless-menu-sections" class="flex flex-col">
 			{% for row in entry.menuSections.all() %}
 				{% set menuSectionHeader = row.sectionHeader %}
+				{% set customAnchor = row.customAnchor %}
 				{% if customAnchor|length %}
-					{% set anchorLink = row.customAnchor %}
+					{% set anchorLink = row.customAnchor|anchors %}
 				{% else %}
 					{% set anchorLink = menuSectionHeader|anchors %}
 				{% endif %}
