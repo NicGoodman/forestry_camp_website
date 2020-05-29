@@ -35,37 +35,36 @@
 							<h3>{{ recipeName }}</h3>
 						</div>
 						<div id="recipe-entries" class="flex flex-col font-GillSansNova">
-							{% for block in row.recipeContent.all() %}
-								<div id="recipe-entry-wrapper" class="flex flex-col w-full mb-4">
-									{% if block.type == block.ingredient %}
-										{% set ingredientMeasurement = block.ingredientMeasurement %}
-										{% set ingredientName = block.ingredientName %}
-										<div id="ingredient" class="flex flex-row justify-start w-full font-bold uppercase text-fc-black">
-											<div class="text-left font-bold">
-												<h4>{{ ingredientMeasurement }}</h4>
-											</div>
-											<div class="text-left pl-10">
-												<h4>{{ ingredientName }}</h4>
-											</div>
+							<div id="recipe-entry-wrapper" class="flex flex-col w-full mb-4">
+								{% for block in row.recipeContent.type('ingredient') %}
+									{% set ingredientMeasurement = block.ingredientMeasurement %}
+									{% set ingredientName = block.ingredientName %}
+									<div id="ingredient" class="flex flex-row justify-start w-full font-bold uppercase text-fc-black">
+										<div class="text-left font-bold">
+											<h4>{{ ingredientMeasurement }}</h4>
 										</div>
-									{% elseif block.type == block.step %}
-										{% set stepNumber = block.stepNumber %}
-										{% set stepText = block.stepText %}
-										<div id="step" class="flex flex-row justify-start w-full text-fc-dkgray">
-											<div class="text-left">
-												{{ stepNumber }}
-											</div>
-											<div class="text-left pl-10">
-												{{ stepText | nl2br }}
-											</div>
+										<div class="text-left pl-10">
+											<h4>{{ ingredientName }}</h4>
 										</div>
-									{% endif %}
-								</div>
-							{% endfor %}
-						</div>
+									</div>
+								{% endfor %}
+								{% for block in row.recipeContent.type('step') %}
+									{% set stepNumber = block.stepNumber %}
+									{% set stepText = block.stepText %}
+									<div id="step" class="flex flex-row justify-start w-full text-fc-dkgray">
+										<div class="text-left">
+											{{ stepNumber }}
+										</div>
+										<div class="text-left pl-10">
+											{{ stepText | nl2br }}
+										</div>
+									</div>
+								{% endfor %}
+							</div>
+						{% endfor %}
 					</div>
-				{% endif %}
-			{% endfor %}
-		</div>
+				</div>
+			{% endif %}
+		{% endfor %}
 	</div>
-{% endblock %}
+</div>{% endblock %}
