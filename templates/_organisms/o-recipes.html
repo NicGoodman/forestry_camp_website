@@ -35,8 +35,8 @@
 							<h3>{{ recipeName }}</h3>
 						</div>
 						<div id="recipe-entries" class="flex flex-col font-GillSansNova">
-							<div id="recipe-entry-wrapper" class="flex flex-col w-full mb-4">
-								<div class="font-bold uppercase text-fc-black">
+							<div id="recipe-ingredients-wrapper" class="flex flex-col w-full mb-4 items-start">
+								<div class="font-bold uppercase text-fc-black mb-2">
 									<h3>Ingredients</h3>
 								</div>
 								{% for block in row.recipeContent.type('ingredient') %}
@@ -51,7 +51,9 @@
 										</div>
 									</div>
 								{% endfor %}
-                                <div class="font-bold uppercase text-fc-black">
+							</div>
+							<div id="recipe-steps-wrapper" class="flex flex-col w-full mb-4 items-start">
+								<div class="font-bold uppercase text-fc-black">
 									<h3>Steps</h3>
 								</div>
 								{% for block in row.recipeContent.type('step') %}
