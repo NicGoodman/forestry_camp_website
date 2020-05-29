@@ -1,0 +1,12 @@
+{% block covid %}
+	{% set header = entry.covidHeader %}
+	{% set image = entry.covidHeaderImage.one().optimizedImages %}
+	{% set altText = entry.covidHeaderImage.one().title %}
+	<a id="covid-news">{% include "_molecules/m-text-header" %}</a>
+	<div id="covid-content" class="flex flex-col text-center justify-center mt-4 px-2 md:px-8 lg:px-16">
+		<div class="flex flex-row justify-start w-full pb-1 mt-16 border-b border-fc-black font-GuestCheck uppercase text-lg text-fc-black mb-2">
+			<h3>{{ entry.covidUpdateTitle }}</h3>
+		</div>
+		{{ entry.covidUpdates }}
+	</div>
+{% endblock %}
