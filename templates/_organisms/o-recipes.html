@@ -61,7 +61,7 @@
 								{% for block in row.recipeContent.type('step').all() %}
 									{% set stepNumber = block.stepNumber %}
 									{% set stepText = block.stepText %}
-									<div id="step" class="flex flex-row justify-start w-full text-fc-dkgray mb-2">
+									<div id="step" class="flex flex-row justify-start w-full text-fc-dkgray mb-2 leading-tight">
 										<div class="text-left font-bold">
 											{{ stepNumber }}
 										</div>
