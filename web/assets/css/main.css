@@ -37308,3 +37308,7 @@ p {
 #myBtn:hover {
   background-color: #183a1c; /* Add a dark-grey background on hover */
 }
+
+#covid-content ul {
+  list-style: bullets !important;
+}
