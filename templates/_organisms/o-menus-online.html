@@ -1,0 +1,72 @@
+{% block menus %}
+{% set image = entry.menusHeaderImage.one().optimizedImages %}
+{% set altText = entry.menusHeaderImage.one().title %}
+{% set header = entry.menusHeaderText %}
+{% set text = entry.menusTextContent %}
+  <a id="menus">{% include "_molecules/m-text-header" %}</a>
+  <div class="flex flex-col text-center mt-4 px-2 md:px-8 lg:px-16">
+  {% include "_atoms/a-text-body" %}
+  
+  <div class="reveal flex flex-row-reverse border-b border-fc-black w-full md:w-2/3 self-center mt-8">
+    {% set header = 'food' %}
+    {% include "_atoms/a-text-h3" %}
+  </div>
+  <div class="reveal flex flex-row flex-wrap justify-center w-full mt-8">
+    <a href="/paperless" class="">
+      <div class="flex flex-col justify-center rounded-full border-fc-black border-2 w-32 h-32  m-2 bg-cover bg-fc-black hover:bg-transparent text-white text-xl hover:text-fc-black">
+        <h3 class="font-GuestCheck text-center">
+          dining<br/>menu
+        </h3>
+      </div>
+    </a>
+
+    <a href="/paperless#camp-grocery-products" class="">
+      <div class="flex flex-col justify-center rounded-full border-fc-black border-2 w-32 h-32  m-2 bg-cover bg-fc-black hover:bg-transparent text-white text-xl hover:text-fc-black">
+        <h3 class="font-GuestCheck text-center">
+          camp grocery<br/>products
+        </h3>
+      </div>
+    </a>
+  </div>
+
+<div class="reveal flex flex-row-reverse border-b border-fc-black w-full md:w-2/3 self-center mt-8">
+  {% set header = 'beverages' %}
+  {% include "_atoms/a-text-h3" %}
+</div>
+  <div class="reveal flex flex-row flex-wrap justify-center w-full mt-8">
+
+    <a href="/paperlessmenu#draft-beer-&-cider" class="">
+      <div class="flex flex-col justify-center rounded-full border-fc-black border-2 w-32 h-32  m-2 bg-cover bg-fc-black hover:bg-transparent text-white text-xl hover:text-fc-black">
+        <h3 class="font-GuestCheck text-center">
+          beer & cider
+        </h3>
+      </div>
+    </a>
+
+    <a href="/paperlessmenu#wine-by-the-glass" class="">
+      <div class="flex flex-col justify-center rounded-full border-fc-black border-2 w-32 h-32  m-2 bg-cover bg-fc-black hover:bg-transparent text-white text-xl hover:text-fc-black">
+        <h3 class="font-GuestCheck text-center">
+          wine
+        </h3>
+      </div>
+    </a>
+
+    <a href="/paperlessmenu#cocktails" class="">
+      <div class="flex flex-col justify-center rounded-full border-fc-black border-2 w-32 h-32  m-2 bg-cover bg-fc-black hover:bg-transparent text-white text-xl hover:text-fc-black">
+        <h3 class="font-GuestCheck text-center">
+          cocktails & spirits
+        </h3>
+      </div>
+    </a>
+
+    <a href="" class="">
+      <div class="flex flex-col justify-center rounded-full border-fc-black border-2 w-32 h-32  m-2 bg-cover bg-fc-black hover:bg-transparent text-white text-xl hover:text-fc-black">
+        <h3 class="font-GuestCheck text-center">
+          espresso & fine tea
+        </h3>
+      </div>
+    </a>
+
+  </div>
+</div>
+{% endblock %}

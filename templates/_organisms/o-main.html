@@ -2,9 +2,9 @@
 	{% set landscape = entry.landscapeImage.one().optimizedImages %}
 	{% set announcementMessage = entry.announcementMessage %}
 	{% if announcementMessage|length %}
-		<div id="announcement-bar" class="w-full h-auto text-white bg-fc-green relative text-center align-middle font-GillSansNova font-normal text-base">
+		<a href="{{ entry.announcementMessageLink }}" id="announcement-bar" class="w-full h-auto text-white bg-fc-green relative text-center align-middle font-GillSansNova font-normal text-base">
 			<p class="py-1 m-0">{{ entry.announcementMessage }}</p>
-		</div>
+		</a>
 	{% endif %}
 	<div id="main-section-content" class="flex flex-col lg:flex-row justify-between md:justify-start items-end md:items-center content-center min-h-screen max-h-full border-b-2 border-fc-black">
 		<a id="home"></a>
