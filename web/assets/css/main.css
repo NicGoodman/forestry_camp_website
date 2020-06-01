@@ -1,6 +1,9 @@
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 
+#covid-content ul {
+  list-style: bullets !important;
+}
 
 /* Document
    ========================================================================== */
@@ -37307,8 +37310,4 @@ p {
 
 #myBtn:hover {
   background-color: #183a1c; /* Add a dark-grey background  hover */
-}
-
-#covid-content ul {
-  list-style: bullets !important;
 }
