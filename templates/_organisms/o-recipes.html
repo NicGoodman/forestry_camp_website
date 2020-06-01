@@ -4,7 +4,7 @@
 	{% set altText = entry.recipesHeaderImage.one().title %}
 	<a id="paperless-menu">{% include "_molecules/m-text-header" %}</a>
 	<div id="paperless-menu-content" class="flex flex-col text-center justify-center mt-4 px-2 md:px-8 lg:px-16">
-		<div id="paperless-menu-navigation" class="flex flex-row flex-wrap justify-around w-3/4 self-center font-GuestCheck lowercase text-lg mb-10">
+		<div id="paperless-menu-navigation" class="flex flex-row flex-no-wrap md:flex-wrap justify-center w-3/4 self-center font-GuestCheck lowercase text-lg mb-10">
 			{% for row in entry.recipeSections.all() %}
 				{% if row.navigationOption == 1 and row.visibility == 1 %}
 					{% set recipeName = row.recipeName %}
