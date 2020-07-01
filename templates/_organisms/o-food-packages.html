@@ -16,15 +16,30 @@
 		<div id="food-packages-sections" class="flex flex-col w-full">
 			{% for row in entry.foodSections.all() %}
 				{% set sectionHeader = row.sectionHeader %}
-                {% set sectionDescription = row.sectionDescription %}
+				{% set sectionDescription = row.sectionDescription %}
 				{% set anchorLink = sectionHeader|replace(' ', '-')|lower %}
 				<div id="private-events-section" class="flex flex-col">
 					<div id="{{ anchorLink }}" class="flex flex-row justify-end w-full pb-1 mt-16 border-b border-fc-black font-GuestCheck uppercase text-xl text-fc-black mb-4">
 						<h3>{{ sectionHeader }}</h3>
 					</div>
-                    <div class="w-full md:w-2/3">
-                        {{ sectionDescription }}
-                    </div>
+					<div class="w-full md:w-2/3">
+						{{ sectionDescription }}
+					</div>
+					<div id="gallery-images" class="w-full flex flex-row flex-wrap">
+						{% for block in row.sectionImages.all() %}
+							{% set image = block.image.one().optimizedImages %}
+							{% set imageLink = block.imageLink %}
+							{% set caption = block.caption %}
+							<div id="gallery-image" class="w-1/2 md:w-1/3 p-2">
+								<a href="{{ imageLink }}">
+									<img src="{{ image.src() }}" data-srcset="{{ image.srcset() }}" alt="">
+								</a>
+								{% if caption|length %}
+									<p>{{ caption }}</p>
+								{% endif %}
+							</div>
+						{% endfor %}
+					</div>
 				</div>
 			{% endfor %}
 		</div>
