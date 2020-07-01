@@ -16,11 +16,15 @@
 		<div id="space-rental-sections" class="flex flex-col w-full">
 			{% for row in entry.spaceSections.all() %}
 				{% set sectionHeader = row.sectionHeader %}
+                {% set sectionDescription = row.sectionDescription %}
 				{% set anchorLink = sectionHeader|replace(' ', '-')|lower %}
-				<div id="space-rental-section" class="flex flex-col">
+				<div id="private-events-section" class="flex flex-col">
 					<div id="{{ anchorLink }}" class="flex flex-row justify-end w-full pb-1 mt-16 border-b border-fc-black font-GuestCheck uppercase text-xl text-fc-black mb-4">
 						<h3>{{ sectionHeader }}</h3>
 					</div>
+                    <div class="w-full md:w-2/3">
+                        {{ sectionDescription }}
+                    </div>
 				</div>
 			{% endfor %}
 		</div>
