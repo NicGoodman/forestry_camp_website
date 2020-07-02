@@ -2,7 +2,7 @@
 	{% set header = entry.foodPackagesHeader %}
 	{% set image = entry.foodPackagesHeaderImage.one().optimizedImages %}
 	{% set altText = entry.foodPackagesHeaderImage.one().title %}
-	<button onclick="location.href = '{{ siteUrl }}';" id="myBtn" title="Return Home">return home</button>
+	<button onclick="location.href = '{{ siteUrl }}';" title="Return Home">return home</button>
 	<a id="food-packages">{% include "_molecules/m-text-header" %}</a>
 	<div id="food-packages-content" class="flex flex-col text-center justify-center mt-4 px-2 md:px-8 lg:px-16">
 		<div id="food-packages-navigation" class="flex flex-row flex-wrap justify-center w-3/4 self-center font-GuestCheck lowercase text-lg mb-10">
