@@ -22,7 +22,7 @@
 					<div id="{{ anchorLink }}" class="flex flex-row justify-end w-full pb-1 mt-16 border-b border-fc-black font-GuestCheck uppercase text-xl text-fc-black mb-4">
 						<h3>{{ sectionHeader }}</h3>
 					</div>
-					<div class="w-full md:w-2/3 text-center self-center font-GillSansNova font-normal text-fc-black text-base">
+					<div class="w-full md:w-3/4 text-center self-center font-GillSansNova font-normal text-fc-black text-base">
 						{{ sectionDescription }}
 					</div>
 					<div id="gallery-images" class="w-full flex flex-row flex-wrap">
@@ -32,7 +32,7 @@
 							{% set caption = block.caption %}
 							<div id="gallery-image" class="w-1/2 md:w-1/4 p-2">
 								<a href="{{ imageLink }}">
-									<img src="{{ image.src() }}" data-srcset="{{ image.srcset() }}" alt="" class="object-cover h-64 w-full">
+									<img src="{{ image.src() }}" data-srcset="{{ image.srcset() }}" alt="" class="object-cover h-48 w-full">
 									{% if caption|length %}
 										<p class="font-GillSansNova font-normal text-fc-black text-sm">{{ caption }}</p>
 									{% endif %}
