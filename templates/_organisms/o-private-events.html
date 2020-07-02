@@ -31,7 +31,7 @@
 							{% set imageLink = block.imageLink %}
 							{% set caption = block.caption %}
 							<div id="gallery-image" class="w-1/2 md:w-1/4 p-2">
-								{% if imageLink|length %}<a href="{{ imageLink }}">{% endif %}
+								{% if imageLink|length %}<a href="{{ siteUrl }}{{ imageLink }}">{% endif %}
 									<img src="{{ image.src() }}" data-srcset="{{ image.srcset() }}" alt="" class="object-cover h-48 w-full">
 									{% if caption|length %}
 										<p class="font-GillSansNova font-bold text-fc-black text-sm">{{ caption }}</p>
