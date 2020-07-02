@@ -30,7 +30,7 @@
 							{% set image = block.image.one().optimizedImages %}
 							{% set imageLink = block.imageLink %}
 							{% set caption = block.caption %}
-							<div id="gallery-image" class="w-1/2 md:w-1/4 p-2 justiy-center">
+							<div id="gallery-image" class="w-1/2 md:w-1/4 p-2 justify-center">
 								<a href="{{ imageLink }}">
 									<img src="{{ image.src() }}" data-srcset="{{ image.srcset() }}" alt="" class="object-cover h-48 w-full">
 									{% if caption|length %}
