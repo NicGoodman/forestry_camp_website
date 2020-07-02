@@ -2,7 +2,10 @@
 	{% set header = entry.privateEventsHeader %}
 	{% set image = entry.privateEventsHeaderImage.one().optimizedImages %}
 	{% set altText = entry.privateEventsHeaderImage.one().title %}
-    <button onclick="location.href = '{{ siteUrl }}';" title="Return Home" class="font-GuestCheck pt-4 text-fc-green font-bold text-center hover:text-fc-black w-32"><i class="fas fa-chevron-circle-left"></i> return home</button>
+	{% set intro = entry.privateEventsIntro %}
+	<button onclick="location.href = '{{ siteUrl }}';" title="Return Home" class="font-GuestCheck pt-4 text-fc-green font-bold text-center hover:text-fc-black w-32">
+		<i class="fas fa-chevron-circle-left"></i>
+		return home</button>
 	<a id="private-events">{% include "_molecules/m-text-header" %}</a>
 	<div id="private-events-content" class="flex flex-col text-center justify-center mt-4 px-2 md:px-8 lg:px-16">
 		<div id="private-events-navigation" class="flex flex-row flex-wrap justify-center w-3/4 self-center font-GuestCheck lowercase text-lg mb-10">
@@ -15,6 +18,9 @@
 			{% endfor %}
 		</div>
 		<div id="private-events-sections" class="flex flex-col w-full">
+			<div class="w-full text-center self-center font-GillSansNova font-normal text-fc-black text-base">
+				{{ intro }}
+			</div>
 			{% for row in entry.privateEventSections.all() %}
 				{% set sectionHeader = row.sectionHeader %}
 				{% set sectionDescription = row.sectionDescription %}
@@ -32,12 +38,16 @@
 							{% set imageLink = block.imageLink %}
 							{% set caption = block.caption %}
 							<div id="gallery-image" class="w-1/2 md:w-1/4 p-2">
-								{% if imageLink|length %}<a href="{{ siteUrl }}{{ imageLink }}">{% endif %}
+								{% if imageLink|length %}
+									<a href="{{ siteUrl }}{{ imageLink }}">
+									{% endif %}
 									<img src="{{ image.src() }}" data-srcset="{{ image.srcset() }}" alt="" class="object-cover h-48 w-full">
 									{% if caption|length %}
 										<p class="font-GillSansNova font-bold text-fc-black text-sm">{{ caption }}</p>
 									{% endif %}
-								{% if imageLink|length %}</a>{% endif %}
+									{% if imageLink|length %}
+									</a>
+								{% endif %}
 							</div>
 						{% endfor %}
 					</div>
