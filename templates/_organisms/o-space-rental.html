@@ -32,7 +32,7 @@
 					<div class="w-full lg:w-3/4 xl:w-full text-center self-center font-GillSansNova font-normal text-fc-black text-base">
 						{{ sectionDescription }}
 					</div>
-					<div id="gallery-images" class="flex flex-col md:flex-row md:flex-wrap w-full justify-center">
+					<div id="gallery-images" class="flex flex-row flex-wrap w-full justify-center">
 						{% for block in row.sectionImages.all() %}
 							{% set imageThumb = block.image.one().optimizedImages %}
 							{% set image = block.image.one() %}
