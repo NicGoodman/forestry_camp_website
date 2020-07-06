@@ -41,7 +41,7 @@
 								{% if imageLink|length %}
 									<a href="{{ siteUrl }}{{ imageLink }}">
 									{% endif %}
-									<img src="{{ image.src() }}" data-srcset="{{ image.srcset() }}" alt="" class="object-contain h-48">
+									<img src="{{ image.src() }}" data-srcset="{{ image.srcset() }}" alt="" class="object-contain object-center h-48">
 									{% if caption|length %}
 										<p class="font-GillSansNova font-bold text-fc-black text-sm">{{ caption }}</p>
 									{% endif %}
