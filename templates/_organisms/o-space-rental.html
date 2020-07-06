@@ -32,14 +32,14 @@
 					<div class="w-full lg:w-3/4 xl:w-full text-center self-center font-GillSansNova font-normal text-fc-black text-base">
 						{{ sectionDescription }}
 					</div>
-					<div id="gallery-images" class="w-full flex flex-row flex-wrap justify-center">
+					<div id="gallery-images" class="flex flex-col md:flex-row md:flex-wrap w-full justify-center">
 						{% for block in row.sectionImages.all() %}
 							{% set imageThumb = block.image.one().optimizedImages %}
 							{% set image = block.image.one() %}
 							{% set caption = block.caption %}
-							<div id="gallery-image" class="w-1/2 md:w-1/4 p-2">
+							<div id="gallery-image" class="p-2">
 								<a href="#" data-featherlight="{{ image.getUrl }}">
-									<img src="{{ imageThumb.src() }}" data-srcset="{{ imageThumb.srcset() }}" alt="" class="object-cover h-48 w-full">
+									<img src="{{ imageThumb.src() }}" data-srcset="{{ imageThumb.srcset() }}" alt="{{ caption }}" class="object-contain h-48">
 								</a>
 								{% if caption|length %}
 									<p class="font-GillSansNova font-bold text-fc-black text-sm">{{ caption }}</p>
