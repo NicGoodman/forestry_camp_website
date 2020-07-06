@@ -37,7 +37,7 @@
 							{% set image = block.image.one().optimizedImages %}
 							{% set imageLink = block.imageLink %}
 							{% set caption = block.caption %}
-							<div id="gallery-image" class="p-2">
+							<div id="gallery-image" class="w-1/2 md:w-1/4 p-2">
 								{% if imageLink|length %}
 									<a href="{{ siteUrl }}{{ imageLink }}">
 									{% endif %}
