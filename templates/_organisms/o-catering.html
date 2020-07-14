@@ -1,0 +1,67 @@
+{% block spaces %}
+	{% set header = entry.cateringHeader %}
+	{% set image = entry.cateringHeaderImage.one().optimizedImages %}
+	{% set altText = entry.cateringHeaderImage.one().title %}
+	{% set intro = entry.cateringIntro %}
+	<button onclick="location.href = '{{ siteUrl }}';" title="Return Home" class="font-GuestCheck pt-4 text-fc-green font-bold text-center hover:text-fc-black w-32">
+		<i class="fas fa-chevron-circle-left"></i>
+		return home</button>
+	<a id="catering">{% include "_molecules/m-text-header" %}</a>
+	<div
+		id="catering-content" class="flex flex-col text-center justify-center mt-4 px-2 md:px-8 lg:px-16">
+		{# <div id="catering-navigation" class="flex flex-row flex-wrap justify-center w-3/4 self-center font-GuestCheck lowercase text-lg mb-10">
+						<a href="/private-events" class="text-fc-dark_green font-bold px-3 py-1 w-full md:w-auto">
+								<h3>Private Events</h3>
+							</a>
+							{% for row in entry.spaceSections.all() %}
+								{% set sectionHeader = row.sectionHeader %}
+								{% set anchorLink = sectionHeader|replace(' ', '-')|lower %}
+								<a href="#{{ anchorLink }}" class="hover:text-fc-dark_green px-3 py-1 w-full md:w-auto">
+									<h3>{{ sectionHeader }}</h3>
+								</a>
+							{% endfor %}
+						</div> #}
+		<div id="catering-sections" class="flex flex-col w-full">
+			<div class="w-full text-center self-center font-GillSansNova font-normal text-fc-black text-base">
+				{{ intro }}
+			</div>
+			{% for block in entry.cateringPackages.all() %}
+				{% switch block.type %}
+					{% case "cateringPackage" %}
+						{% set sectionHeader = block.packageTitle %}
+						{% set sectionDescription = row.packageDescription %}
+						{% set anchorLink = sectionHeader|replace(' ', '-')|lower %}
+						<div id="private-events-section" class="flex flex-col">
+							<div id="{{ anchorLink }}" class="flex flex-row justify-end w-full pb-1 mt-16 border-b border-fc-black font-GuestCheck uppercase text-xl text-fc-black mb-4">
+								<h3>{{ sectionHeader }}</h3>
+							</div>
+							<div class="w-full lg:w-3/4 xl:w-full text-center self-center font-GillSansNova font-normal text-fc-black text-base">
+								{{ sectionDescription }}
+							</div>
+							<div id="gallery-images" class="flex flex-row flex-wrap w-full justify-center">
+								{% for block in block.packageImages.all() %}
+									{% if block.image.one()|length %}
+										{% set imageThumb = block.image.one().optimizedImages %}
+										{% set image = block.image.one() %}
+										<div id="gallery-image" class="p-2">
+											<a href="#" data-featherlight="{{ image.getUrl }}">
+												<img src="{{ imageThumb.src() }}" data-srcset="{{ imageThumb.srcset() }}" alt="{{ caption }}" class="object-contain object-center h-48">
+											</a>
+											{% if caption|length %}
+												<p class="font-GillSansNova font-bold text-fc-black text-sm">{{ caption }}</p>
+											{% endif %}
+										</div>
+									{% endif %}
+								{% endfor %}
+							</div>
+						</div>
+					{% case "callToAction" %}
+						<div class="w-full text-center self-center">
+
+							<a href="{{ block.callToActionLink }}" class="font-GuestCheck pt-4 text-fc-green font-bold text-center hover:text-fc-black w-32">{{ block.callToActionTitle }}</a>
+						</div>
+				{% endswitch %}
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}
