@@ -29,7 +29,7 @@
 				{% switch block.type %}
 					{% case "cateringPackage" %}
 						{% set sectionHeader = block.packageName %}
-						{% set sectionDescription = row.packageDescription %}
+						{% set sectionDescription = block.packageDescription %}
 						{% set anchorLink = sectionHeader|replace(' ', '-')|lower %}
 						<div id="private-events-section" class="flex flex-col">
 							<div id="{{ anchorLink }}" class="flex flex-row justify-end w-full pb-1 mt-16 border-b border-fc-black font-GuestCheck uppercase text-xl text-fc-black mb-4">
