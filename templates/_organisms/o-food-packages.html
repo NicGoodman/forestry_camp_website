@@ -33,19 +33,24 @@
 						{{ sectionDescription }}
 					</div>
 					<div id="gallery-images" class="flex flex-row flex-wrap w-full justify-center">
+
+
 						{% for block in row.sectionImages.all() %}
-							{% set imageThumb = block.image.one().optimizedImages %}
-							{% set image = block.image.one() %}
-							{% set caption = block.caption %}
-							<div id="gallery-image" class="p-2">
-								<a href="#" data-featherlight="{{ image.getUrl }}">
-									<img src="{{ imageThumb.src() }}" data-srcset="{{ imageThumb.srcset() }}" alt="{{ caption }}" class="object-contain object-center h-48">
-								</a>
-								{% if caption|length %}
-									<p class="font-GillSansNova font-bold text-fc-black text-sm">{{ caption }}</p>
-								{% endif %}
-							</div>
+							{% if block.image.one()|length %}
+								{% set imageThumb = block.image.one().optimizedImages %}
+								{% set image = block.image.one() %}
+								{% set caption = block.caption %}
+								<div id="gallery-image" class="p-2">
+									<a href="#" data-featherlight="{{ image.getUrl }}">
+										<img src="{{ imageThumb.src() }}" data-srcset="{{ imageThumb.srcset() }}" alt="{{ caption }}" class="object-contain object-center h-48">
+									</a>
+									{% if caption|length %}
+										<p class="font-GillSansNova font-bold text-fc-black text-sm">{{ caption }}</p>
+									{% endif %}
+								</div>
+							{% endif %}
 						{% endfor %}
+
 					</div>
 				</div>
 			{% endfor %}
