@@ -4,26 +4,34 @@
 	{% set header = entry.hoursHeaderText %}
 	{% set text = entry.hoursTextContent %}
 	<a id="hours">{% include "_molecules/m-text-header" %}</a>
-	<div id="hours-and-reservations-content" class="flex flex-col text-center justify-center mt-4 px-2 md:px-8 lg:px-16">
+	<div id="hours-and-reservations-content" class="flex flex-col justify-center px-2 mt-4 text-center md:px-8 lg:px-16">
 		{% include "_atoms/a-text-body" %}
-		<div id="contact-buttons" class="flex flex-col w-full items-center md:justify-around">
-			<a href="http://shop.forestrycamp.com/" class="font-GuestCheck text-3xl px-4 py-2 bg-fc-green text-orange-100 text-center hover:text-fc-black rounded-lg">
+		<div id="contact-buttons" class="flex flex-col items-center w-full md:justify-around">
+			<a href="http://shop.forestrycamp.com/" class="px-4 py-2 text-3xl text-center text-orange-100 rounded-lg font-GuestCheck bg-fc-green hover:text-fc-black">
 				our store
 			</a>
-			<p class="font-GillSansNova font-normal text-fc-black text-base text-center pt-2">Visit our online store to purchase food, beer and wine for pickup ahead of time. Please allow 30-45 minutes to prepare your order. We also ship merchandise and gift cards nationwide.</p>
-			<a href="tel:1-828-505-4452" class="cursor-pointer text-center">
-				<h5 class="font-GuestCheck border-t-2 border-b-2 mt-4 border-fc-black text-fc-black text-2xl font-bold hover:text-fc-green w-52">give us a call</h5>
+			<p class="pt-2 text-base font-normal text-center font-GillSansNova text-fc-black">{{ entry.onlineStoreMessage }}</p>
+			<a href="private-events" class="px-4 py-2 text-3xl text-center text-orange-100 rounded-lg font-GuestCheck bg-fc-green hover:text-fc-black">
+				private events
+			</a>
+			<p class="pt-2 text-base font-normal text-center font-GillSansNova text-fc-black">{{ entry.privateEventsMessage }}</p>
+			<a href="catering" class="px-4 py-2 text-3xl text-center text-orange-100 rounded-lg font-GuestCheck bg-fc-green hover:text-fc-black">
+				catering
+			</a>
+			<p class="pt-2 text-base font-normal text-center font-GillSansNova text-fc-black">{{ entry.cateringMessage }}</p>
+			<a href="tel:1-828-505-4452" class="text-center cursor-pointer">
+				<h5 class="mt-4 text-2xl font-bold border-t-2 border-b-2 font-GuestCheck border-fc-black text-fc-black hover:text-fc-green w-52">give us a call</h5>
 			</a>
 		</div>
-		<div id="hours-and-map-content" class="flex flex-col lg:flex-row-reverse justify-center items-center my-20">
-			<div id="hours-content" class="reveal p-4 lg:text-left lg:w-auto">
-				<h3 id="hours-header" class="font-GuestCheck text-fc-black text-2xl">hours</h3>
-				<p class="font-GillSansNova font-normal text-fc-black text-base text-left">As of June 2, 2020, we are open for Outdoor Dining and Pick Up. For more updates surrounding COVID 19 please <a href="/covid-updates">click here</a></p>
+		<div id="hours-and-map-content" class="flex flex-col items-center justify-center my-20 lg:flex-row-reverse">
+			<div id="hours-content" class="p-4 reveal lg:text-left lg:w-auto">
+				<h3 id="hours-header" class="text-2xl font-GuestCheck text-fc-black">hours</h3>
+				<p class="text-base font-normal text-left font-GillSansNova text-fc-black">As of June 2, 2020, we are open for Outdoor Dining and Pick Up. For more updates surrounding COVID 19 please <a href="/covid-updates">click here</a></p>
 				<div id="hours-list" class="flex flex-col">
 					{% for day in entry.restaurantHours %}
 						<div>
-							<span class="font-GillSansNova font-bold text-fc-black text-base">{{ day.name }}</span>
-							<span class="font-GillSansNova text-fc-black text-base">
+							<span class="text-base font-bold font-GillSansNova text-fc-black">{{ day.name }}</span>
+							<span class="text-base font-GillSansNova text-fc-black">
 								{% if day.isBlank %}
 									Closed
 								{% else %}
