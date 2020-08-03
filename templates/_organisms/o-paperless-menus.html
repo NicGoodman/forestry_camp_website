@@ -23,7 +23,7 @@
 			{% for entry in latestWineMenus.all() %}
 				{% set menuLink = entry.newMenu.one() %}
 				<a href="{{ menuLink.getUrl }}" class="w-full px-3 py-1 hover:text-fc-dark_green md:w-auto">
-					<h3>Wine List</h3>
+					<h3>Full Wine List</h3>
 				</a>
 			{% endfor %}
 		</div>
