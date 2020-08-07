@@ -26,7 +26,7 @@
 		<div id="hours-and-map-content" class="flex flex-col items-center justify-center my-20 lg:flex-row-reverse">
 			<div id="hours-content" class="p-4 reveal lg:text-left lg:w-auto">
 				<h3 id="hours-header" class="text-2xl font-GuestCheck text-fc-black">hours</h3>
-				<p class="text-base font-normal text-left font-GillSansNova text-fc-black">As of June 2, 2020, we are open for Outdoor Dining and Pick Up. For more updates surrounding COVID 19 please <a href="/covid-updates">click here</a></p>
+				<div class="text-base font-normal text-left font-GillSansNova text-fc-black">{{ entry.ReservationsMessage }}</div>
 				<div id="hours-list" class="flex flex-col">
 					{% for day in entry.restaurantHours %}
 						<div>
