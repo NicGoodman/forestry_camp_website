@@ -2,6 +2,9 @@
 	{% set header = entry.wineMenuHeader %}
 	{% set image = entry.wineMenuHeaderImage.one().optimizedImages %}
 	{% set altText = entry.wineMenuHeaderImage.one().title %}
+	<button onclick="location.href = '{{ siteUrl }}';" title="Return Home" class="w-32 pt-4 font-bold text-center font-GuestCheck text-fc-green hover:text-fc-black">
+		<i class="fas fa-chevron-circle-left"></i>
+		return home</button>
 	<a id="wine-menu">{% include "_molecules/m-text-header" %}</a>
 	<div id="wine-menu-content" class="flex flex-col justify-center px-2 mt-4 text-center md:px-8 lg:px-16">
 		<div id="wine-menu-navigation" class="flex flex-row flex-wrap self-center justify-center w-3/4 mb-10 text-lg lowercase font-GuestCheck">
@@ -43,8 +46,8 @@
 							{% elseif block.type.handle == "menuItem" %}
 								{% set itemName = block.itemName %}
 								{% set region = block.region %}
-                                {% set country = block.country %}
-                                {% set grape = block.grape %}
+								{% set country = block.country %}
+								{% set grape = block.grape %}
 								{% set price = block.price %}
 								<div id="menu-item-wrapper" class="flex flex-col w-full mb-4">
 									<div id="menu-item-top-line" class="flex flex-row justify-between w-full text-lg font-bold uppercase text-fc-black">
@@ -57,7 +60,11 @@
 									</div>
 									<div id="menu-item-bottom-line" class="flex flex-row justify-between w-full font-light text-fc-black">
 										<div class="text-left">
-											{{ region | nl2br }} • {{ country | nl2br }} • {{ grape | nl2br }}
+											{{ region | nl2br }}
+											•
+											{{ country | nl2br }}
+											•
+											{{ grape | nl2br }}
 										</div>
 									</div>
 								</div>
