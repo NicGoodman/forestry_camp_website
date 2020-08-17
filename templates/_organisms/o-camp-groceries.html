@@ -1,15 +1,14 @@
 {% block menus %}
-	{% set header = entry.paperlessMenuHeader %}
-	{% set image = entry.paperlessMenuHeaderImage.one().optimizedImages %}
-	{% set altText = entry.paperlessMenuHeaderImage.one().title %}
-	{% set latestWineMenus = craft.entries().section('wineMenus').limit(1) %}
+	{% set header = entry.campGroceriesHeader %}
+	{% set image = entry.campGroceriesHeaderImage.one().optimizedImages %}
+	{% set altText = entry.campGroceriesHeaderImage.one().title %}
 	<button onclick="location.href = '{{ siteUrl }}';" title="Return Home" class="w-32 pt-4 font-bold text-center font-GuestCheck text-fc-green hover:text-fc-black">
 		<i class="fas fa-chevron-circle-left"></i>
 		return home</button>
-	<a id="paperless-menu">{% include "_molecules/m-text-header" %}</a>
-	<div id="paperless-menu-content" class="flex flex-col justify-center px-2 mt-4 text-center md:px-8 lg:px-16">
-		<div id="paperless-menu-navigation" class="flex flex-row flex-wrap self-center justify-center w-3/4 mb-10 text-lg lowercase font-GuestCheck">
-			{% for row in entry.menuSections.all() %}
+	<a id="camp-groceries-menu">{% include "_molecules/m-text-header" %}</a>
+	<div id="camp-groceries-menu-content" class="flex flex-col justify-center px-2 mt-4 text-center md:px-8 lg:px-16">
+		<div id="camp-groceries-menu-navigation" class="flex flex-row flex-wrap self-center justify-center w-3/4 mb-10 text-lg lowercase font-GuestCheck">
+			{% for row in entry.campGroceriesSections.all() %}
 				{% if row.navigationOption == 1 %}
 					{% set menuSectionHeader = row.sectionHeader %}
 					{% set customAnchor = row.customAnchor %}
@@ -23,15 +22,12 @@
 					<h3>{{ menuSectionHeader }}</h3>
 				</a>
 			{% endfor %}
-			{% for entry in latestWineMenus.all() %}
-				{% set menuLink = entry.newMenu.one() %}
-				<a href="{{ menuLink.getUrl }}" class="w-full px-3 py-1 hover:text-fc-dark_green md:w-auto">
-					<h3>Full Wine List</h3>
-				</a>
-			{% endfor %}
 		</div>
-		<div id="paperless-menu-sections" class="flex flex-col w-full">
-			{% for row in entry.menuSections.all() %}
+		<div id="" class="w-full font-light text-center text-fc-black">
+			{{ campGroceriesIntro | nl2br }}
+		</div>
+		<div id="camp-groceries-menu-sections" class="flex flex-col w-full">
+			{% for row in entry.campGroceriesSections.all() %}
 				{% set menuSectionHeader = row.sectionHeader %}
 				{% set customAnchor = row.customAnchor %}
 				{% if customAnchor|length %}
@@ -39,7 +35,7 @@
 				{% else %}
 					{% set anchorLink = menuSectionHeader|replace(' ', '-')|lower %}
 				{% endif %}
-				<div id="paperless-menu-section" class="flex flex-col">
+				<div id="camp-groceries-menu-section" class="flex flex-col">
 					<div id="{{ anchorLink }}" class="flex flex-row justify-end w-full pb-1 mt-16 mb-4 text-xl uppercase border-b border-fc-black font-GuestCheck text-fc-black">
 						<h3>{{ menuSectionHeader }}</h3>
 					</div>

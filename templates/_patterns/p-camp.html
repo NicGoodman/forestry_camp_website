@@ -1,0 +1,10 @@
+{% extends "_patterns/p-base" %}
+{% block body %}
+	<main id="content" class="flex flex-col">
+		<section id="main" class="flex flex-col px-6 pb-24 border-b-2 md:px-12 lg:px-24 xl:px-56 border-fc-black">
+			{% include "_organisms/o-camp-groceries" %}
+			{% block menus %}{% endblock %}
+		</section>
+	</main>
+	<button onclick="topFunction()" id="myBtn" title="Return to top">return to top <i class="fas fa-chevron-circle-up"></i></button>
+{% endblock %}
