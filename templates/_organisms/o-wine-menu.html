@@ -45,10 +45,7 @@
 								</div>
 							{% elseif block.type.handle == "menuItem" %}
 								{% set itemName = block.itemName %}
-								{% set region = block.region %}
-								{% set country = block.country %}
-								{% set grape = block.grape %}
-								{% set price = block.price %}
+								{% set description = block.description %}
 								<div id="menu-item-wrapper" class="flex flex-col w-full mb-4">
 									<div id="menu-item-top-line" class="flex flex-row justify-between w-full text-lg font-bold uppercase text-fc-black">
 										<div class="text-left">
@@ -60,11 +57,7 @@
 									</div>
 									<div id="menu-item-bottom-line" class="flex flex-row justify-between w-full font-light text-fc-black">
 										<div class="text-left">
-											{{ region | nl2br }}
-											•
-											{{ country | nl2br }}
-											•
-											{{ grape | nl2br }}
+											{{ description | nl2br }}
 										</div>
 									</div>
 								</div>
