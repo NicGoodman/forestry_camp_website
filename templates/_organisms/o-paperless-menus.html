@@ -23,12 +23,25 @@
 					<h3>{{ menuSectionHeader }}</h3>
 				</a>
 			{% endfor %}
-			{% for entry in latestWineMenus.all() %}
-				{% set menuLink = entry.newMenu.one() %}
-				<a href="{{ menuLink.getUrl }}" class="w-full px-3 py-1 hover:text-fc-dark_green md:w-auto">
-					<h3>Full Wine List</h3>
-				</a>
-			{% endfor %}
+  <div class="flex flex-col px-2 mt-4 text-center md:px-8 lg:px-16">
+<div class="flex flex-row flex-wrap justify-center w-full mt-8 reveal">
+    <a href="/camp-groceries" class="">
+      <div class="flex flex-col justify-center w-32 h-32 m-2 text-xl text-white bg-cover border-2 rounded-full border-fc-black bg-fc-black hover:bg-transparent hover:text-fc-black">
+        <h3 class="text-center font-GuestCheck">
+          camp<br />grocery
+        </h3>
+      </div>
+    </a>
+
+    <a href="/wine-menu" class="">
+      <div class="flex flex-col justify-center w-32 h-32 m-2 text-xl text-white bg-cover border-2 rounded-full border-fc-black bg-fc-black hover:bg-transparent hover:text-fc-black">
+        <h3 class="text-center font-GuestCheck">
+          full<br/>wine list
+        </h3>
+      </div>
+    </a>
+  </div>
+</div>
 		</div>
 		<div id="paperless-menu-sections" class="flex flex-col w-full">
 			{% for row in entry.menuSections.all() %}
