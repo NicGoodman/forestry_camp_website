@@ -2,7 +2,7 @@
 	{% set header = entry.campGroceriesHeader %}
 	{% set image = entry.campGroceriesHeaderImage.one().optimizedImages %}
 	{% set altText = entry.campGroceriesHeaderImage.one().title %}
-	<button onclick="location.href = '{{ siteUrl }}/paperlessmenu';" title="Return Home" class="w-32 pt-4 font-bold text-center font-GuestCheck text-fc-green hover:text-fc-black">
+	<button onclick="location.href = '{{ siteUrl }}paperlessmenu';" title="Return Home" class="w-32 pt-4 font-bold text-center font-GuestCheck text-fc-green hover:text-fc-black">
 		<i class="fas fa-chevron-circle-left"></i>
 		back to paperless menu</button>
 	<a id="camp-groceries-menu">{% include "_molecules/m-text-header" %}</a>
