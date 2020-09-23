@@ -28,6 +28,14 @@
     {# can we remove the event map? And take the link down that says ‘For Burnpile Ticket Packages and Presale Beers Please Click Here’? #}
   </a>
   <section id="ticket-levels" class="flex flex-col justify-center md:flex-wrap md:flex-row">
+  <div id="about-burnpile" class="flex flex-col self-center w-full text-center font-FellRomanSc">
+      {# <h3 id="heading" class="px-2 pb-4 text-3xl font-bold font-FellRomanSc md:px-0" style="color: #015570">
+      {{ entry.aboutBurnpileHeader}}
+    </h3> #}
+
+  {{ entry.aboutBurnpile }}
+
+  </div>
     {% for block in entry.ticketLevels.all() %}
     {% switch block.cardType %}
     {% case "small" %}
