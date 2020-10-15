@@ -5,7 +5,14 @@
 	<button onclick="location.href = '{{ siteUrl }}events/burnpile-2020';" title="Return Home" class="w-32 pt-4 font-normal text-center font-base font-FellRomanSc" onMouseOver="this.style.color='#015570'" onMouseOut="this.style.color='#ffffff'">
 		<i class="fas fa-chevron-circle-left"></i>
 		return home</button>
-	<a id="paperless-menu">{% include "_molecules/m-text-header" %}</a>
+	<a id="paperless-menu"><div class="flex flex-row items-end justify-between w-full px-1 pb-2 mt-16 border-b-2 border-fc-dkgray">
+  <img src="{{ image.src() }}" data-srcset="{{ image.srcset() }}" sizes="100vw" class="object-scale-down w-24 lazyload reveal md:w-32" alt="{{ altText }}" />
+
+  <h2 class="pb-2 text-3xl reveal font-FellRomanSc md:text-4xl">
+  {{ header }}
+</h2>
+
+</div></a>
 	<div id="paperless-menu-content" class="flex flex-col justify-center px-2 mt-4 text-center md:px-8 lg:px-16">
 		<div id="paperless-menu-navigation" class="flex flex-row flex-wrap self-center justify-center w-3/4 mb-10 text-lg font-normal font-FellRoman">
 			{% for row in entry.menuSections.all() %}
@@ -33,14 +40,14 @@
 					{% set anchorLink = menuSectionHeader|replace(' ', '-')|lower %}
 				{% endif %}
 				<div id="paperless-menu-section" class="flex flex-col">
-					<div id="{{ anchorLink }}" class="flex flex-row justify-end w-full pb-1 mt-16 mb-4 text-xl font-bold uppercase border-b border-fc-dkgray font-FellRomanSc" style="color: #015570">
+					<div id="{{ anchorLink }}" class="flex flex-row justify-end w-full pb-1 mt-16 mb-4 text-2xl font-bold border-b border-fc-dkgray font-FellRomanSc" style="color: #015570">
 						<h3>{{ menuSectionHeader }}</h3>
 					</div>
 					<div id="menu-items" class="flex flex-col px-4 font-GillSansNova">
 						{% for block in row.menuItems.all() %}
 							{% if block.type.handle == "subHeading" %}
 								{% set subHeading = block.subHeadingText %}
-								<div class="flex flex-row justify-start w-full pb-1 mt-16 mb-2 text-lg lowercase border-b border-fc-dkgray font-FellRomanSc">
+								<div class="flex flex-row justify-start w-full pb-1 mt-16 mb-2 text-xl lowercase border-b border-fc-dkgray font-FellRomanSc">
 									<h3>{{ subHeading }}</h3>
 								</div>
 							{% elseif block.type.handle == "menuItem" %}
