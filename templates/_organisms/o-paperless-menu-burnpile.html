@@ -1,0 +1,76 @@
+{% block menus %}
+	{% set header = entry.paperlessMenuHeader %}
+	{% set image = entry.paperlessMenuHeaderImage.one().optimizedImages %}
+	{% set altText = entry.paperlessMenuHeaderImage.one().title %}
+	<button onclick="location.href = '{{ siteUrl }}events/burnpile-2020';" title="Return Home" class="w-32 pt-4 font-normal text-center font-base font-FellRomanSc" onMouseOver="this.style.color='#015570'" onMouseOut="this.style.color='#ffffff'">
+		<i class="fas fa-chevron-circle-left"></i>
+		return home</button>
+	<a id="paperless-menu">{% include "_molecules/m-text-header" %}</a>
+	<div id="paperless-menu-content" class="flex flex-col justify-center px-2 mt-4 text-center md:px-8 lg:px-16">
+		<div id="paperless-menu-navigation" class="flex flex-row flex-wrap self-center justify-center w-3/4 mb-10 text-lg font-normal font-FellRoman">
+			{% for row in entry.menuSections.all() %}
+				{% if row.navigationOption == 1 %}
+					{% set menuSectionHeader = row.sectionHeader %}
+					{% set customAnchor = row.customAnchor %}
+					{% if customAnchor|length %}
+						{% set anchorLink = customAnchor|replace(' ', '-')|lower %}
+					{% else %}
+						{% set anchorLink = menuSectionHeader|replace(' ', '-')|lower %}
+					{% endif %}
+				{% endif %}
+				<a href="#{{ anchorLink }}" class="w-full px-3 py-1 md:w-auto" onMouseOver="this.style.color='#015570'" onMouseOut="this.style.color='#ffffff'">
+					<h3>{{ menuSectionHeader }}</h3>
+				</a>
+			{% endfor %}
+		</div>
+		<div id="paperless-menu-sections" class="flex flex-col w-full">
+			{% for row in entry.menuSections.all() %}
+				{% set menuSectionHeader = row.sectionHeader %}
+				{% set customAnchor = row.customAnchor %}
+				{% if customAnchor|length %}
+					{% set anchorLink = row.customAnchor|replace(' ', '-')|lower %}
+				{% else %}
+					{% set anchorLink = menuSectionHeader|replace(' ', '-')|lower %}
+				{% endif %}
+				<div id="paperless-menu-section" class="flex flex-col">
+					<div id="{{ anchorLink }}" class="flex flex-row justify-end w-full pb-1 mt-16 mb-4 text-xl font-bold uppercase border-b border-fc-dkgray font-FellRomanSc" style="color: #015570">
+						<h3>{{ menuSectionHeader }}</h3>
+					</div>
+					<div id="menu-items" class="flex flex-col px-4 font-GillSansNova">
+						{% for block in row.menuItems.all() %}
+							{% if block.type.handle == "subHeading" %}
+								{% set subHeading = block.subHeadingText %}
+								<div class="flex flex-row justify-start w-full pb-1 mt-16 mb-2 text-lg lowercase border-b border-fc-dkgray font-FellRomanSc">
+									<h3>{{ subHeading }}</h3>
+								</div>
+							{% elseif block.type.handle == "menuItem" %}
+								{% set itemName = block.itemName %}
+								{% set itemDescription = block.itemDescription %}
+								{% set price = block.price %}
+								{% set priceDescription = block.priceDescription %}
+								<div id="menu-item-wrapper" class="flex flex-col w-full mb-4">
+									<div id="menu-item-top-line" class="flex flex-row justify-between w-full text-lg font-FellRomanSc">
+										<div class="text-left">
+											<h4>{{ itemName }}</h4>
+										</div>
+										<div class="pl-10 text-right">
+											<h4>{{ price }}</h4>
+										</div>
+									</div>
+									<div id="menu-item-bottom-line" class="flex flex-row justify-between w-full font-FellRoman">
+										<div class="text-left">
+											{{ itemDescription | nl2br }}
+										</div>
+										<div class="pl-10 text-right">
+											{{ priceDescription }}
+										</div>
+									</div>
+								</div>
+							{% endif %}
+						{% endfor %}
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}
