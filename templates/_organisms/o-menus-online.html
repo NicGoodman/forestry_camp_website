@@ -81,22 +81,6 @@
       </div>
     </a>
 
-    <a href="/beverages" class="">
-      <div class="flex flex-col justify-center w-32 h-32 m-2 text-xl text-white bg-cover border-2 rounded-full border-fc-black bg-fc-black hover:bg-transparent hover:text-fc-black">
-        <h3 class="text-center font-GuestCheck">
-          food &<br/>beverage
-        </h3>
-      </div>
-    </a>
-
-    <a href="/tasting-experiences" class="">
-      <div class="flex flex-col justify-center w-32 h-32 m-2 text-xl text-white bg-cover border-2 rounded-full border-fc-black bg-fc-black hover:bg-transparent hover:text-fc-black">
-        <h3 class="text-center font-GuestCheck">
-          food &<br/>beverage
-        </h3>
-      </div>
-    </a>
-
     <a href="/wine-menu" class="">
       <div class="flex flex-col justify-center w-32 h-32 m-2 text-xl text-white bg-cover border-2 rounded-full border-fc-black bg-fc-black hover:bg-transparent hover:text-fc-black">
         <h3 class="text-center font-GuestCheck">
@@ -112,6 +96,23 @@
         </h3>
       </div>
     </a>
+  </div>
+
+
+
+
+
+
+  <div class="flex flex-row flex-wrap justify-center w-full mt-8 reveal">
+    {% for block in entry.menus %}
+    <a href="{{ block.menuLink.getUrl() }}" class="">
+      <div class="flex flex-col justify-center w-32 h-32 m-2 text-xl text-white bg-cover border-2 rounded-full border-fc-black bg-fc-black hover:bg-transparent hover:text-fc-black">
+        <h3 class="text-center font-GuestCheck">
+          {{ block.menuName }}
+        </h3>
+      </div>
+    </a>
+    {% endfor %}
   </div>
 
 
