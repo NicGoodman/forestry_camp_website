@@ -105,8 +105,13 @@
 
   <div class="flex flex-row flex-wrap justify-center w-full mt-8 reveal">
     {% for block in entry.menus %}
-    {% set menuLink = block.menuLink.one() %}
-    <a href="{{ menuLink.url }}" class="">
+    {% if block.menuType.(true) %}
+    {% set menuLink = block.menuLink.one().url %}
+    {% else %}
+        {% set menuEntry = block.menuLink.one() %}
+        {% set menuLink = menuEntry.newMenu.one().getUrl %}
+    {% endif %}
+    <a href="{{ menuLink }}" class="">
       <div class="flex flex-col justify-center w-32 h-32 m-2 text-xl text-white bg-cover border-2 rounded-full border-fc-black bg-fc-black hover:bg-transparent hover:text-fc-black">
         <h3 class="text-center font-GuestCheck">
           {{ block.menuName|lower }}
