@@ -31,7 +31,7 @@
         <nav id="main-navigation" class="flex flex-row items-center font-GillSansNova font-normal text-base">
             {% for block in navigation %}
                 {% if block.type == "navigationItem" %}
-                <a href="{% if block.interalLink|length %}{{ internalLink.getUrl() }}{% elseif block.externalOrAnchorLink|length %}{{ block.externalOrAnchorLink }}{% endif %}" class="text-fc-black hover:text-fc-green">{{ block.itemName }}</a>
+                <a href="{% if block.internalLink|length %}{{ internalLink.getUrl() }}{% elseif block.externalOrAnchorLink|length %}{{ block.externalOrAnchorLink }}{% endif %}" class="text-fc-black hover:text-fc-green">{{ block.itemName }}</a>
                     
                  {% elseif block.type == "dropdownItem" %}
                     {{ block.dropdownName }}
