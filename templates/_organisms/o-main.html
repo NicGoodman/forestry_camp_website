@@ -24,23 +24,24 @@
 
 <section
     id="header-section"
-    class="flex flex-row justify-between w-full h-auto flex-grow-0 flex-shink-0 border-b-2 border-fc-black"
+    class="flex flex-row justify-between w-full h-auto flex-grow-0 flex-shink-0 border-b-2 border-fc-black items-center"
 >
     <article id="logo-nav-wrapper" class="flex flex-row h-auto">
-        <h1 id="logo" class="">{% include "_atoms/a-logo-alt" %}</h1>
-        <nav id="main-navigation" class="flex flex-row">
+        <h1 id="logo" class="py-6 px-8">{% include "_atoms/a-logo-alt" %}</h1>
+        <nav id="main-navigation" class="flex flex-row items-center font-GillSansNova font-normal text-base">
             {% for block in navigation %}
                 {% if block.type == "navigationItem" %}
-                    {{ block.itemName }} 
+                <a href="{% if block.interalLink|length %}{{ internalLink.getUrl() }}{% elseif block.externalOrAnchorLink|length %}{{ block.externalOrAnchorLink }}{% endif %}" class="text-fc-black hover:text-fc-green">{{ block.itemName }}</a>
+                    
                  {% elseif block.type == "dropdownItem" %}
                     {{ block.dropdownName }}
                   {% endif %} 
             {% endfor %}
         </nav>
     </article>
-    <article id="reservation-button" class="">
+    <article id="reservation-button" class="flex flex-row items-center">
         <a
-            href="#"
+            href="#reservations"
             class="font-GuestCheck text-3xl p-2 bg-fc-green text-orange-100 text-center hover:text-fc-black rounded-lg"
         >
             make a reservation
@@ -49,7 +50,7 @@
 </section>
 <section
     id="hero-slider-section"
-    class="w-full relative h-auto flex-grow-1"
+    class="w-full relative h-full flex-grow-1"
     x-data="{ show: 1 }"
 >
     {% for image in imageSlider %}
