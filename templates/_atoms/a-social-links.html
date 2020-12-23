@@ -1,38 +1,38 @@
-<ul class="inline-block">
+<ul class="inline-block py-1">
 	{% for block in socialMediaAccounts %}
 		{% set accountLink = block.accountLink %}
 		{% if 'youtube' in accountLink %}
-			<li class="inline-block p-2">
+			<li class="inline-block px-2">
 				<a href="{{ accountLink }}" class="social-item" target="_blank" rel="nofollow" aria-label="youtube" rel="noreferrer">
 					<i class="fab fa-youtube"></i>
 				</a>
 			</li>
 		{% elseif 'facebook' in accountLink %}
-			<li class="inline-block p-2">
+			<li class="inline-block px-2">
 				<a href="{{ accountLink }}" class="social-item"  target="_blank" rel="nofollow" aria-label="facebook" rel="noreferrer">
 					<i class="fab fa-facebook-f"></i>
 				</a>
 			</li>
 		{% elseif 'twitter' in accountLink %}
-			<li class="inline-block p-2">
+			<li class="inline-block px-2">
 				<a href="{{ accountLink }}" class="social-item"  target="_blank" rel="nofollow" aria-label="twitter" rel="noreferrer">
 					<i class="fab fa-twitter"></i>
 				</a>
 			</li>
 		{% elseif 'instagram' in accountLink %}
-			<li class="inline-block p-2">
+			<li class="inline-block px-2">
 				<a href="{{ accountLink }}" class="social-item"  target="_blank" rel="nofollow" aria-label="instagram" rel="noreferrer">
 					<i class="fab fa-instagram"></i>
 				</a>
 			</li>
 		{% elseif 'pinterest' in accountLink %}
-			<li class="inline-block p-2">
+			<li class="inline-block px-2">
 				<a href="{{ accountLink }}" class="social-item"  target="_blank" rel="nofollow" aria-label="pinterest" rel="noreferrer">
 					<i class="fab fa-pinterest-p"></i>
 				</a>
 			</li>
 		{% elseif 'linkedin' in accountLink %}
-			<li class="inline-block p-2">
+			<li class="inline-block px-2">
 				<a href="{{ accountLink }}" class="social-item"  target="_blank" rel="nofollow" aria-label="linkedin" rel="noreferrer">
 					<i class="fab fa-linkedin-in"></i>
 				</a>

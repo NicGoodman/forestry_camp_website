@@ -16,11 +16,11 @@
     {% set internalLink = block.internalLink.one() %}
     <a
         href="{% if internalLink|length %}{{ internalLink.url }}{% elseif block.externalOrAnchorLink|length %}{{ block.externalOrAnchorLink }}{% endif %}"
-        class="text-white hover:text-fc-black hover:cursor-pointer p-2"
+        class="text-white hover:text-fc-black hover:cursor-pointer p-1"
         >{{ block.itemName }}</a
     >
     {% elseif block.type == "dropdownItem" %}
-    <div id="dropdown" class="p-2">
+    <div id="dropdown" class="p-1">
         <span
             id="dropdown-header"
             class="text-white hover:text-fc-black hover:cursor-pointer"
