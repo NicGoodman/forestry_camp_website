@@ -2,8 +2,8 @@
 {% set announcementMessage = entry.announcementMessage %}
 {% set navigation = entry.navigationItems.all() %}
 {% set imageSlider = entry.imageSlider.all() %}
+{% set socialAccounts = entry.socialMediaAccounts.all() %}
 {% set address = entry.businessAddress %}
-{% set mapsLink = entry.googleMapsLink %}
 {% set phone = entry.phoneNumber %}
 
 <section id="top-bars" class="flex flex-col flex-grow-0 flex-shink-0">
@@ -20,7 +20,7 @@
         id="address-bar"
         class="hidden md:block w-full h-auto text-white bg-fc-black relative text-right align-middle font-GillSansNova font-normal text-base"
     >
-    <a href="{{ mapsLink }}" class="py-1 px-2">{{ address }}</a><a href="tel:8281234567" class="py-1 px-2 font-GuestCheck">{{ phone }}</a>{% include "_atoms/a-social-links" %}
+    <a href="" onclick="mapsSelector()" class="py-1 px-2">{{ address }}</a><a href="tel:+18285054452" class="py-1 px-2 font-GuestCheck">{{ phone }}</a>{% include "_atoms/a-social-links" %}
     </section>
 </section>
 <section
