@@ -1,11 +1,8 @@
-{% block main %}
-{% set announcementMessage = entry.announcementMessage %}
-{% set navigation = entry.navigationItems.all() %}
-{% set imageSlider = entry.imageSlider.all() %}
-{% set address = entry.businessAddress %}
-{% set mapsLink = entry.googleMapsLink %}
-{% set phone = entry.phoneNumber %}
-{% set socialAccounts = entry.socialMediaAccounts %}
+{% block main %} {% set announcementMessage = entry.announcementMessage %} {%
+set navigation = entry.navigationItems.all() %} {% set imageSlider =
+entry.imageSlider.all() %} {% set address = entry.businessAddress %} {% set
+mapsLink = entry.googleMapsLink %} {% set phone = entry.phoneNumber %} {% set
+socialAccounts = entry.socialMediaAccounts %}
 <section id="top-bars" class="flex flex-col flex-grow-0 flex-shink-0">
     {% if announcementMessage|length %}
     <a
@@ -26,18 +23,28 @@
     id="header-section"
     class="flex flex-row justify-between w-full h-auto flex-grow-0 flex-shink-0 border-b-2 border-fc-black items-center"
 >
-    <article id="logo-nav-wrapper" class="flex flex-row h-auto">
+    <article id="logo-nav-wrapper" class="flex flex-row h-auto" x-data="{ selected: null }">
         <h1 id="logo" class="py-6 px-8">{% include "_atoms/a-logo-alt" %}</h1>
-        <nav id="main-navigation" class="flex flex-row items-center font-GillSansNova font-bold text-base">
-            {% for block in navigation %}
-                {% if block.type == "navigationItem" %}
-                {% set internalLink = block.internalLink.one() %}
-                <a href="{% if internalLink|length %}{{ internalLink.url }}{% elseif block.externalOrAnchorLink|length %}{{ block.externalOrAnchorLink }}{% endif %}" class="text-fc-black hover:text-fc-green hover:cursor-pointer px-2">{{ block.itemName }}</a>
-                    
-                 {% elseif block.type == "dropdownItem" %}
+        <nav
+            id="main-navigation"
+            class="flex flex-row items-center font-GillSansNova font-bold text-base"
+        >
+            {% for block in navigation %} {% if block.type == "navigationItem"
+            %} {% set internalLink = block.internalLink.one() %}
+            <a
+                href="{% if internalLink|length %}{{ internalLink.url }}{% elseif block.externalOrAnchorLink|length %}{{ block.externalOrAnchorLink }}{% endif %}"
+                class="text-fc-black hover:text-fc-green hover:cursor-pointer px-2"
+                >{{ block.itemName }}</a
+            >
+
+            {% elseif block.type == "dropdownItem" %}
+                <span id="dropdown-header" class="text-fc-black hover:text-fc-green hover:cursor-pointer px-2" @click="selected !== {{ loop.index }} ? selected = {{ loop.index }} : selected = null" :class="{ 'text-fc-green': selected === {{ loop.index }}, 'text-fc-green': selected !== {{ loop.index }} }">
                     {{ block.dropdownName }}
-                  {% endif %} 
-            {% endfor %}
+                </span>
+                <div id="dropdown-container" class="" x-show="selected == {{ loop.index }}">
+                DROPDOWN
+            </div>
+            {% endif %} {% endfor %}
         </nav>
     </article>
     <article id="reservation-button" class="flex flex-row items-center px-6">
@@ -52,7 +59,6 @@
 <section
     id="hero-slider-section"
     class="w-full relative h-full flex-grow-1"
-    x-data="{ show: 1 }"
 >
     {% for image in imageSlider %}
     <img
