@@ -1,5 +1,5 @@
 {% extends "_patterns/p-base" %} {% block body %}
-<main id="content" class="flex flex-col">
+<main id="content" class="flex flex-col overflow-hidden">
     <section id="main" class="flex flex-col h-screen w-full" x-data="{ selected: null, mobileShow: false, imageShow: 1, add() {
     if (this.imageShow === 3 ){
         this.imageShow = 1;
