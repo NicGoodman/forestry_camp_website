@@ -14,7 +14,7 @@
     <div id="dropdown" class="relative">
         <span
             id="dropdown-header"
-            class="text-fc-black hover:text-fc-green hover:cursor-pointer px-2"
+            class="text-fc-black hover:text-fc-green cursor-pointer px-2"
             @click="selected !== {{ loop.index }} ? selected = {{ loop.index }} : selected = null"
             :class="{ 'text-fc-green': selected === {{ loop.index }}, 'text-fc-black': selected !== {{ loop.index }} }"
         >
