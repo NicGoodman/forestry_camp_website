@@ -55,7 +55,8 @@
         </i>
     </article>
 </section>
-<section id="hero-slider-section" class="w-full relative h-full flex-grow-1">
+<section id="hero-slider-section" class="w-full relative h-full flex-grow-1" x-alpine-interval="{ callback: 'add', timer: 3000 }" x-text="imageShow"
+>
 {% include "_molecules/m-main-nav-mobile" %}
     {% for image in imageSlider %}
     <img
@@ -67,4 +68,13 @@
     />
     {% endfor %}
 </section>
+<script>
+function add() {
+    if (this.imageShow === 6 ){
+        this.imageShow = 1;
+    } else {
+        this.imageShow++;
+    }
+}
+</script>
 {% endblock %}
