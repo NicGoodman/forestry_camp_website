@@ -55,7 +55,7 @@
         </i>
     </article>
 </section>
-<section id="hero-slider-section" class="w-full relative h-full flex-grow-1">
+<section id="hero-slider-section" class="w-full relative h-full flex-grow-1"         x-alpine-interval="{ callback: 'add', timer: 3000 }">
 {% include "_molecules/m-main-nav-mobile" %}
     {% for image in imageSlider %}
     <img
@@ -63,7 +63,6 @@
         alt=""
         id=""
         class="w-full h-full object-cover top-0 left-0 absolute z-40"
-        x-alpine-interval="{ callback: 'add', timer: 3000 }"
         x-show.transition="imageShow = {{ loop.index }}"
     />
     {% endfor %}
