@@ -47,7 +47,7 @@ socialAccounts = entry.socialMediaAccounts %}
                     id="dropdown-header"
                     class="text-fc-black hover:text-fc-green hover:cursor-pointer px-2"
                     @click="selected !== {{ loop.index }} ? selected = {{ loop.index }} : selected = null"
-                    :class="{ 'text-fc-green': selected === {{ loop.index }}, 'text-fc-green': selected !== {{ loop.index }} }"
+                    :class="{ 'text-fc-green': selected === {{ loop.index }}, 'text-fc-black': selected !== {{ loop.index }} }"
                 >
                     {{ block.dropdownName }}
                 </span>
