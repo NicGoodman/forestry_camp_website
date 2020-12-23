@@ -53,11 +53,12 @@ socialAccounts = entry.socialMediaAccounts %}
                 </span>
                 <div
                     id="dropdown-container"
-                    class="absolute top-0 mt-8 bg-fc-green border-2 border-white rounded-lg text-white text-sm font-normal p-2 z-50"
+                    class="absolute top-0 mt-8 bg-fc-green border-2 border-white rounded-lg text-white text-sm font-normal p-2 z-50 w-40"
                     x-show="selected == {{ loop.index }}"
                 >
                     {% for item in block.dropdownItems %}
-                    <a href="http://">{{ item.dropdownNavigationItemName }}</a>
+                    {% set internalLink = item.dropdownNavigationInternalLink.one() %}
+                    <a href="{% if internalLink|length %}{{ internalLink.url }}{% elseif item.dropdownNavigationExternalOrAnchorLink|length %}{{ item.dropdownNavigationExternalOrAnchorLink }}{% endif %}" class="block">{{ item.dropdownNavigationItemName }}</a>
                         
                     {% endfor %}
                 </div>
