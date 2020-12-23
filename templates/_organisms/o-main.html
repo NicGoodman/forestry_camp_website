@@ -23,76 +23,45 @@
     <a href="{{ mapsLink }}" class="py-1 px-2">{{ address }}</a><a href="tel:8281234567" class="py-1 px-2 font-GuestCheck">{{ phone }}</a>
     </section>
 </section>
-
 <section
     id="header-section"
-    class="flex flex-row justify-between w-full h-auto flex-grow-0 flex-shink-0 border-b-2 border-fc-black items-center"
+    class="flex flex-row justify-between w-full h-24 md:h-auto flex-grow-0 flex-shink-0 border-b-2 border-fc-black items-center"
 >
     <article
         id="logo-nav-wrapper"
         class="flex flex-row h-auto"
-        x-data="{ selected: null }"
     >
         <h1 id="logo" class="py-6 px-8 h-24">
             {% include "_atoms/a-logo-alt" %}
         </h1>
-        <nav
-            id="main-navigation"
-            class="flex flex-row items-center font-GillSansNova font-bold text-base"
-        >
-            {% for block in navigation %} {% if block.type == "navigationItem"
-            %} {% set internalLink = block.internalLink.one() %}
-            <a
-                href="{% if internalLink|length %}{{ internalLink.url }}{% elseif block.externalOrAnchorLink|length %}{{ block.externalOrAnchorLink }}{% endif %}"
-                class="text-fc-black hover:text-fc-green hover:cursor-pointer px-2"
-                >{{ block.itemName }}</a
-            >
-
-            {% elseif block.type == "dropdownItem" %}
-            <div id="dropdown" class="relative">
-                <span
-                    id="dropdown-header"
-                    class="text-fc-black hover:text-fc-green hover:cursor-pointer px-2"
-                    @click="selected !== {{ loop.index }} ? selected = {{ loop.index }} : selected = null"
-                    :class="{ 'text-fc-green': selected === {{ loop.index }}, 'text-fc-black': selected !== {{ loop.index }} }"
-                >
-                    {{ block.dropdownName }}
-                </span>
-                <div
-                    id="dropdown-container"
-                    class="absolute top-0 mt-8 bg-fc-green border-2 border-white rounded-lg text-white text-sm font-normal p-2 z-50 w-40"
-                    x-show="selected == {{ loop.index }}"
-                >
-                    {% for item in block.dropdownItems %} {% set internalLink =
-                    item.dropdownNavigationInternalLink.one() %}
-                    <a
-                        href="{% if internalLink|length %}{{ internalLink.url }}{% elseif item.dropdownNavigationExternalOrAnchorLink|length %}{{ item.dropdownNavigationExternalOrAnchorLink }}{% endif %}"
-                        class="block"
-                        >{{ item.dropdownNavigationItemName }}</a
-                    >
-
-                    {% endfor %}
-                </div>
-            </div>
-            {% endif %} {% endfor %}
-        </nav>
+            {% include "_molecules/m-main-nav-desktop" %}
     </article>
-    <article id="reservation-button" class="flex flex-row items-center px-6">
+    <article id="reservation-and-mobile-buttons" class="hidden md:flex flex-row items-center px-6">
         <a
             href="#reservations"
-            class="font-GuestCheck text-lg p-2 bg-fc-green text-orange-100 text-center hover:text-fc-black rounded-lg"
+            class="font-GuestCheck text-lg p-2 bg-fc-green text-orange-100 text-center hover:text-fc-black rounded-lg hidden md:block"
         >
             make a reservation
         </a>
+                <i
+            class="block md:hidden fas fa-bars text-lg p-2 text-fc-black hover:cursor-pointer" @click="mobile-show: true"
+            x-show="mobile-show = false"
+        >
+        <i
+            class="block md:hidden fas fa-times-circle text-lg p-2 text-fc-black hover:cursor-pointer" @click="mobile-show: false"
+            x-show="mobile-show = true"
+        >
+        </i>
     </article>
 </section>
 <section id="hero-slider-section" class="w-full relative h-full flex-grow-1">
+{% include "_molecules/m-main-nav-mobile" %}
     {% for image in imageSlider %}
     <img
         src="{{ image.getUrl }}"
         alt=""
         id=""
-        class="w-full h-full object-cover top-0 left-0 absolute"
+        class="w-full h-full object-cover top-0 left-0 absolute z-40"
     />
     {% endfor %}
 </section>
