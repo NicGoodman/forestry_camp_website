@@ -28,11 +28,11 @@
 >
     <article id="logo-nav-wrapper" class="flex flex-row h-auto">
         <h1 id="logo" class="py-6 px-8">{% include "_atoms/a-logo-alt" %}</h1>
-        <nav id="main-navigation" class="flex flex-row items-center font-GillSansNova font-normal text-base">
+        <nav id="main-navigation" class="flex flex-row items-center font-GillSansNova font-bold text-base">
             {% for block in navigation %}
                 {% if block.type == "navigationItem" %}
                 {% set internalLink = block.internalLink.one() %}
-                <a href="{% if internalLink|length %}{{ internalLink.url }}{% elseif block.externalOrAnchorLink|length %}{{ block.externalOrAnchorLink }}{% endif %}" class="text-fc-black hover:text-fc-green">{{ block.itemName }}</a>
+                <a href="{% if internalLink|length %}{{ internalLink.url }}{% elseif block.externalOrAnchorLink|length %}{{ block.externalOrAnchorLink }}{% endif %}" class="text-fc-black hover:text-fc-green hover:cursor-pointer px-2">{{ block.itemName }}</a>
                     
                  {% elseif block.type == "dropdownItem" %}
                     {{ block.dropdownName }}
@@ -40,10 +40,10 @@
             {% endfor %}
         </nav>
     </article>
-    <article id="reservation-button" class="flex flex-row items-center">
+    <article id="reservation-button" class="flex flex-row items-center px-6">
         <a
             href="#reservations"
-            class="font-GuestCheck text-3xl p-2 bg-fc-green text-orange-100 text-center hover:text-fc-black rounded-lg"
+            class="font-GuestCheck text-lg p-2 bg-fc-green text-orange-100 text-center hover:text-fc-black rounded-lg"
         >
             make a reservation
         </a>
