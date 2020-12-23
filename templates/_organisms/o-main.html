@@ -56,12 +56,12 @@
     </article>
 </section>
 <section id="hero-slider-section" class="w-full relative h-full flex-grow-1" x-data="{imageShow: 1, add() {
-    if (this.imageShow === 6 ){
+    if (this.imageShow === 5 ){
         this.imageShow = 1;
     } else {
         this.imageShow++;
     }
-} }" x-alpine-interval="{ callback: 'add', timer: 3000 }" x-text="imageShow"
+} }" x-alpine-interval="{ callback: 'add', timer: 3000 }"
 >
 {% include "_molecules/m-main-nav-mobile" %}
     {% for image in imageSlider %}
