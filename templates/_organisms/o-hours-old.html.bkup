@@ -1,0 +1,50 @@
+{% block hours %}
+	{% set image = entry.hoursHeaderImage.one().optimizedImages %}
+	{% set altText = entry.hoursHeaderImage.one().title %}
+	{% set header = entry.hoursHeaderText %}
+	{% set text = entry.hoursTextContent %}
+	<a id="hours">{% include "_molecules/m-text-header" %}</a>
+	<div id="hours-and-reservations-content" class="flex flex-col justify-center px-2 mt-4 text-center md:px-8 lg:px-16">
+		{% include "_atoms/a-text-body" %}
+		<div id="contact-buttons" class="flex flex-col items-center w-full md:justify-around">
+			<!-- <a href="http://shop.forestrycamp.com/" class="px-4 py-2 text-3xl text-center text-orange-100 rounded-lg font-GuestCheck bg-fc-green hover:text-fc-black">
+				our store
+			</a> -->
+			<a href="private-events" class="block px-4 py-2 text-3xl text-center text-orange-100 rounded-lg md:hidden font-GuestCheck bg-fc-green hover:text-fc-black">
+				private events
+			</a>
+			<p class="block pt-2 text-base font-normal text-center md:hidden font-GillSansNova text-fc-black">{{ entry.privateEventsMessage }}</p>
+			<a href="catering" class="block px-4 py-2 text-3xl text-center text-orange-100 rounded-lg md:hidden font-GuestCheck bg-fc-green hover:text-fc-black">
+				catering
+			</a>
+			<p class="block pt-2 text-base font-normal text-center md:hidden font-GillSansNova text-fc-black">{{ entry.cateringMessage }}</p>
+			<!-- <a href="tel:1-828-505-4452" class="text-center cursor-pointer">
+				<h5 class="mt-4 text-2xl font-bold border-t-2 border-b-2 font-GuestCheck border-fc-black text-fc-black hover:text-fc-green w-52">give us a call</h5>
+			</a> -->
+		</div>
+		<div id="hours-and-map-content" class="flex flex-col items-center justify-center my-20 lg:flex-row-reverse">
+			<div id="hours-content" class="p-4 reveal lg:text-left lg:w-auto">
+				<h3 id="hours-header" class="text-2xl font-GuestCheck text-fc-black">hours</h3>
+				<div class="text-base font-normal text-left font-GillSansNova text-fc-black">{{ entry.reservationsMessage }}</div>
+				<div id="hours-list" class="flex flex-col">
+					{% for day in entry.restaurantHours %}
+						<div>
+							<span class="text-base font-bold font-GillSansNova text-fc-black">{{ day.name }}</span>
+							<span class="text-base font-GillSansNova text-fc-black">
+								{% if day.isBlank %}
+									Closed
+								{% else %}
+									{{ day.open|time('short') }}
+									-
+									{{ day.close|time('short') }}
+								{% endif %}
+							</span>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+			{% include "_atoms/a-googlemaps-plugin" %}
+		</div>
+		{% include "_atoms/a-opentable-plugin" %}
+	</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% block reservations %}
+{% set image = entry.reservationsHeaderImage.one().optimizedImages %}
+{% set altText = entry.reservationsHeaderImage.one().title %}
+{% set header = entry.reservationsHeaderText %}
+{% set text = entry.reservationsMessage %}
+<a id="reservations">{% include "_molecules/m-text-header" %}</a>
+<div
+    id="reservations-content"
+    class="flex flex-col justify-center px-2 mt-4 text-center md:px-8 lg:px-16"
+>
+    {% include "_atoms/a-text-body" %} {% include "_atoms/a-opentable-plugin" %}
+</div>
+{% endblock %}

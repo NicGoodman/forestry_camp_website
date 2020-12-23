@@ -1,0 +1,7 @@
+{% block pecatering %}
+{% set image = entry.privateEventsAndCateringHeaderImage.one().optimizedImages %}
+{% set altText = entry.privateEventsAndCateringHeaderImage.one().title %}
+{% set header = entry.privateEventsAndCateringHeaderText %}
+{% set text = entry.privateEventsAndCateringMessage %}
+<a id="private-events-and-catering">{% include "_molecules/m-text-header" %}</a>
+{% endblock %}

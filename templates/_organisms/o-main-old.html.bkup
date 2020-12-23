@@ -1,0 +1,48 @@
+{% block main %}
+	{% set landscape = entry.landscapeImage.one().optimizedImages %}
+	{% set announcementMessage = entry.announcementMessage %}
+	{% if announcementMessage|length %}
+		<a href="{{ entry.announcementMessageLink }}" id="announcement-bar" class="w-full h-auto text-white bg-fc-green relative text-center align-middle font-GillSansNova font-normal text-base">
+			<p class="py-1 m-0">{{ entry.announcementMessage }}</p>
+		</a>
+	{% endif %}
+	<div id="main-section-content" class="flex flex-col lg:flex-row justify-between md:justify-start items-end md:items-center content-center min-h-screen max-h-full border-b-2 border-fc-black">
+		<a id="home"></a>
+		<div id="logo-and-nav" class="flex flex-col w-full h-auto lg:w-1/2 px-6 py-6 justify-center lg:max-h-full flex-shrink-0">
+			<div id="logo" class="flex self-center max-w-sm md:h-56 h-48 flex-shrink mb-3">
+				{% include "_atoms/a-logo" %}
+			</div>
+			<div class="flex flex-row flex-wrap justify-between lg:px-2 lg:max-w-xs self-center">
+				{% for block in entry.navigationLinks.all() %}
+					{% set image = block.navigationImage.one().optimizedImages %}
+					{% set altText = block.navigationImage.one().text %}
+					{% set header = block.navigationText %}
+					{% set anchor = block.navigationAnchor %}
+					{% include "_molecules/m-nav-icon" %}
+				{% endfor %}
+			</div>
+		</div>
+		<div class="hidden lg:block lg:flex lg:flex-col-reverse lg:min-h-screen lg:max-h-full lg:flex-grow lg:self-end lg:w-1/2 lg:border-l-2 border-fc-black">
+			<img class="reveal lazyload w-full h-auto lg:self-end overflow-hidden" src="{{ landscape.src() }}" data-srcset="{{ landscape.srcset() }}" sizes="100vw" alt="Illustration by David P. Seymour of Burial Brewing Company's Forestry Camp bar and restaurant, located in Asheville North Carolina"/>
+			<div class="flex flex-col w-2/3 justify-center self-center my-20 flex-grow">
+				<a href="http://shop.forestrycamp.com/" class="font-GuestCheck text-3xl p-2 bg-fc-green text-orange-100 text-center hover:text-fc-black rounded-lg">
+					our store
+				</a>
+				<p class="font-GillSansNova font-normal text-fc-black text-base text-center pt-2">{{ entry.onlineStoreMessage }}</p>
+				<a href="private-events" class="font-GuestCheck text-3xl p-2 bg-fc-green text-orange-100 text-center hover:text-fc-black rounded-lg">
+					private events
+				</a>
+				<p class="font-GillSansNova font-normal text-fc-black text-base text-center pt-2">{{ entry.privateEventsMessage }}</p>
+				<a href="catering" class="font-GuestCheck text-3xl p-2 bg-fc-green text-orange-100 text-center hover:text-fc-black rounded-lg">
+					catering
+				</a>
+				<p class="font-GillSansNova font-normal text-fc-black text-base text-center pt-2">{{ entry.cateringMessage }}</p>
+				<hr class="border-t-2 border-fc-black w-full">
+				<a href="tel:1-828-505-4452" class="font-GuestCheck text-3xl text-fc-black text-center hover:text-fc-green">
+					828.505.4452
+				</a>
+			</div>
+		</div>
+		<img id="mobile-landscape" src="{{ landscape.src() }}" data-srcset="{{ landscape.srcset() }}" sizes="100vw" class="lazyload reveal w-full h-auto flex-shrink object-cover object-top lg:self-end overflow-hidden lg:hidden mt-3" alt="Illustration by David P. Seymour of Burial Brewing Company's Forestry Camp bar and restaurant, located in Asheville North Carolina"/>
+	</div>
+{% endblock %}
