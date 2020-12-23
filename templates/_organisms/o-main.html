@@ -1,8 +1,11 @@
-{% block main %} {% set announcementMessage = entry.announcementMessage %} {%
-set navigation = entry.navigationItems.all() %} {% set imageSlider =
-entry.imageSlider.all() %} {% set address = entry.businessAddress %} {% set
-mapsLink = entry.googleMapsLink %} {% set phone = entry.phoneNumber %} {% set
-socialAccounts = entry.socialMediaAccounts %}
+{% block main %}
+{% set announcementMessage = entry.announcementMessage %}
+{% set navigation = entry.navigationItems.all() %}
+{% set imageSlider = entry.imageSlider.all() %}
+{% set address = entry.businessAddress %}
+{% set mapsLink = entry.googleMapsLink %}
+{% set phone = entry.phoneNumber %}
+{% set socialAccounts = entry.socialMediaAccounts.all() %}
 <section id="top-bars" class="flex flex-col flex-grow-0 flex-shink-0">
     {% if announcementMessage|length %}
     <a
@@ -16,7 +19,9 @@ socialAccounts = entry.socialMediaAccounts %}
     <section
         id="address-bar"
         class="w-full h-auto text-white bg-fc-black relative text-right align-middle font-GillSansNova font-normal text-base"
-    ></section>
+    >
+    <a href="{{ mapsLink }}" class="py-1 px-2">{{ address }}</a><a href="tel:8281234567" class="py-1 px-2 font-GuestCheck">{{ phone }}</a>
+    </section>
 </section>
 
 <section
@@ -28,7 +33,9 @@ socialAccounts = entry.socialMediaAccounts %}
         class="flex flex-row h-auto"
         x-data="{ selected: null }"
     >
-        <h1 id="logo" class="py-6 px-8 h-24">{% include "_atoms/a-logo-alt" %}</h1>
+        <h1 id="logo" class="py-6 px-8 h-24">
+            {% include "_atoms/a-logo-alt" %}
+        </h1>
         <nav
             id="main-navigation"
             class="flex flex-row items-center font-GillSansNova font-bold text-base"
@@ -56,10 +63,14 @@ socialAccounts = entry.socialMediaAccounts %}
                     class="absolute top-0 mt-8 bg-fc-green border-2 border-white rounded-lg text-white text-sm font-normal p-2 z-50 w-40"
                     x-show="selected == {{ loop.index }}"
                 >
-                    {% for item in block.dropdownItems %}
-                    {% set internalLink = item.dropdownNavigationInternalLink.one() %}
-                    <a href="{% if internalLink|length %}{{ internalLink.url }}{% elseif item.dropdownNavigationExternalOrAnchorLink|length %}{{ item.dropdownNavigationExternalOrAnchorLink }}{% endif %}" class="block">{{ item.dropdownNavigationItemName }}</a>
-                        
+                    {% for item in block.dropdownItems %} {% set internalLink =
+                    item.dropdownNavigationInternalLink.one() %}
+                    <a
+                        href="{% if internalLink|length %}{{ internalLink.url }}{% elseif item.dropdownNavigationExternalOrAnchorLink|length %}{{ item.dropdownNavigationExternalOrAnchorLink }}{% endif %}"
+                        class="block"
+                        >{{ item.dropdownNavigationItemName }}</a
+                    >
+
                     {% endfor %}
                 </div>
             </div>
