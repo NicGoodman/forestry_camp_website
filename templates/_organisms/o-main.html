@@ -1,11 +1,8 @@
-{% block main %}
-{% set announcementMessage = entry.announcementMessage %}
-{% set navigation = entry.navigationItems.all() %}
-{% set imageSlider = entry.imageSlider.all() %}
-{% set address = entry.businessAddress %}
-{% set mapsLink = entry.googleMapsLink %}
-{% set phone = entry.phoneNumber %}
-{% set socialAccounts = entry.socialMediaAccounts %}
+{% block main %} {% set announcementMessage = entry.announcementMessage %} {%
+set navigation = entry.navigationItems.all() %} {% set imageSlider =
+entry.imageSlider.all() %} {% set address = entry.businessAddress %} {% set
+mapsLink = entry.googleMapsLink %} {% set phone = entry.phoneNumber %} {% set
+socialAccounts = entry.socialMediaAccounts %}
 <section id="top-bars" class="flex flex-col flex-grow-0 flex-shink-0">
     {% if announcementMessage|length %}
     <a
@@ -19,18 +16,23 @@
     <section
         id="address-bar"
         class="w-full h-auto text-white bg-fc-black relative text-right align-middle font-GillSansNova font-normal text-base"
-    >
-    
-    </section>
+    ></section>
 </section>
 
-<section id="header-section" class="flex flex-row justify-between w-full h-auto flex-grow-0 flex-shink-0 border-b-2 border-fc-black">
+<section
+    id="header-section"
+    class="flex flex-row justify-between w-full h-auto flex-grow-0 flex-shink-0 border-b-2 border-fc-black"
+>
     <article id="logo-nav-wrapper" class="flex flex-row h-auto">
         <h1 id="logo" class="">{% include "_atoms/a-logo-alt" %}</h1>
-        <nav id="main-navigation" class="">
-        {% for nav in navigation %}
-            
-        {% endfor %}
+        <nav id="main-navigation" class="flex flex-row">
+            {% for block in navigation %}
+                {% if block.type = navigationItem %}
+                    {{ block.itemName }} 
+                 {% elseif block.type = dropdownItem %}
+                    {{ block.dropdownName }}
+                  {% endif %} 
+            {% endfor %}
         </nav>
     </article>
     <article id="reservation-button" class="">
@@ -42,19 +44,18 @@
         </a>
     </article>
 </section>
-<section id="hero-slider-section" class="w-full relative h-auto flex-grow-1" x-data="{ show: 1 }">
-{% for image in imageSlider %}
-    <img src="" alt="" id="" class="w-full h-full object-cover top-0 left-0 absolute">
-{% endfor %}
+<section
+    id="hero-slider-section"
+    class="w-full relative h-auto flex-grow-1"
+    x-data="{ show: 1 }"
+>
+    {% for image in imageSlider %}
+    <img
+        src="{{ image.getUrl }}"
+        alt=""
+        id=""
+        class="w-full h-full object-cover top-0 left-0 absolute"
+    />
+    {% endfor %}
 </section>
 {% endblock %}
-
-x-on:load.debounce=
-@click="selected !== {{ loop.index }} ? selected = {{ loop.index }} : selected = null"
-:class="{ 'text-tag-dark-teal': selected === {{ loop.index }}, 'text-tag-teal': selected !== {{ loop.index }} }"
-
-<script>
-function showImage(index) {
-    
-}
-</script>
