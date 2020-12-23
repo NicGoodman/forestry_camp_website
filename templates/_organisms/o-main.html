@@ -27,9 +27,9 @@ socialAccounts = entry.socialMediaAccounts %}
         <h1 id="logo" class="">{% include "_atoms/a-logo-alt" %}</h1>
         <nav id="main-navigation" class="flex flex-row">
             {% for block in navigation %}
-                {% if block.type = navigationItem %}
+                {% if block.type == navigationItem %}
                     {{ block.itemName }} 
-                 {% elseif block.type = dropdownItem %}
+                 {% elseif block.type == dropdownItem %}
                     {{ block.dropdownName }}
                   {% endif %} 
             {% endfor %}
