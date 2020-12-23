@@ -18,9 +18,9 @@
     {% endif %}
     <section
         id="address-bar"
-        class="w-full h-auto text-white bg-fc-black relative text-right align-middle font-GillSansNova font-normal text-base"
+        class="hidden md:block w-full h-auto text-white bg-fc-black relative text-right align-middle font-GillSansNova font-normal text-base"
     >
-    <a href="{{ mapsLink }}" class="py-1 px-2">{{ address }}</a><a href="tel:8281234567" class="py-1 px-2 font-GuestCheck">{{ phone }}</a>
+    <a href="{{ mapsLink }}" class="py-1 px-2">{{ address }}</a><a href="tel:8281234567" class="py-1 px-2 font-GuestCheck">{{ phone }}</a>{% include "_atoms/a-socaial-links" %}
     </section>
 </section>
 <section
@@ -31,7 +31,7 @@
         id="logo-nav-wrapper"
         class="flex flex-row h-auto"
     >
-        <h1 id="logo" class="py-2 px-4 h-16 md:py-6 md:px-8 md:h-24">
+        <h1 id="logo" class="py-2 px-4 h-12 md:py-6 md:px-8 md:h-24">
             {% include "_atoms/a-logo-alt" %}
         </h1>
             {% include "_molecules/m-main-nav-desktop" %}

@@ -16,14 +16,14 @@
     {% set internalLink = block.internalLink.one() %}
     <a
         href="{% if internalLink|length %}{{ internalLink.url }}{% elseif block.externalOrAnchorLink|length %}{{ block.externalOrAnchorLink }}{% endif %}"
-        class="text-white hover:text-fc-black hover:cursor-pointer px-2"
+        class="text-white hover:text-fc-black hover:cursor-pointer p-2"
         >{{ block.itemName }}</a
     >
     {% elseif block.type == "dropdownItem" %}
-    <div id="dropdown" class="relative">
+    <div id="dropdown" class="p-2">
         <span
             id="dropdown-header"
-            class="text-white hover:text-fc-black hover:cursor-pointer px-2"
+            class="text-white hover:text-fc-black hover:cursor-pointer"
         >
             {{ block.dropdownName }}
         </span>
@@ -43,4 +43,10 @@
     </div>
     {% endif %}
     {% endfor %}
+<section
+        id="address-bar"
+        class="w-full h-auto text-white text-center align-middle font-GillSansNova font-normal text-base"
+    >
+    <a href="{{ mapsLink }}" class="py-1 px-2 block">{{ address }}</a><a href="tel:8281234567" class="py-1 px-2 font-GuestCheck block">{{ phone }}</a>{% include "_atoms/a-socaial-links" %}
+    </section>
 </nav>
