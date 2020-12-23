@@ -42,7 +42,7 @@ socialAccounts = entry.socialMediaAccounts %}
                 <span id="dropdown-header" class="text-fc-black hover:text-fc-green hover:cursor-pointer px-2" @click="selected !== {{ loop.index }} ? selected = {{ loop.index }} : selected = null" :class="{ 'text-fc-green': selected === {{ loop.index }}, 'text-fc-green': selected !== {{ loop.index }} }">
                     {{ block.dropdownName }}
                 </span>
-                <div id="dropdown-container" class="absolute top-0 mt-8 bg-fc-green border-2 border-fc-white rounded-md text-fc-white" x-show="selected == {{ loop.index }}">
+                <div id="dropdown-container" class="absolute top-0 mt-8 bg-fc-green border-2 border-white rounded-lg text-white text-sm font-normal p-2 z-50" x-show="selected == {{ loop.index }}">
                 DROPDOWN
             </div>
             </div>
