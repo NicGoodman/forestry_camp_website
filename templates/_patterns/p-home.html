@@ -59,13 +59,13 @@
     {% include "_organisms/o-footer" %} {% block footer %}{% endblock %}
 </footer>
 <script>
-var imageShow = 1;
-var interval = setInterval( increment, 4000);
 function increment() {
-    if ( imageShow === 5 ){
-        imageShow = 1
+    var imageShow = 1;
+var interval = setInterval( increment, 4000);
+    if ( this.imageShow === 5 ){
+        this.imageShow = 1
     } else {
-        imageShow = imageShow++
+        this.imageShow = this.imageShow++
     }
 }
 </script>
