@@ -1,6 +1,6 @@
 {% extends "_patterns/p-base" %} {% block body %}
 <main id="content" class="flex flex-col">
-    <section id="main" class="flex flex-col h-screen w-full" x-data="{ selected: null, mobileShow: false }">
+    <section id="main" class="flex flex-col h-screen w-full" x-data="{ selected: null, mobileShow: false, imageSlider() }">
         {% include "_organisms/o-main" %} {% block main %}{% endblock %}
     </section>
 
@@ -58,4 +58,15 @@
 >
     {% include "_organisms/o-footer" %} {% block footer %}{% endblock %}
 </footer>
+<script>
+var imageShow = 1;
+var interval = setInterval( increment, 4000);
+function increment() {
+    if ( imageShow === 5 ){
+        imageShow = 1
+    } else {
+        imageShow = imageShow++
+    }
+}
+</script>
 {% endblock %}

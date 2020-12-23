@@ -63,6 +63,7 @@
         alt=""
         id=""
         class="w-full h-full object-cover top-0 left-0 absolute z-40"
+        x-show.transition="imageShow = {{ loop.index }}"
     />
     {% endfor %}
 </section>
