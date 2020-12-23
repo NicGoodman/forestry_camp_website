@@ -11,7 +11,7 @@
             make a reservation
         </a>
     </article>
-    <div id="nav-wrapper" class="">
+    <div id="nav-wrapper" class="flex flex-col">
     {% for block in navigation %}
     {% if block.type == "navigationItem" %}
     {% set internalLink = block.internalLink.one() %}
