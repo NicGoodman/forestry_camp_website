@@ -36,7 +36,7 @@
         </h1>
             {% include "_molecules/m-main-nav-desktop" %}
     </article>
-    <article id="reservation-and-mobile-buttons" class="hidden md:flex flex-row items-center px-6">
+    <article id="reservation-and-mobile-buttons" class="flex flex-row items-center px-6">
         <a
             href="#reservations"
             class="font-GuestCheck text-lg p-2 bg-fc-green text-orange-100 text-center hover:text-fc-black rounded-lg hidden md:block"
@@ -44,13 +44,13 @@
             make a reservation
         </a>
                 <i
-            class="block md:hidden fas fa-bars text-lg p-2 text-fc-black hover:cursor-pointer" @click="mobileShow: true"
-            x-show="mobileShow = false"
+            class="block md:hidden fas fa-bars text-lg p-2 text-fc-black hover:cursor-pointer" @click="mobileShow = true"
+            x-show="!mobileShow"
         >
         </i>
         <i
-            class="block md:hidden fas fa-times-circle text-lg p-2 text-fc-black hover:cursor-pointer" @click="mobileShow: false"
-            x-show="mobileShow = true"
+            class="block md:hidden fas fa-times-circle text-lg p-2 text-fc-black hover:cursor-pointer" @click="mobileShow = false"
+            x-show="mobileShow"
         >
         </i>
     </article>
