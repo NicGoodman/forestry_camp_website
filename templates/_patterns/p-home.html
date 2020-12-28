@@ -1,12 +1,17 @@
 {% extends "_patterns/p-base" %} {% block body %}
 <main id="content" class="flex flex-col overflow-hidden">
-    <section id="main" class="flex flex-col h-screen w-full" x-data="{ selected: null, mobileShow: false, imageShow: 1, add() {
+    <section
+        id="main"
+        class="flex flex-col h-screen w-full"
+        x-data="{ selected: null, mobileShow: false, imageShow: 1, add() {
     if (this.imageShow === 3 ){
         this.imageShow = 1;
     } else {
         this.imageShow++;
     }
-} }" x-alpine-interval="{ callback: 'add', timer: 3000 }">
+} }"
+        x-alpine-interval="{ callback: 'add', timer: 3000 }"
+    >
         {% include "_organisms/o-main" %} {% block main %}{% endblock %}
     </section>
 
@@ -14,7 +19,8 @@
         id="reservations-section"
         class="flex flex-col px-6 md:px-12 lg:px-24 xl:px-56 pb-24 border-b-2 border-fc-black"
     >
-        {% include "_organisms/o-reservations" %} {% block reservations %}{% endblock %}
+        {% include "_organisms/o-reservations" %} {% block reservations %}{%
+        endblock %}
     </section>
 
     <section
@@ -26,26 +32,19 @@
     </section>
 
     <section
-        id="about-us-section"
-        class="flex flex-col px-6 md:px-12 lg:px-24 xl:px-56 pb-24 border-b-2 border-fc-black"
-    >
-        {% include "_organisms/o-about" %} {% block about %}{% endblock %}
-    </section>
-
-    <section
         id="menus-section"
         class="flex flex-col px-6 md:px-12 lg:px-24 xl:px-56 pb-24 border-b-2 border-fc-black"
-        style="background-color: rgba(85, 90, 110, 0.15)"
     >
         {% include "_organisms/o-menus-online" %} {% block menus %}{% endblock
         %}
     </section>
 
     <section
-        id="private-events-and-catering-section"
-        class="flex flex-col px-6 md:px-12 lg:px-24 xl:px-56"
+        id="about-us-section"
+        class="flex flex-col px-6 md:px-12 lg:px-24 xl:px-56 pb-24 border-b-2 border-fc-black"
+        style="background-color: rgba(85, 90, 110, 0.15)"
     >
-        {% include "_organisms/o-private-events-and-catering" %} {% block pecatering %}{% endblock %}
+        {% include "_organisms/o-about" %} {% block about %}{% endblock %}
     </section>
 
     <section
